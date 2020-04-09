@@ -1,0 +1,12 @@
+p {
+  width: 300px;
+  line-height: 50px;
+}
+
+strong {
+  border: 3px solid hotpink;
+  padding: 5px;
+  margin: 25px;
+	line-height: 50px;
+  background-color: lavenderblush;
+}
