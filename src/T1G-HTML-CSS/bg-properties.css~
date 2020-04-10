@@ -1,0 +1,4 @@
+header {
+  background-image: url(https://i.pinimg.com/originals/e0/12/34/e01234bb15f06380da7773ef3f9a77fd.png);
+  height: 200px;
+}
