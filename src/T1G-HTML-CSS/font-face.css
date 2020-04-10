@@ -4,7 +4,7 @@ http://www.1001freefonts.com/always_forever.font
 */
 @font-face {
   font-family: "My Custom Font";
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/always%20forever.ttf");
+  src: url("../../fonts/always-forever.ttf");
 }
 
 body {
