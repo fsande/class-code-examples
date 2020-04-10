@@ -1,0 +1,11 @@
+#flex-container {
+  display: flex;
+  border: 2px solid black;
+  height: 150px;
+}
+
+.flex-item {
+  border-radius: 10px;
+  background-color: purple;
+  margin: 5px;
+}

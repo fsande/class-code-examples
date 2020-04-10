@@ -1,0 +1,13 @@
+#flex-container {
+  display: flex;
+	align-items: flex-start;
+  border: 2px solid black;
+  height: 150px;
+}
+
+.flex-item {
+  border-radius: 10px;
+	flex-grow: 1;
+  background-color: purple;
+  margin: 5px;
+}

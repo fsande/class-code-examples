@@ -1,0 +1,20 @@
+#box {
+  height: 500px;
+  width: 500px;
+  background-color: hotpink;
+}
+
+#upper-half {
+  height: 50%;
+  width: 100%;
+}
+
+#upper-quarter {
+  height: 100%;
+  width: 50%;
+}
+
+#box div {
+ background-color: rgba(255, 255, 255, 0.25);
+}
+

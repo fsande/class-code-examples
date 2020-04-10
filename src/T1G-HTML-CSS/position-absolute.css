@@ -1,0 +1,23 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+#box1 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#box2 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}

@@ -1,0 +1,26 @@
+article {
+  border: 10px solid gray; 
+  margin: auto;
+  height: 600px;
+  width: 80%;
+}
+
+header {
+  background-image: url(https://i.pinimg.com/originals/e0/12/34/e01234bb15f06380da7773ef3f9a77fd.png);
+  background-size: cover;
+  height: 300px;
+  position: relative;
+}
+
+#overlay {
+  background-color:
+    rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+

@@ -1,0 +1,29 @@
+article {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+section {
+  flex-grow: 1;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+footer, header {
+  font-size: 24px;
+  background-color: purple;
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+}
