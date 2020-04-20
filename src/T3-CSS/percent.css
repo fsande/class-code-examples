@@ -1,0 +1,13 @@
+/* You can define font sizes in terms of percentage: */
+
+body {
+  font-size: 30px;
+}
+
+div {
+  font-size: 200%;
+}
+
+p {
+  font-size: 50%;
+}

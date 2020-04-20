@@ -1,0 +1,14 @@
+/* Percent on font-size behaves exactly like percentage i
+   on width and height, in that it's relative to the parent */
+
+body {
+  font-size: 30px;
+}
+
+div {
+  font-size: 200%;
+}
+
+p {
+  font-size: 75%;
+}

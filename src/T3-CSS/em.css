@@ -1,0 +1,17 @@
+/* Relative font sizes are usually defined in terms of em:
+
+   em represents the calculated font-size of the element
+   1em = the inherited font size
+   2em = 2 times the inherited font size
+*/
+body {
+  font-size: 30px;
+}
+
+div {
+  font-size: 2em;
+}
+
+p {
+  font-size: .5em;
+}

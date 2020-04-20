@@ -1,0 +1,18 @@
+/* If you do not want your relative font sizes to compound through inheritance, use  rem:
+
+   rem represents the font-size of the root element
+   1rem = the root (html tag) font size
+   2rem = 2 times root font size
+*/
+
+html {
+  font-size: 30px;
+}
+
+div {
+  font-size: 2rem;
+}
+
+p {
+  font-size: .75em;
+}

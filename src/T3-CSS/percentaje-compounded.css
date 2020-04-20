@@ -1,0 +1,9 @@
+/* Why is <strong> 120px and not 60px?  */
+
+body {
+  font-size: 30px;
+}
+
+strong {
+  font-size: 2em;
+}
