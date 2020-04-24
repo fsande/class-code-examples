@@ -6,7 +6,7 @@
  *
  * @author F. de Sande
  * @since 24.apr.2020
- * @desc Tic Tac Toe Example. Step 1
+ * @desc Tic Tac Toe Example. Step 2
  */
 
 "use strict"
@@ -20,9 +20,28 @@ function changeToX(event) {
   image.src = X_IMAGE_URL;
   container.appendChild(image);
   container.removeEventListener('click', changeToX);
+  computerChooseO();
+}
+
+function computerChooseO() {
+  const allBoxes  = document.querySelectorAll('#grid div');
+  const freeBoxes = [];
+  for (const box of allBoxes) {
+    let imageChild = box.querySelector('img');
+    if (!imageChild) {
+      freeBoxes.push(box);
+    }
+  }
+  const index = Math.floor(Math.random() * freeBoxes.length);
+  const freeSpace = freeBoxes[index];
+  const image = document.createElement('img');
+  image.src = O_IMAGE_URL;
+  freeSpace.removeEventListener('click', changeToX);
+  freeSpace.appendChild(image);
 }
 
 const boxes = document.querySelectorAll('#grid div');
 for (const box of boxes) {
   box.addEventListener('click', changeToX);
 }
+
