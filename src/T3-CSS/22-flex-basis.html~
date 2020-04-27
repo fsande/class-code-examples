@@ -6,7 +6,7 @@
 
    @author F. de Sande
    @since 24.apr.2020
-	 @desc CSS. Flex item is inline (span)
+	 @desc Flex Basis
 -->
 
 <!DOCTYPE html>
@@ -15,14 +15,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>PAI: HTML & CSS</title>
-	<link rel=stylesheet href="flex-inline.css">
+	<link rel=stylesheet href="flex-basis.css">
 </head>
 <body>
-  <h1>Flex item in an inline</h1>
+  <h1>Flex Basis</h1>
   <div id="flex-container">
-	  <span class="flex-item"></span>
-	  <span class="flex-item"></span>
-	  <span class="flex-item"></span>
+	  <span class="flex-item">Uno</span>
+	  <div class="flex-item">Hola</div>
+	  <span class="flex-item">Dos</span>
   </div>
 </body>
 </html>
