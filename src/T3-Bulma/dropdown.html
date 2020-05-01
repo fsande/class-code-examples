@@ -1,0 +1,54 @@
+<!--  
+  Universidad de La Laguna
+  Escuela Superior de Ingeniería y Tecnología
+  Grado en Ingeniería Informática
+  Programación de Aplicaciones Interactivas
+  
+  @author F. de Sande
+  @since 30.apr.2020
+  @desc GUI. Bulma Components. Dropdown
+  @see {@link https://bulma.io/documentation/components/dropdown/}
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <!-- If you want to use icons with Bulma, don't forget to include Font Awesome 5: -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="dropdown.js"></script>
+    <title>Bulma Dropdown</title>
+  </head>
+  <body>
+    <section class = "section">
+      <div class = "container">
+        <span class = "title">
+        Basic Dropdown (see dropdown.js code)
+        </span>
+        <br>
+        <br>
+        <div class = "dropdown">
+          <div class = "dropdown-trigger">
+            <button class = "button" aria-haspopup = "true" aria-controls = "dropdown-menu">
+            <span>Universities</span>
+            <span class = "icon is-small">
+            <i class = "fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+            </button>
+          </div>
+          <div class = "dropdown-menu" id = "dropdown-menu" role = "menu">
+            <div class = "dropdown-content">
+              <a href = "#" class = "dropdown-item">Princeton</a>
+              <a class = "dropdown-item">Universidad de La Laguna</a>
+              <a href = "#" class = "dropdown-item is-active">Massachussets Institute of Technology</a>
+              <a href = "#" class = "dropdown-item">Cambridge</a>
+              <hr class = "dropdown-divider">
+              <a href = "#" class = "dropdown-item">Yale</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

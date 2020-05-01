@@ -1,0 +1,83 @@
+<!--  
+  Universidad de La Laguna
+  Escuela Superior de Ingeniería y Tecnología
+  Grado en Ingeniería Informática
+  Programación de Aplicaciones Interactivas
+  
+  @author F. de Sande
+  @since 30.apr.2020
+  @desc GUI. Bulma Tabs
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <!-- If you want to use icons with Bulma, don't forget to include Font Awesome 5: -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="bulma-tabs.js"></script>
+    <title>Bulma Tabs</title>
+  </head>
+  <body>
+    <section class="hero is-success">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            JS for Bulma Tabs
+          </h1>
+        </div>
+      </div>
+      <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth is-large">
+          <div class="container">
+            <ul>
+              <li class="tab is-active" onclick="openTab(event,'WebDev')"><a >Web Development</a></li>
+              <li class="tab" onclick="openTab(event,'WebAud')"><a >Website Audit</a></li>
+              <li class="tab" onclick="openTab(event,'Support')"><a >Support</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <div class="container section">
+      <div id="WebDev" class="content-tab" >
+        <p>
+          test1<br>
+          Overview Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+					unknown printer took a galley of type and scrambled it to make a type specimen book. 
+					It has survived not only five centuries, but also the leap into electronic typesetting, 
+					remaining essentially unchanged. It was popularised in the 1960s with the release of 
+					Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+					publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+      <div id="WebAud" class="content-tab" style="display:none">
+        <p>
+          test2<br>
+          Details Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
+					an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+					It has survived not only five centuries, but also the leap into electronic typesetting, 
+					remaining essentially unchanged. It was popularised in the 1960s with the release of 
+					Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+					software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+      <div id="Support" class="content-tab" style="display:none">
+        <p>
+          test3 <br>
+          Specification Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+					unknown printer took a galley of type and scrambled it to make a type specimen book. 
+					It has survived not only five centuries, but also the leap into electronic typesetting, 
+					remaining essentially unchanged. It was popularised in the 1960s with the release of 
+					Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+					software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

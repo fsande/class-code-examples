@@ -1,0 +1,79 @@
+<!--  
+  Universidad de La Laguna
+  Escuela Superior de Ingeniería y Tecnología
+  Grado en Ingeniería Informática
+  Programación de Aplicaciones Interactivas
+  
+  @author F. de Sande
+  @since 30.apr.2020
+  @desc GUI. Bulma Components. Tab switcher
+  @see {@link https://bulma.io/documentation/components/tabs/}
+  @see {@link https://stackoverflow.com/questions/44891771/bulma-css-tab-switcher}
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <!-- If you want to use icons with Bulma, don't forget to include Font Awesome 5: -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="tab-switcher.js"></script>
+    <title>Bulma Tab Switcher</title>
+  </head>
+  <body>
+    <div class="tabs is-centered">
+      <ul>
+        <li id="all-tab" class="is-active">
+          <a onClick="switchToAll()">
+          <span class="icon is-small"><i class="fa fa-html5"></i></span>
+          <span>All</span>
+          </a>
+        </li>
+        <li id="adaptivedesign-tab">
+          <a onClick="switchToAdaptiveDesign()">
+          <span class="icon is-small"><i class="fa fa-tablet"></i></span>
+          <span>Adaptive design</span>
+          </a>
+        </li>
+        <li id="jquery-tab">
+          <a onClick="switchToJquery()">
+          <span class="icon is-small"><i class="fa fa-file-code-o"></i></span>
+          <span>jQuery</span>
+          </a>
+        </li>
+        <li id="ajax-tab">
+          <a onClick="switchToAjax()">
+          <span class="icon is-small"><i class="fa fa-cog"></i></span>
+          <span>AJAX</span>
+          </a>
+        </li>
+        <li id="angularjs-tab">
+          <a onClick="switchToAngularJS()">
+          <span class="icon is-small"><i class="fa fa-file-text-o"></i></span>
+          <span>AngularJS</span>
+          </a>
+        </li>
+      </ul>
+      <!--/tabs is-centered-->
+    </div>
+    <div class="container">
+      <div id="all-tab-content">
+        <h1 class="title is-1" style="text-align:center;">Here will be the contents of the "All" tab</h1>
+      </div>
+      <div class="is-hidden" id="adaptivedesign-tab-content">
+        <h1 class="title is-1" style="text-align:center;">Here will be the contents of the "Adaptive Design" tab</h1>
+      </div>
+      <div class="is-hidden" id="jquery-tab-content">
+        <h1 class="title is-1" style="text-align:center;">Here will be the contents of the "jQuery" tab</h1>
+      </div>
+      <div class="is-hidden" id="ajax-tab-content">
+        <h1 class="title is-1" style="text-align:center;">Here will be the contents of the "AJAX" tab</h1>
+      </div>
+      <div class="is-hidden" id="angularjs-tab-content">
+        <h1 class="title is-1" style="text-align:center;">Here will be the contents of the "AngularJS" tab</h1>
+      </div>
+    </div>
+  </body>
+</html>

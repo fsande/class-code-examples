@@ -1,0 +1,33 @@
+{
+  "name": "t3-bulma",
+  "version": "1.0.0",
+  "description": "Bulma Installation for class examples",
+  "main": "sass/mystyles.scss",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsande/PAI-class-code-examples.git"
+  },
+  "keywords": [
+    "Bulma",
+    "CSS",
+    "JS",
+    "GUI",
+    "PAI"
+  ],
+  "author": "F de Sande",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fsande/PAI-class-code-examples/issues"
+  },
+  "homepage": "https://github.com/fsande/PAI-class-code-examples#readme",
+  "devDependencies": {
+    "bulma": "^0.8.2",
+    "node-sass": "^4.14.0"
+  }
+}

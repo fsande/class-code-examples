@@ -1,0 +1,137 @@
+<!--  
+  Universidad de La Laguna
+  Escuela Superior de Ingeniería y Tecnología
+  Grado en Ingeniería Informática
+  Programación de Aplicaciones Interactivas
+  
+  @author F. de Sande
+  @since 30.apr.2020
+  @desc GUI. Bulma. Buttons states
+  The button can be displayed in the different types of states by using classes such as 
+  is-focused, is-active, is-loading and buttons with icons 
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <!-- If you want to use icons with Bulma, don't forget to include Font Awesome 5: -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>Buttons states</title>
+  </head>
+  <body>
+    <section class = "section">
+      <div class = "container">
+        <span class = "title">
+        Buttons States
+        </span>
+        <br>
+        <br>
+        <span class = "is-size-5">
+        Normal Buttons
+        </span>
+        <br>
+        <a class = "button">Normal</a>
+        <a class = "button is-primary">Normal</a>
+        <a class = "button is-link">Normal</a>
+        <br>
+        <br>
+        <span class = "is-size-5">
+        Focus Buttons
+        </span>
+        <br>
+        <a class = "button is-focused">Focus</a>
+        <a class = "button is-primary is-focused">Focus</a>
+        <a class = "button is-link is-focused">Focus</a>
+        <br>
+        <br>
+        <span class = "is-size-5">
+        Active Buttons
+        </span>
+        <br>
+        <a class = "button is-active">Active</a>
+        <a class = "button is-primary is-active">Active</a>
+        <a class = "button is-link is-active">Active</a>
+        <br>
+        <br>
+        <span class = "is-size-5">
+        Loading buttons
+        </span>
+        <br>
+        <br>
+        <a class = "button is-loading">Loading</a>
+        <a class = "button is-primary is-loading">Loading</a>
+        <a class = "button is-link is-loading">Loading</a>
+        <br>
+        <br>
+        <span class = "is-size-5">
+        Disabled buttons
+        </span>
+        <br>
+        <br>
+        <a class = "button" title = "Disabled button" disabled>Disabled</a>
+        <a class = "button is-primary" title = "Disabled button" disabled>Disabled</a>
+        <a class = "button is-link" title = "Disabled button" disabled>Disabled</a>
+        <br>
+        <br>
+        <span class = "is-size-5">
+        Buttons with Icons
+        </span>
+        <br>
+        <br>
+        <p class = "buttons">
+          <a class = "button is-primary">
+          <span class = "icon">
+          <i class = "fab fa-youtube"></i>
+          </span>
+          <span>Youtube</span>
+          </a>
+          <a class = "button is-success">
+          <span class = "icon is-small">
+          <i class = "fas fa-bookmark"></i>
+          </span>
+          <span>Bookmark</span>
+          </a>
+          <a class = "button is-danger is-outlined">
+          <span>Delete</span>
+          <span class = "icon is-small">
+          <i class = "fas fa-trash"></i>
+          </span>
+          </a>
+        </p>
+        <span class = "is-size-5">
+        Buttons group with addons
+        </span>
+        <br>
+        <br>
+        <div class = "field has-addons">
+          <p class = "control">
+            <a class = "button">
+            <span class = "icon is-small">
+            <i class = "fas fa-bold"></i>
+            </span>
+            <span>Bold</span>
+            </a>
+          </p>
+          <p class = "control">
+            <a class = "button">
+            <span class = "icon is-small">
+            <i class = "fas fa-italic"></i>
+            </span>
+            <span>Italic</span>
+            </a>
+          </p>
+          <p class = "control">
+            <a class = "button">
+            <span class = "icon is-small">
+            <i class = "fas fa-underline"></i>
+            </span>
+            <span>Underline</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

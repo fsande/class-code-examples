@@ -1,0 +1,116 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div class="tabs is-centered">
+    <ul>
+      <li id="all-tab" class="is-active">
+        <a onClick="switchToAll()">
+        <span class="icon is-small"><i class="fa fa-html5"></i></span>
+        <span>All</span>
+      </a>
+      </li>
+      <li id="adaptivedesign-tab">
+        <a onClick="switchToAdaptiveDesign()">
+        <span class="icon is-small"><i class="fa fa-tablet"></i></span>
+        <span>Adaptive design</span>
+      </a>
+      </li>
+      <li id="jquery-tab">
+        <a onClick="switchToJquery()">
+        <span class="icon is-small"><i class="fa fa-file-code-o"></i></span>
+        <span>jQuery</span>
+      </a>
+      </li>
+      <li id="ajax-tab">
+        <a onClick="switchToAjax()">
+        <span class="icon is-small"><i class="fa fa-cog"></i></span>
+        <span>AJAX</span>
+      </a>
+      </li>
+      <li id="angularjs-tab">
+        <a onClick="switchToAngularJS()">
+        <span class="icon is-small"><i class="fa fa-file-text-o"></i></span>
+        <span>AngularJS</span>
+      </a>
+      </li>
+    </ul>
+    <!--/tabs is-centered-->
+  </div>
+
+  <div class="container">
+    <div id="all-tab-content">
+      <h1 class="title is-1" style="text-align:center;">Here will be the contents of the "All" tab</h1>
+    </div>
+    <div class="is-hidden" id="adaptivedesign-tab-content">
+      <h1 class="title is-1" style="text-align:center;">Here will be the contents of the "Adaptive Design" tab</h1>
+    </div>
+    <div class="is-hidden" id="jquery-tab-content">
+      <h1 class="title is-1" style="text-align:center;">Here will be the contents of the "jQuery" tab</h1>
+    </div>
+    <div class="is-hidden" id="ajax-tab-content">
+      <h1 class="title is-1" style="text-align:center;">Here will be the contents of the "AJAX" tab</h1>
+    </div>
+    <div class="is-hidden" id="angularjs-tab-content">
+      <h1 class="title is-1" style="text-align:center;">Here will be the contents of the "AngularJS" tab</h1>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    function switchToAll() {
+      removeActive();
+      hideAll();
+      $("#all-tab").addClass("is-active");
+      $("#all-tab-content").removeClass("is-hidden");
+    }
+
+    function switchToAdaptiveDesign() {
+      removeActive();
+      hideAll();
+      $("#adaptivedesign-tab").addClass("is-active");
+      $("#adaptivedesign-tab-content").removeClass("is-hidden");
+    }
+
+    function switchToJquery() {
+      removeActive();
+      hideAll();
+      $("#jquery-tab").addClass("is-active");
+      $("#jquery-tab-content").removeClass("is-hidden");
+    }
+
+    function switchToAjax() {
+      removeActive();
+      hideAll();
+      $("#ajax-tab").addClass("is-active");
+      $("#ajax-tab-content").removeClass("is-hidden");
+    }
+
+    function switchToAngularJS() {
+      removeActive();
+      hideAll();
+      $("#angularjs-tab").addClass("is-active");
+      $("#angularjs-tab-content").removeClass("is-hidden");
+    }
+
+    function removeActive() {
+      $("li").each(function() {
+        $(this).removeClass("is-active");
+      });
+    }
+
+    function hideAll(){
+      $("#all-tab-content").addClass("is-hidden");
+      $("#adaptivedesign-tab-content").addClass("is-hidden");
+      $("#jquery-tab-content").addClass("is-hidden");
+      $("#ajax-tab-content").addClass("is-hidden");
+      $("#angularjs-tab-content").addClass("is-hidden");
+    }
+  </script>
+</body>
+
+</html>

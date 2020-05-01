@@ -1,0 +1,87 @@
+<!--  
+  Universidad de La Laguna
+  Escuela Superior de Ingeniería y Tecnología
+  Grado en Ingeniería Informática
+  Programación de Aplicaciones Interactivas
+  
+  @author F. de Sande
+  @since 30.apr.2020
+  @desc GUI. Bulma. Buttons styles
+  Different types of styles using classes such as is-outlined, is-inverted, is-rounded along with color modifiers of buttons
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <!-- If you want to use icons with Bulma, don't forget to include Font Awesome 5: -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>Buttons styles</title>
+  </head>
+  <body>
+    <section class = "section">
+      <div class = "container">
+        <span class = "title">
+        Buttons Styles
+        </span>
+        <br>
+        <br>
+        <span class = "is-size-5">
+        Outlined Buttons
+        </span>
+        <br>
+        <a class = "button is-outlined">Outlined</a>
+        <a class = "button is-primary is-outlined">Outlined</a>
+        <a class = "button is-link is-outlined">Outlined</a>
+        <a class = "button is-info is-outlined">Outlined</a>
+        <a class = "button is-success is-outlined">Outlined</a>
+        <a class = "button is-danger is-outlined">Outlined</a>
+        <br>
+        <br>
+        <span class = "is-size-5">
+        Inverted Buttons (text color becomes background color, and vice-versa)
+        </span>
+        <br>
+        <div class = "columns">
+          <div class = "column is-narrow ">
+            <div class = "box has-background-info" >
+              <a class = "button is-primary is-inverted">Inverted</a>
+              <a class = "button is-link is-inverted">Inverted</a>
+              <a class = "button is-info is-inverted">Inverted</a>
+              <a class = "button is-success is-inverted">Inverted</a>
+              <a class = "button is-danger is-inverted">Inverted</a>
+            </div>
+          </div>
+        </div>
+        <span class = "is-size-5">
+        Inverted Outlined Buttons (
+        invert color becomes the text and border colors)
+        </span>
+        <br>
+        <div class = "columns">
+          <div class = "column is-narrow ">
+            <div class = "box has-background-info" >
+              <a class = "button is-primary is-inverted is-outlined">Invert Outlined</a>
+              <a class = "button is-link is-inverted is-outlined">Invert Outlined</a>
+              <a class = "button is-info is-inverted is-outlined">Invert Outlined</a>
+              <a class = "button is-success is-inverted is-outlined">Invert Outlined</a>
+              <a class = "button is-danger is-inverted is-outlined">Invert Outlined</a>
+            </div>
+          </div>
+        </div>
+        <span class = "is-size-5">
+        Rounded buttons
+        </span>
+        <br>
+        <br>
+        <a class = "button is-rounded">Rounded</a>
+        <a class = "button is-primary is-rounded">Rounded</a>
+        <a class = "button is-link is-rounded">Rounded</a>
+        <a class = "button is-info is-rounded">Rounded</a>
+        <a class = "button is-success is-rounded">Rounded</a>
+        <a class = "button is-danger is-rounded">Rounded</a>
+      </div>
+    </section>
+  </body>
+</html>
