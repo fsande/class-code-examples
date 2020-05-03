@@ -13,7 +13,7 @@
 "use strict";
 
 function onClick() { 
-  console.log('clicked');
+  console.log('Executing the event listener: Button has been clicked');
 }
 
 const BUTTON = document.querySelector('button');
