@@ -29,8 +29,8 @@ function onResetClick() {
 
 const outer = document.querySelector('#outer');
 const inner = document.querySelector('#inner');
-outer.addEventListener('click', onOuterClick, { capture: true });
-inner.addEventListener('click', onInnerClick, { capture: true });
+outer.addEventListener('click', onOuterClick, { capture: true});
+inner.addEventListener('click', onInnerClick, { capture: true});
 
 const reset = document.querySelector('button');
 reset.addEventListener('click', onResetClick);

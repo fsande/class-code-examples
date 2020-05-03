@@ -6,7 +6,11 @@
  *
  * @author F. de Sande
  * @since 24.apr.2020
- * @desc JS Events and descendants<
+ * @desc JS Events and descendants
+ * If you click on the <img>, will the toggleVisibility function fire?   
+ * Yes, a click event set on an element will fire if you click on a child of that element
+ * If you put a click event listener on the div, and the user clicks on the img inside 
+ * that div, then the event listener will still fire
  */
 
 "use strict";

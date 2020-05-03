@@ -18,9 +18,11 @@ const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle
 function onClick(event) {
   // Get the element that was clicked
   const element = event.target;
+
   // Create an <img> tag with the X img src
   const image = document.createElement('img');
   image.src = X_IMAGE_URL;
+
   // Append that <img> tag to the element
   element.appendChild(image);
 }

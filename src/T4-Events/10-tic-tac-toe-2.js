@@ -27,7 +27,7 @@ function computerChooseO() {
   const allBoxes  = document.querySelectorAll('#grid div');
   const freeBoxes = [];
   for (const box of allBoxes) {
-    let imageChild = box.querySelector('img');
+    let imageChild = box.querySelector('img');   // Identify boxes without an img inside
     if (!imageChild) {
       freeBoxes.push(box);
     }
@@ -37,7 +37,7 @@ function computerChooseO() {
   const image = document.createElement('img');
   image.src = O_IMAGE_URL;
   freeSpace.removeEventListener('click', changeToX);
-  freeSpace.appendChild(image);
+  freeSpace.appendChild(image);									// Include an 'O' Image in the empty box
 }
 
 const boxes = document.querySelectorAll('#grid div');
