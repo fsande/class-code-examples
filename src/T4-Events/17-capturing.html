@@ -4,9 +4,9 @@
 	 Grado en Ingeniería Informática
 	 Programación de Aplicaciones Interactivas
 
-   @author       F. de Sande
+   @author F. de Sande
    @since 24.apr.2020
-	 @desc Present Example. Events
+	 @desc Events. JS Events. Capturing
 -->
 
 <!DOCTYPE html>
@@ -14,12 +14,21 @@
   <head>
     <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel=stylesheet href="05-present-example.css">
-		<script defer async src="05-present-example.js"> </script>
-    <title>PAI - Present Example</title>
+	  <link rel=stylesheet href="17-capturing.css">
+		<script defer async   src="17-capturing.js"> </script>
+    <title>PAI - Capturing </title>
   </head>
   <body>
-    <h1>Click for a present:</h1>
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png" />
+	  <h1>Capturing</h1>
+    <div id="outer">
+      Click me!
+      <div id="inner">
+        No, click me!
+      </div>
+    </div>
+    <button>Reset</button>
   </body>
 </html>
+
+
+
