@@ -4,4 +4,3 @@ clean:
 	git add . 
 	git commit -m "Minor fixings" 
 	git push
-
