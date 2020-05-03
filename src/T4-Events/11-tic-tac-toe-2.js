@@ -9,7 +9,7 @@
  * @desc Tic Tac Toe Example. Step 2. Better(?) approach: Global Variable
  */
 
-"use strict"
+"use strict";
 
 const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
 const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';

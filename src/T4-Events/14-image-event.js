@@ -9,7 +9,7 @@
  * @desc JS Events and descendants<
  */
 
-"use strict"
+"use strict";
 
 const RIGHT_ARROW = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/forward-arrow.png';
 const DOWN_ARROW = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/down-arrow.png';
