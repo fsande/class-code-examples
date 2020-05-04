@@ -27,7 +27,7 @@ function onClick(event) {
   element.appendChild(image);
 }
 
-const gridItems = document.querySelector('#grid div');
+const gridItems = document.querySelectorAll('#grid div');
 for (const item of gridItems) {
   item.addEventListener('click', onClick);
 }

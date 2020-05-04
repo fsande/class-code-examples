@@ -18,7 +18,7 @@ function changeToX(event) {
   const container = event.currentTarget;
   const image = document.createElement('img');
   image.src = X_IMAGE_URL;
-  container.appendChild(image);
+  container.appendChild(image);    // We add the image child to the div X-clicked element
   container.removeEventListener('click', changeToX);
 }
 
