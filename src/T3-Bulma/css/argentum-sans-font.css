@@ -1,0 +1,13 @@
+/**
+    This font is from:
+    https://www.1001fonts.com/argentum-sans-font.html
+*/
+
+@font-face {
+  font-family: "My Custom Font";
+  src: url("../../../fonts/ArgentumSans-Regular.ttf");
+}
+
+body {
+  font-family: "ArgentumSans Regular", serif;
+}

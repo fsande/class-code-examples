@@ -19,9 +19,9 @@ $custom-colors: ("ull-purple": ($ull-purple, $ull-purple-invert));
 $family-sans-serif: "Nunito", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
-$primary: $purple;
+// $primary: $purple;
 // We update primary to red
-// $primary: red;                  
+$primary: red;                  
 $link: $pink;
 $widescreen-enabled: false;
 $fullhd-enabled: false;

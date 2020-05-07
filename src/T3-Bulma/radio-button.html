@@ -1,0 +1,78 @@
+<!--  
+  Universidad de La Laguna
+  Escuela Superior de Ingeniería y Tecnología
+  Grado en Ingeniería Informática
+  Programación de Aplicaciones Interactivas
+  
+  @author F. de Sande
+  @since 7.may.2020
+  @desc GUI. Bulma. Form. Radio Button
+  @see {https://bulma.io/documentation/form/radio/}
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <!-- If you want to use icons with Bulma, don't forget to include Font Awesome 5: -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>Checkbox</title>
+  </head>
+	<body>
+	<section class = "section">
+         <div class = "container">
+            <span class = "title">
+               Radio Button
+            </span>
+            <br>
+            <br>
+
+            <div class = "checkbox">
+               <label class = "is-size-5">Subjects</label>
+               <br>
+
+               <label class = "radio">
+                  <input type = "radio" name = "fruitdemo">
+                  Programación de Aplicaciones Interactivas
+               </label>
+               <label class = "radio">
+                  <input type = "radio" name = "fruitdemo">
+                  Procesadores de Lenguajes
+               </label>
+            </div>
+            <br>
+            <br>
+
+            <label class = "is-size-5">Disabled Radio Button</label>
+            <br>
+
+            <label class = "radio">
+               <input type = "radio" name = "fruitdemo">
+               Inteligencia Artificial Avanzada
+            </label>
+            <label class = "radio" disabled>
+               <input type = "radio" name = "fruitdemo" disabled>
+               Diseño y Análisis de Algoritmos
+            </label>
+            <br>
+            <br>
+
+            <label class = "is-size-5">Using checked HTML attribute</label>
+            <br>
+
+            <label class = "radio">
+               <input type = "radio" name = "fruitdemo" checked>
+               Programación de Aplicaciones Interactivas
+            </label>
+            <label class = "radio">
+               <input type = "radio" name = "fruitdemo">
+               Inteligencia Artificial Avanzada
+            </label>
+
+         </div>
+      </section>
+  </body>
+</html>
+</body>
+</html>
