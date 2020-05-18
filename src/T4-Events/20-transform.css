@@ -1,0 +1,25 @@
+#examples > div {
+  border: 2px solid black;
+  margin: 5px;
+  padding: 10px;
+}
+
+.translate-x {
+  transform: translateX(30px);
+}
+
+.translate-y {
+  transform: translateY(-30px);
+}
+
+.translate-xy {
+  transform: translate(10px, 10px);
+}
+
+.rotate {
+  transform: rotate(5deg); 
+}
+
+.translate-rotate {
+  transform: translateY(-15px) rotate(-5deg);
+}
