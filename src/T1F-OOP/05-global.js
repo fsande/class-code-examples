@@ -4,12 +4,14 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
+ * @author F. de Sande
  * @since 20.feb.2020
  * @desc The global object
  */
 
 // console.log(global);
+
+"use strict";
 
 function makeMessage() {
 	// oops, forgot const / let   ... I'm a global!

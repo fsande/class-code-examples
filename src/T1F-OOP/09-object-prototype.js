@@ -4,12 +4,12 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
+ * @author F. de Sande
  * @since 20.feb.2020
  * @desc Object Prototype
  */
 
-"use strict"
+"use strict";
 
 console.log(Object.getPrototypeOf({}) == Object.prototype);					// → true
 console.log(Object.getPrototypeOf(Object.prototype));  							// → null

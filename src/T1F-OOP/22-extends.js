@@ -4,13 +4,13 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
+ * @author F. de Sande
  * @since 20.feb.2020
  * @desc The extends keyword
  * @tutorial {@link https://javascript.info/class-inheritance#the-extends-keyword}
  */
 
-"use strict"
+"use strict";
 
 class Animal {
   constructor(name) {

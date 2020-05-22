@@ -4,14 +4,14 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
+ * @author F. de Sande
  * @since 20.feb.2020
  * @desc Private and protected properties and methods
  * @tutorial {@link https://javascript.info/private-protected-properties-methods#private-waterlimit}
  *           {@link https://stackoverflow.com/questions/22156326/private-properties-in-javascript-es6-classes}
  */
 
-"use strict"
+"use strict";
 
 /**
  * NOTE: Private fields (and methods) are being implemented in the ECMA standard. 
@@ -24,7 +24,6 @@ class CoffeeMachine {
     if (value < 0) throw new Error("Negative water");
     if (value > this.#waterLimit) throw new Error("Too much water");
   }
-
 }
 
 let coffeeMachine = new CoffeeMachine();

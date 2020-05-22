@@ -4,13 +4,13 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
+ * @author F. de Sande
  * @since 20.feb.2020
  * @desc Private and protected properties and methods
  * @tutorial {@link https://javascript.info/private-protected-properties-methods#read-only-power}
  */
 
-"use strict"
+"use strict";
 
 /**
  * NOTE: waterAmount has been moved into the constructor to work on NodeJS

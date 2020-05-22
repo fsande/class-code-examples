@@ -4,10 +4,12 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
+ * @author F. de Sande
  * @since 20.feb.2020
  * @desc Adding a method to an object
  */
+
+use strict;
 
 let person = {};
 

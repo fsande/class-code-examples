@@ -4,13 +4,13 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
+ * @author F. de Sande
  * @since 20.feb.2020
  * @desc Object accessors
  * @tutorial {@link https://javascript.info/property-accessors}
  */
 
-"use strict"
+"use strict";
 
 /**
  * fullName is a new property implemented through a getter

@@ -16,7 +16,6 @@
 
 "use strict";
 
-
 /**
   * @description MDN: When a function is used as an event handler, 
 	*              its this is set to the element on which the listener is placed 

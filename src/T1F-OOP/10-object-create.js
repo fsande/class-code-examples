@@ -4,12 +4,12 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
+ * @author F. de Sande
  * @since 20.feb.2020
  * @desc Object.create first example
  */
 
-"use strict"
+"use strict";
 
 // our "template" object
 let protoWerewolf = {

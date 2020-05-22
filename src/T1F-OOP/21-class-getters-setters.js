@@ -4,13 +4,13 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
+ * @author F. de Sande
  * @since 20.feb.2020
  * @desc Class Getters & Setters
  * @tutorial {@link https://javascript.info/class#getters-setters-other-shorthands}
  */
 
-"use strict"
+"use strict";
 
 /**
  * Getters/setters can be used as wrappers over “real” property values to gain more control over operations with them

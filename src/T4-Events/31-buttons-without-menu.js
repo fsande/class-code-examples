@@ -11,7 +11,6 @@
 
 "use strict";
 
-
 /**
  * @class
  * @description Class for the objects buttons to be placed in tha page
@@ -19,8 +18,8 @@
 class Button {
   /**
    * @description Sets up a button object placing it in the page (DOM)
-   * @param {Element} containerElement The DOM element that will host the button
-   * @param {String} text Button text
+   * @param {Element} containerElement - The DOM element that will host the button
+   * @param {String} text - Button text
    */
   constructor(containerElement, text) {
     this.containerElement = containerElement;

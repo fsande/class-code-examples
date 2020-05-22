@@ -4,12 +4,13 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
+ * @author F. de Sande
  * @since 20.feb.2020
  * @desc class properties
  */
 
-// "use strict"
+"use strict";
+
 /**
  * The property name is not placed into User.prototype. 
  * Instead, it is created by new before calling the constructor, it’s a property of the object itself.

@@ -1,0 +1,81 @@
+<!--  
+  Universidad de La Laguna
+  Escuela Superior de Ingeniería y Tecnología
+  Grado en Ingeniería Informática
+  Programación de Aplicaciones Interactivas
+  
+  @author F. de Sande
+  @since 5.may.2020
+  @desc GUI. Bulma Variables. SASS
+  @see {@link https://bulma.io/documentation/customize/with-node-sass/}
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Testing Bulma Customization Variables</title>
+    <!-- If you want to use icons with Bulma, don't forget to include Font Awesome 5: 
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+		-->
+    <link rel="stylesheet" href="vendors/bulma/css/bulma.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <h1 class="title">
+      A Bulma example to test customization
+    </h1>
+
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Customizing Bulma using Variables
+      </h1>
+      <h2 class="subtitle">
+        Hero subtitle
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+    <p class="subtitle">
+      Bulma is a Modern CSS framework based on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
+			</br>
+      In this page you can find the <a href="https://www.ull.es/portal/marca/manual-identidad-corporativa/">Corporate Brand Guidelines</a>.
+			There you can find the official <a href="https://www.ull.es/portal/marca/color/">colors</a>
+			and <a href="https://www.ull.es/portal/marca/tipografia/">font</a>
+			</br>
+      The official font for the ULL brand is <a href="https://fonts.google.com/specimen/Montserrat?query=Montserrat">Montserrat</a>
+    </p>
+    <p class="subtitle">
+		Step 9: Now for the most important part of all; customizing! Your sass should be watching for changes in public/styles/main.scss, so let’s go make some. The way it is currently setup, bulma defaults are active in your html, but can be overwritten above @import ‘../vendors/bulma/bulma.sass’; in main.scss. Any other styling you want to do with Bulma’s initial-variables can be done below the import. Try typing $primary: red; in your main.scss file. After a moment (for sass to compile it), it should turn the turquoise header to standard CSS red
+		</br>
+    Argentum Sans is an evolution of the <a href="https://fonts.google.com/specimen/Montserrat?query=Montserrat">Montserrat</a>
+		typography, so for Google documents Montserrat can be used as equivalent.
+    </p>
+    <div class="field">
+      <div class="control">
+        <input class="input" type="text" placeholder="Input">
+      </div>
+    </div>
+    <div class="field">
+      <p class="control">
+        <span class="select">
+          <select>
+            <option>Select dropdown</option>
+          </select>
+        </span>
+      </p>
+    </div>
+    <div class="buttons">
+      <a class="button is-primary">Primary</a>
+      <a class="button is-link">Link</a>
+      <a class="button is-ull-purple">ULL button</a>
+    </div>
+  </body>
+</html>
