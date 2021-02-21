@@ -13,29 +13,29 @@
   */
 
 console.log(0 || 5);          // 5
-console.log("hello" || 5);    // hello
-console.log(true && "what");  // what
+console.log('hello' || 5);    // hello
+console.log(true && 'what');  // what
 if (0 || 5) {
-  console.log("Sí");
+  console.log('Sí');
 }
 
-if ("hello" || 5) {
-  console.log("Sí");
+if ('hello' || 5) {
+  console.log('Sí');
 }
 
-if (true && "what") {
-  console.log("Sí");
+if (true && 'what') {
+  console.log('Sí');
 }
 
 // 0, NaN, empty string (""), and undefined/null are false
 // Other values are true-ish
 
-if("this string says false, but...!?") {
-  console.log("in here!");
+if('this string says false, but...!?') {
+  console.log('in here!');
 }
 
 // no output
-let myString = "";
+let myString = '';
 
 if(myString) {
   console.log("you shouldn't see me!");

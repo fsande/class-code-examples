@@ -8,7 +8,7 @@
   * @since 04.feb.2020
 	* @desc JS Hello World using console
 	*
-  * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#As_a_DOM_event_handler}
+  * @see {@link https://www.programiz.com/javascript/examples/hello-world}
   */
 
 /*

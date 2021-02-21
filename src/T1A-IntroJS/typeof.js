@@ -11,7 +11,7 @@
   * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof}
   */
 
-typeof 317.0
+// typeof 317.0
 
 console.log(typeof undefined);
 console.log(typeof null);
