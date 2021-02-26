@@ -10,19 +10,19 @@
 	*
   */
 
-let x = "hi!";         // hello... I'm a global variable
+let myVar = "hi!";         // hello... I'm a global variable
 
-let f = function() {
-	let x = "from f";
+let func1 = function() {
+	let myVar = "from func1";
 };
 
-let g = function() {
-	x = "from g";
+let func2 = function() {
+	myVar = "from func2";
 };
 
-console.log(x)
-f();
-console.log(x);
-g();
-console.log(x);
+console.log(myVar)
+func1();
+console.log(myVar);
+func2();
+console.log(myVar);
 

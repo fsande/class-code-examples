@@ -18,7 +18,6 @@ function printMessage(message, times) {
   }
   console.log('Value of i is ' + i);
 }
-printMessage('hello', 3);
 
 function meaningless() {
   var x = 10;
@@ -28,5 +27,6 @@ function meaningless() {
 	console.log('y is ' + y);
 }
 
+printMessage('hello', 3);
 meaningless();
 console.log('y is ' + y);

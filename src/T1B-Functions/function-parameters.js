@@ -6,7 +6,7 @@
   *
   * @author F. de Sande
   * @since 16.ene.2020
-	* @desc Understanding let
+	* @desc Function Parameters
 	*
   * Function parameters are not declared with var, let, or const
   */
