@@ -13,7 +13,6 @@
   */
 
 let gimmeFunction = function() {
-
   let a = "I'm in here!";
 
   return function() {

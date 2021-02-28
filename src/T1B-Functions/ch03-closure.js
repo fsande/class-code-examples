@@ -16,7 +16,7 @@
  * When called, the function body sees the environment in which it was created, 
  * not the environment in which it is called.
  * 
- * En el ejemplo, se llama multiplier y se crea un entorno en el que su parámetro factor está vinculado a 2. 
+ * En el segundo ejemplo, se llama multiplier y se crea un entorno en el que su parámetro factor está vinculado a 2. 
  * El valor de la función que devuelve, que se almacena en 'twice', recuerda este entorno. 
  * Así que cuando se llama así, multiplica su argumento por 2.
  */

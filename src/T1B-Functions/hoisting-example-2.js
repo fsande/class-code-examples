@@ -24,5 +24,3 @@ console.log(f);
 f = function(x) {
   console.log("hello " + x);
 }
-
-
