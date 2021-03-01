@@ -11,10 +11,11 @@
   * Function parameters are not declared with var, let, or const
   */
 
- function printMessage(message, times) {
-  for (let i = 0; i < times; i++) {
-    console.log(message);
-  }
-  console.log('Value of i is ' + i);
+function printMessage(message, times) {
+ for (let i = 0; i < times; i++) {
+   console.log(message);
+ }
+ console.log('Value of i is ' + i);
 }
+
 printMessage('hello', 3);
