@@ -11,6 +11,8 @@
   * Function parameters are not declared with var, let, or const
   */
 
+"use strict";
+
 function printMessage(message, times) {
  for (let i = 0; i < times; i++) {
    console.log(message);

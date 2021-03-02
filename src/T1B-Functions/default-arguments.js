@@ -11,6 +11,8 @@
   * We can use the = operator to give a default value for the parameter it it is missing:
   */
 
+"use strict";
+
 function greetTheWorld(greeting) {
 	console.log((greeting || "Hello") + " world!");
 }

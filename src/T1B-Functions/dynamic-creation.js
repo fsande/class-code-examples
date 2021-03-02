@@ -13,6 +13,8 @@
   * @see {@link https://javascript.info/arrow-functions-basics}
   */
 
+"use strict";
+
 let readlineSync = require('/home/fsande/.node_modules_global/lib/node_modules/readline-sync/');
 
 let age = readlineSync.question('What is your age? ');

@@ -19,6 +19,8 @@
   * @see {@link https://javascript.info/function-basics}
   */
 
+"use strict";
+
 function changeStuff(param1, param2, param3) {
   param1 = param1 * 10;
   param2.item = "changed";

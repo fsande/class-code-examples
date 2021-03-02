@@ -13,6 +13,8 @@
   * Note the initialization is executed in the place where it occurs… consequently, num is undefined
   */
 
+"use strict";
+
 var num = 1000;
 f();
 
@@ -20,4 +22,3 @@ function f(){
 	console.log(num);
 	var num = 5;
 };
-

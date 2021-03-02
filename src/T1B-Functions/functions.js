@@ -10,6 +10,8 @@
 	*
   */
 
+"use strict";
+
 let readlineSync = require('/home/fsande/.node_modules_global/lib/node_modules/readline-sync/');
 
 const square = function(x) {
@@ -29,7 +31,7 @@ const power = (base, exponent) => {
 };
 
 
-number = readlineSync.question('Introduce a number: ');
+let number = readlineSync.question('Introduce a number: ');
 console.log(square(10));
 makeNoise();
 console.log(power(2, 10));

@@ -10,6 +10,8 @@
 	*
   */
 
+"use strict";
+
 let x = 1;
 function f() {
   let x = 2;
@@ -22,4 +24,3 @@ function f() {
 }
 f();
 console.log(x);
-

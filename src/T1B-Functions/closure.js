@@ -12,6 +12,8 @@
 	*
   */
 
+"use strict";
+
 let gimmeFunction = function() {
   let myVar = "I'm in here!";
 

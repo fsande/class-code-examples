@@ -10,6 +10,8 @@
 	*
   */
 
+"use strict";
+
 let myVar = "hi!";         // hello... I'm a global variable
 
 let func1 = function() {

@@ -10,6 +10,8 @@
 	*
   */
 
+"use strict";
+
 function outer() {
   inner();
   function inner() {

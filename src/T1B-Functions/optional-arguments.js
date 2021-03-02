@@ -10,6 +10,8 @@
 	*
   */
 
+"use strict";
+
 function f(a, b) {
   console.log(a, b);
 }
