@@ -23,4 +23,4 @@ let bag = {
   [fruit + 'Computers']: 5, // the name of the property is taken from the variable fruit
 };
 
-console.log(bag.appleComputers); 
+console.log(bag.apple); 
