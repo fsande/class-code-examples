@@ -23,12 +23,12 @@ function sayHello() {
   console.log('Ice Bear says hello');
 }
 
-const bird = {
+let bird = {
   name: 'mockingbird',
   hobbies: ['flying', 'cooking', 'singing'],
 };
 
-const bear = {
+let bear = {
   name: 'Ice Bear',
   hobbies: ['knitting', 'cooking', 'dancing'],
   greeting: sayHello

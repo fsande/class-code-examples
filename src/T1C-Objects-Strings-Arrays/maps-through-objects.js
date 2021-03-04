@@ -10,12 +10,12 @@
 	*
   */
 
-const SCORES = {
+let scores = {
   peach: 100,
   mario: 88,
   luigi: 91
 };
-SCORES.toad = 72;
+scores.toad = 72;
 let name = 'wario';
-SCORES[name] = 102;
-console.log(SCORES);   // → 100
+scores[name] = 102;
+console.log(scores);   // → 100

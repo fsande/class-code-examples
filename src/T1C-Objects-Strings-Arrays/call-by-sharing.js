@@ -11,11 +11,11 @@
   * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#As_a_DOM_event_handler}
   */
 
-let p = {'x':5, 'y':3}; 
+let point = {'x':5, 'y':3}; 
 let changePoint = function(point, distance) {
   point.x = 0;
   console.log('in function:', point);
 };
-changePoint(p);
-console.log('outside', p);
 
+changePoint(point);
+console.log('outside', point);

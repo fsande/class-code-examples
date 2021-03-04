@@ -15,7 +15,7 @@ let myString = "I'm not really an object";
 myString.message = "prove it!"
 console.log(myString.message);
 
-let a = [];
-a[0] = 'ok'
-a[4] = 'where are the previous elements?'
-console.log(a);    // → 
+let myArray = [];
+myArray[0] = 'ok'
+myArray[4] = 'where are the previous elements?'
+console.log(myArray);    // → 
