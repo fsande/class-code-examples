@@ -10,6 +10,9 @@
 	*
   */
 
+
+'use strict';
+
 let scores = {
   peach: 100,
   mario: 88,

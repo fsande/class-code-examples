@@ -24,7 +24,7 @@
 	* Los Callbacks son un modo de asegurarse de que cierto código no se ejecuta hasta que otro código haya terminado de ejecutarse.
   */
 
-"use strict";
+'use strict';
 
 function first(){
   // Simular retardo

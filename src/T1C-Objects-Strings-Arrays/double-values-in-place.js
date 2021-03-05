@@ -10,6 +10,8 @@
 	*
   */
 
+'use strict';
+
 let numbers = [1, 2, 3];
 let doubleValuesInPlace = function(arr) {
 	for(let i = 0; i < arr.length; i++) {

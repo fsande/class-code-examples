@@ -10,6 +10,8 @@
 	*
   */
 
+'use strict';
+
 let a = [2, 4, 6, 8, 10, 12];
 console.log(a.splice(2));
 console.log(a);

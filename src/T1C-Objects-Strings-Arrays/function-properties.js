@@ -13,6 +13,8 @@
 	*       Function objects also have a call method, which invokes the underlying executable code associated with this function object
   */
 
+'use strict';
+
 const greeting = function() {
   console.log('hello, world');
 };

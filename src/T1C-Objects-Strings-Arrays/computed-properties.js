@@ -13,7 +13,7 @@
   * @see {@link https://javascript.info/arrow-functions-basics}
   */
 
-"use strict";
+'use strict';
 
 const readlineSync = require('/home/fsande/.node_modules_global/lib/node_modules/readline-sync/');
 

@@ -11,6 +11,8 @@
   * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#As_a_DOM_event_handler}
   */
 
+'use strict';
+
 let point = {'x':5, 'y':3}; 
 let changePoint = function(point, distance) {
   point.x = 0;

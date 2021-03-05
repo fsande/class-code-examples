@@ -17,7 +17,7 @@
   *
   */
 
-"use strict";
+'use strict';
 
 function sayHello() {
   console.log('Ice Bear says hello');

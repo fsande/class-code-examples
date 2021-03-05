@@ -10,6 +10,8 @@
 	*
   */
 
+'use strict';
+
 let a = [2, 4, 6, 8];
 console.log(a.slice());
 console.log(a.slice(1));

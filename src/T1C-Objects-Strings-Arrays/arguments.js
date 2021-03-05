@@ -12,6 +12,8 @@
 	* along with its defined parameters (and this, but we'll talk about that later)
   */
 
+'use strict';
+
 let f = function() {
   // btw... ok - I get the funny coercion rules now
   console.log("number of args " + arguments.length);
@@ -20,4 +22,5 @@ let f = function() {
     console.log(arguments[i]);
   }
 };
+
 f(1, 2, 3);

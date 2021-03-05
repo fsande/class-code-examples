@@ -24,6 +24,8 @@
   *
   */
 
+'use strict';
+
 let reverseArray = paramArray => {
   let localArray = [];
 

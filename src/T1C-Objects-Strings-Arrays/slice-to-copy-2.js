@@ -10,6 +10,8 @@
 	*
   */
 
+'use strict';
+
 let a = [{}, 2, 3];
 let b = a.slice();
 b[0].tricky = 'yup, same object';

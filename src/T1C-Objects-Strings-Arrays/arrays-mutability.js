@@ -11,6 +11,8 @@
   * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#As_a_DOM_event_handler}
   */
 
+'use strict';
+
 let a = [1, 2, 3];
 let b = a;
 a.push(4);

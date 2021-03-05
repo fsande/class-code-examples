@@ -10,6 +10,7 @@
 	*
   */
 
+'use strict';
 
 let myString = "I'm not really an object";
 myString.message = "prove it!"
