@@ -1,0 +1,1 @@
+console.log(myArray.splice(2, 2, 1, 1));  // →  [ 6, 8 ]
