@@ -9,7 +9,7 @@
  * @desc Constructors
  */
 
-"use strict";
+'use strict';
 
 /** 
  * both sadWerewolf and partyWerewolf are instances of Werewolf
@@ -18,7 +18,7 @@
  * this is the object that's returned after calling new Werewolf
  */
 function Werewolf(mood) {
-	this.mood = mood;
+  this.mood = mood;
 }
 
 let sadWerewolf = new Werewolf('sad');

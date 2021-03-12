@@ -9,7 +9,7 @@
  * @desc The this binding. In methods, this refers to the object that the method was called on
  */
 
-"use strict";
+'use strict';
 
 function speak() {
   if(this.nationality == "Japanese") {
@@ -24,5 +24,5 @@ function speak() {
 let japaneseCat = { nationality: "Japanese", speak: speak };
 let americanCat = { nationality: "American", speak: speak };
 
-japaneseCat.speak();		// →  nyan
-americanCat.speak();		// →  meow
+japaneseCat.speak();    // →  nyan
+americanCat.speak();    // →  meow

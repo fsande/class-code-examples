@@ -11,10 +11,10 @@
  * @tutorial {@link https://javascript.info/object-methods}
  */
 
-"use strict";
+'use strict';
 
 let user = {
-  firstName: "Ilya",
+  firstName: 'Ilya',
   sayHi() {
     let arrow = () => console.log(this.firstName);
     arrow();

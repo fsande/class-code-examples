@@ -9,9 +9,9 @@
  * @desc Object.create first example
  */
 
-"use strict";
+'use strict';
 
-// our "template" object
+// our 'template' object
 let protoWerewolf = {
   description: 'hairy',
   howl: function(thing) {

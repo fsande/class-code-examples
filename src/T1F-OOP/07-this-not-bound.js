@@ -10,10 +10,10 @@
  * @tutorial {@link https://javascript.info/object-methods}
  */
 
-"use strict";
+'use strict';
 
-let user = { name: "John" };
-let admin = { name: "Admin" };
+let user = {name: 'John'};
+let admin = {name: 'Admin'};
 
 function sayHi() {
   console.log( this.name );

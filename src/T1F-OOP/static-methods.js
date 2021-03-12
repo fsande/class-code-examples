@@ -21,41 +21,41 @@
  * Also, note that we are calling “mary.name” not “mary_name”. So the output is being returned from our getter.
  */
 
-"use strict";
+'use strict';
 
 class User {
   constructor(name, age, email) {
-	  this._name = name;
-		this._age = age;
-		this._email = email;
-	}
+    this._name = name;
+    this._age = age;
+    this._email = email;
+  }
 
-	increaseAge() {
-	  this._age += 1;
-	}
+  increaseAge() {
+    this._age += 1;
+  }
 
-	static staticMethod() {
-	  console.log('I am a static method');
-	}
+  static staticMethod() {
+    console.log('I am a static method');
+  }
 
-	get name() {
-	  return this._name;
-	}
+  get name() {
+    return this._name;
+  }
 
-	set name(newName) {
-	  this._name = newName;
-	}
+  set name(newName) {
+    this._name = newName;
+  }
 
-	get age() {
-	  return this._age;
-	}
+  get age() {
+    return this._age;
+  }
 }
 
 const john = new User('John', 45, 'john@ull.es');
 john.increaseAge();
 console.log('Age: ', john.age);
 User.staticMethod();
-// john.staticMethod();		// Returns Typerror since staticMethod is not a john's method
+// john.staticMethod();    // Returns Typerror since staticMethod is not a john's method
 
 const mary = new User('Mary', 25, 'mary@ull.es');
 console.log(mary.name);

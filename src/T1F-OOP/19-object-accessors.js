@@ -10,25 +10,25 @@
  * @tutorial {@link https://javascript.info/property-accessors}
  */
 
-"use strict";
+'use strict';
 
 let user = {
-  name: "John",
-  surname: "Smith",
+  name: 'John',
+  surname: 'Smith',
 
   get fullName() {
     return `${this.name} ${this.surname}`;
   },
 
   set fullName(value) {
-    [this.name, this.surname] = value.split(" ");
+    [this.name, this.surname] = value.split(' ');
   }
 };
 
-console.log(user.fullName); 		// → John Smith
-console.log(user);							// fullName property has been added 
+console.log(user.fullName);     // → John Smith
+console.log(user);              // fullName property has been added 
 // set fullName is executed with the given value.
-user.fullName = "Alice Cooper";
+user.fullName = 'Alice Cooper';
 
 console.log(user.name); // Alice
 console.log(user.surname); // Cooper

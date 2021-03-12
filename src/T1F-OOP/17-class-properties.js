@@ -9,14 +9,14 @@
  * @desc class properties
  */
 
-"use strict";
+'use strict';
 
 /**
  * The property name is not placed into User.prototype. 
  * Instead, it is created by new before calling the constructor, it’s a property of the object itself.
  */
 class User {
-  name = "Anonymous";
+  name = 'Anonymous';
 
   sayHi() {
     console.log(`Hello, ${this.name}!`);
@@ -25,5 +25,5 @@ class User {
 
 new User().sayHi();
 
-console.log(User.prototype.sayHi); 		// placed in User.prototype
-console.log(User.prototype.name); 		// undefined, not placed in User.prototype
+console.log(User.prototype.sayHi);     // placed in User.prototype
+console.log(User.prototype.name);     // undefined, not placed in User.prototype

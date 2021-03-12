@@ -10,7 +10,7 @@
  *       Node does't provide support for ES6 classes
  */
 
-"use strict";
+'use strict';
 
 class MyClass {
   a = 1;          // .a is public

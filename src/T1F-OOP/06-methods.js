@@ -9,7 +9,7 @@
  * @desc Adding a method to an object
  */
 
-use strict;
+'use strict';
 
 let person = {};
 

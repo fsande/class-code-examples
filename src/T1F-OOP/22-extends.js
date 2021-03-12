@@ -10,7 +10,7 @@
  * @tutorial {@link https://javascript.info/class-inheritance#the-extends-keyword}
  */
 
-"use strict";
+'use strict';
 
 class Animal {
   constructor(name) {
@@ -33,8 +33,8 @@ class Rabbit extends Animal {
   }
 }
 
-let animal = new Animal("My animal");
-let rabbit = new Rabbit("White Rabbit");
+let animal = new Animal('My animal');
+let rabbit = new Rabbit('White Rabbit');
 
 rabbit.run(5); // White Rabbit runs with speed 5.
 rabbit.hide(); // White Rabbit hides!

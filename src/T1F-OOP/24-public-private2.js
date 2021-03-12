@@ -10,14 +10,14 @@
  * @tutorial {@link https://javascript.info/private-protected-properties-methods#read-only-power}
  */
 
-"use strict";
+'use strict';
 
 /**
  * NOTE: waterAmount has been moved into the constructor to work on NodeJS
  */
 class CoffeeMachine {
   set waterAmount(value) {
-    if (value < 0) throw new Error("Negative amount of water");
+    if (value < 0) throw new Error('Negative amount of water');
     this._waterAmount = value;
   }
 
@@ -25,13 +25,13 @@ class CoffeeMachine {
     return this._waterAmount;
   }
 
-	get power() {
+  get power() {
     return this._power;
   }
 
   constructor(power) {
     this._power = power;
-    this.waterAmount = 0;		// Call the setter
+    this.waterAmount = 0;    // Call the setter
     console.log( `Created a coffee-machine, power: ${power}` );
   }
 
@@ -39,7 +39,7 @@ class CoffeeMachine {
 
 // Create the coffee machine
 let coffeeMachine = new CoffeeMachine(100);
-console.log(`Power is: ${coffeeMachine.power}W`); 	// Power is: 100W
+console.log(`Power is: ${coffeeMachine.power}W`);   // Power is: 100W
 
 // add water
 // coffeeMachine.waterAmount = -10; // Error: Negative water

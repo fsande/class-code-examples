@@ -10,14 +10,14 @@
  * @tutorial {@link https://javascript.info/private-protected-properties-methods#protecting-wateramount}
  */
 
-"use strict";
+'use strict';
 
 /**
  * NOTE: waterAmount has been moved into the constructor to work on NodeJS
  */
 class CoffeeMachine {
   set waterAmount(value) {
-    if (value < 0) throw new Error("Negative amount of water");
+    if (value < 0) throw new Error('Negative amount of water');
     this._waterAmount = value;
   }
 
@@ -27,7 +27,7 @@ class CoffeeMachine {
 
   constructor(power) {
     this._power = power;
-    this.waterAmount = 0;		// Call the setter
+    this.waterAmount = 0;    // Call the setter
     console.log( `Created a coffee-machine, power: ${power}` );
   }
 

@@ -10,7 +10,7 @@
  * @tutorial {@link https://javascript.info/property-accessors}
  */
 
-"use strict";
+'use strict';
 
 /**
  * fullName is a new property implemented through a getter
@@ -18,14 +18,14 @@
  * We don’t call user.fullName as a function, we read it normally: the getter runs behind the scenes
  */
 let user = {
-  name: "John",
-  surname: "Smith",
+  name: 'John',
+  surname: 'Smith',
 
   get fullName() {
     return `${this.name} ${this.surname}`;
   }
 };
 
-console.log(user.fullName); 		// → John Smith
-console.log(user);							// fullName property has been added 
-// user.fullName = "Test";         // Error (property has only a getter)
+console.log(user.fullName);     // → John Smith
+console.log(user);              // fullName property has been added 
+// user.fullName = 'Test';         // Error (property has only a getter)

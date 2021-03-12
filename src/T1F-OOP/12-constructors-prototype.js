@@ -9,10 +9,10 @@
  * @desc Constructors prototype
  */
 
-"use strict";
+'use strict';
 
 function Werewolf(mood) {
-	this.mood = mood;
+  this.mood = mood;
 }
 
 let sadWerewolf = new Werewolf('sad');
@@ -23,7 +23,7 @@ console.log(partyWerewolf.mood);               // → partying
  *  We could use a constructor's prototype to add a howl method on every instance of Werewolf
  */
 Werewolf.prototype.howl = function(thing) {
-	console.log('Werewolf howls at the ' + thing + '.');
+  console.log('Werewolf howls at the ' + thing + '.');
 }
-sadWerewolf.howl('moon');											// →  Werewolf howls at the moon.
-partyWerewolf.howl('bowl of chips');					// →  Werewolf howls at the bowl of chips.
+sadWerewolf.howl('moon');                      // →  Werewolf howls at the moon.
+partyWerewolf.howl('bowl of chips');          // →  Werewolf howls at the bowl of chips.

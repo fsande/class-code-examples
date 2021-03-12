@@ -11,16 +11,16 @@
 
 // console.log(global);
 
-"use strict";
+'use strict';
 
 function makeMessage() {
-	// oops, forgot const / let   ... I'm a global!
-	message = 'hello there';
+  // oops, forgot const / let   ... I'm a global!
+  message = 'hello there';
 }
 
 makeMessage();
-console.log(message);						// → hello there
-console.log(global.message);		// → hello there
+console.log(message);            // → hello there
+console.log(global.message);    // → hello there
 console.log(global.surprise); 
 
 obj = {};
