@@ -9,9 +9,9 @@
   * @desc Module that imports data from a JSON file
   *       Uses require with ES6 modules syntax
   *       ES6 Modules in Node >= 14 no longer have require by default.
-  * If you want to add it, put this code at the top of your file:
-  *   import { createRequire } from 'module';
-  *   const require = createRequire(import.meta.url);
+  *       If you want to add it, put this code at the top of your file:
+  *         import { createRequire } from 'module';
+  *         const require = createRequire(import.meta.url);
   *       
   * @see {@link https://nodejs.org/api/modules.html#modules_module_createrequire_filename}
   *
