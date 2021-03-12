@@ -13,6 +13,7 @@
   *         import { createRequire } from 'module';
   *         const require = createRequire(import.meta.url);
   *       
+  * @see {@link https://blog.logrocket.com/es-modules-in-node-today/}
   * @see {@link https://nodejs.org/api/modules.html#modules_module_createrequire_filename}
   *
   * Reading and Writing JSON Files with Node.js
