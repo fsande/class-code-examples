@@ -11,7 +11,7 @@
 
 // console.log(global);
 
-'use strict';
+// 'use strict';
 
 function makeMessage() {
   // oops, forgot const / let   ... I'm a global!

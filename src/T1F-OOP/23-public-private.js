@@ -18,11 +18,11 @@
 class CoffeeMachine {
   set waterAmount(value) {
     if (value < 0) throw new Error('Negative amount of water');
-    this._waterAmount = value;
+    this.waterAmount_ = value;
   }
 
   get waterAmount() {
-    return this._waterAmount;
+    return this.waterAmount_;
   }
 
   constructor(power) {

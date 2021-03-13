@@ -14,8 +14,8 @@
 
 /**
  * Getters/setters can be used as wrappers over “real” property values to gain more control over operations with them
- * The name is stored in _name property, and the access is done via getter and setter
- * Technically, external code is able to access the name directly by using user._name
+ * The name is stored in name_ property, and the access is done via getter and setter
+ * Technically, external code is able to access the name directly by using user.name_
  * But there is a widely known convention that properties starting with 
  * an underscore '_' are internal and should not be touched from outside the object
  */
@@ -23,7 +23,7 @@ const MIN_NAME_LENGHT = 4;
 
 let user = {
   get name() {
-    return this._name;
+    return this.name_;
   },
 
   set name(value) {
@@ -31,7 +31,7 @@ let user = {
       console.log('Name is too short, need at least 4 characters');
       return;
     }
-    this._name = value;
+    this.name_ = value;
   }
 };
 

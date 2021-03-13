@@ -17,18 +17,18 @@
  */
 class CoffeeMachine {
   constructor(power) {
-    this._power = power;
-    this.waterAmount = 0;    // Call the setter
+    this.power_ = power;
+    this.waterAmount_ = 0;    // Call the setter
     console.log( `Created a coffee-machine, power: ${power}` );
   }
 
   setWaterAmount(value) {
     if (value < 0) throw new Error('Negative water');
-    this._waterAmount = value;
+    this.waterAmount_ = value;
   }
 
   getWaterAmount() {
-    return this._waterAmount;
+    return this.waterAmount_;
   }
 }
 

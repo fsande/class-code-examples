@@ -14,7 +14,7 @@
 // console.log(global)
 
 function oopsGlobal() {
-  mistake = "yup";             // Declaring a variable!! use strict   !!!
+  mistake = 'yup';             // Declaring a variable!! use strict   !!!
 }
 
 oopsGlobal();

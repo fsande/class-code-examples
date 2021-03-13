@@ -12,17 +12,17 @@
 'use strict';
 
 function speak() {
-  if(this.nationality == "Japanese") {
-    console.log("nyan");
-  } else if (this.nationality == "American") {
-    console.log("meow");
+  if(this.nationality == 'Japanese') {
+    console.log('nyan');
+  } else if (this.nationality == 'American') {
+    console.log('meow');
   } else {
-    console.log("default cat noise");
+    console.log('default cat noise');
   }
 }
 
-let japaneseCat = { nationality: "Japanese", speak: speak };
-let americanCat = { nationality: "American", speak: speak };
+let japaneseCat = { nationality: 'Japanese', speak: speak };
+let americanCat = { nationality: 'American', speak: speak };
 
 japaneseCat.speak();    // →  nyan
 americanCat.speak();    // →  meow

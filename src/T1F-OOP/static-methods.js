@@ -18,20 +18,20 @@
  * 
  * The underscore in front of the properties is another example of a convention. 
  * It also prevents a stack overflow when calling our methods. 
- * Also, note that we are calling “mary.name” not “mary_name”. So the output is being returned from our getter.
+ * Also, note that we are calling “mary.name” not “maryname_”. So the output is being returned from our getter.
  */
 
 'use strict';
 
 class User {
   constructor(name, age, email) {
-    this._name = name;
-    this._age = age;
-    this._email = email;
+    this.name_ = name;
+    this.age_ = age;
+    this.email_ = email;
   }
 
   increaseAge() {
-    this._age += 1;
+    this.age_ += 1;
   }
 
   static staticMethod() {
@@ -39,15 +39,15 @@ class User {
   }
 
   get name() {
-    return this._name;
+    return this.name_;
   }
 
   set name(newName) {
-    this._name = newName;
+    this.name_ = newName;
   }
 
   get age() {
-    return this._age;
+    return this.age_;
   }
 }
 

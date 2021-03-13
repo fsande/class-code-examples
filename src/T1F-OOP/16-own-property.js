@@ -73,6 +73,3 @@ for (let property in sadWerewolf) {
     console.log(property + ': ' + sadWerewolf[property]);
   }
 }
-
-
-
