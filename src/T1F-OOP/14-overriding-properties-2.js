@@ -9,7 +9,7 @@
  * @desc Overriding Properties
  */
 
-'use strict':
+'use strict';
 
 function Werewolf(mood) {
   this.mood = mood;

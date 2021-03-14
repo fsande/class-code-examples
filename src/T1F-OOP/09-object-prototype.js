@@ -11,11 +11,11 @@
 
 'use strict';
 
-console.log(Object.getPrototypeOf({}) == Object.prototype);          // → true
+console.log(Object.getPrototypeOf({}) === Object.prototype);          // → true
 console.log(Object.getPrototypeOf(Object.prototype));                // → null
 
-// function myFunc(x) { return x; }
-// console.log(Object.getPrototypeOf(myFunc) == Function.prototype);   // → true
-// console.log( Object.getPrototypeOf([1, 2, 3]) == Array.prototype);  // → true
+function myFunc(x) { return x; }
+console.log(Object.getPrototypeOf(myFunc) == Function.prototype);   // → true
+console.log( Object.getPrototypeOf([1, 2, 3]) == Array.prototype);  // → true
 
-console.log(Object.getPrototypeOf(Array.prototype) == Object.prototype);    // → true
+console.log(Object.getPrototypeOf(Array.prototype) === Object.prototype);    // → true

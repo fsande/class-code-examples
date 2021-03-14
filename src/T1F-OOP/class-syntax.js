@@ -35,7 +35,7 @@ class Food {
   }
 
   print () {
-    console.log( this.toString() );
+    console.log(this.toString());
   }
 }
 

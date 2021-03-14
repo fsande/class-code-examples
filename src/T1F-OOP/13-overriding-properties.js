@@ -29,7 +29,6 @@ Werewolf.prototype.howl = function(thing) {
 sadWerewolf.howl('moon');                      // →  Werewolf howls at the moon.
 partyWerewolf.howl('bowl of chips');          // →  Werewolf howls at the bowl of chips.
 
-
 /** 
  *  If you add a property directly to an object, it is added to the object itself, not the object's prototype
  */

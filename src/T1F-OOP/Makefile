@@ -4,7 +4,7 @@ clean:
 	find . -name basura -exec rm {} \;
 
 push:
-	rm *~
+	rm -rf *~
 	git pull 
 	git add . 
 	git commit -m "Minor fixes" 

@@ -11,10 +11,10 @@
 
 'use strict';
 
-function speak() {
-  if(this.nationality == 'Japanese') {
+const speak = function() {
+  if(this.nationality === 'Japanese') {
     console.log('nyan');
-  } else if (this.nationality == 'American') {
+  } else if (this.nationality === 'American') {
     console.log('meow');
   } else {
     console.log('default cat noise');

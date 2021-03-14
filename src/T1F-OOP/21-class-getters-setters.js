@@ -40,7 +40,6 @@ class User {
     }
     this.name_ = value;
   }
-
 }
 
 let user = new User('John');

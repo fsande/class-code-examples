@@ -9,8 +9,6 @@
  * @desc The global object
  */
 
-// console.log(global);
-
 // 'use strict';
 
 function makeMessage() {
@@ -19,8 +17,8 @@ function makeMessage() {
 }
 
 makeMessage();
-console.log(message);            // → hello there
-console.log(global.message);    // → hello there
+console.log(message);         // → hello there
+console.log(global.message);  // → hello there
 console.log(global.surprise); 
 
 obj = {};

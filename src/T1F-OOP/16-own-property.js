@@ -50,24 +50,25 @@ Werewolf.prototype.toString = function() {
 };
 console.log(partyWerewolf + '');              // →  partying werewolf
 console.log('========================');              
+console.log('party:\n-----');
 for (let property in partyWerewolf) {
   console.log(property + ': ' + partyWerewolf[property]);
 }
 
 console.log('\n');
-
+console.log('sad:\n---');
 for (let property in sadWerewolf) {
   console.log(property + ': ' + sadWerewolf[property]);
 }
 console.log('========================');              
-console.log('party\n-----');
+console.log('party:\n-----');
 for (let property in partyWerewolf) {
   if (partyWerewolf.hasOwnProperty(property)) {
     console.log(property + ': ' + partyWerewolf[property]);
   }
 }
 console.log('\n');
-console.log('sad\n-----');
+console.log('sad:\n---');
 for (let property in sadWerewolf) {
   if (sadWerewolf.hasOwnProperty(property)) {
     console.log(property + ': ' + sadWerewolf[property]);

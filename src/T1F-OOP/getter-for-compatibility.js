@@ -18,11 +18,11 @@
 
 'use strict';
 
-
 function User(name, age) {
   this.name = name;
   this.age = age;
 }
+
 let john = new User('John', 25);
 console.log(john.age); // 25
 

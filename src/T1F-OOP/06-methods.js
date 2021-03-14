@@ -7,6 +7,7 @@
  * @author F. de Sande
  * @since 20.feb.2020
  * @desc Adding a method to an object
+ *       A method is an object property that is a function (or a function within the context of an object)
  */
 
 'use strict';

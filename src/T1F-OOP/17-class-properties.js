@@ -25,5 +25,5 @@ class User {
 
 new User().sayHi();
 
-console.log(User.prototype.sayHi);     // placed in User.prototype
+console.log(User.prototype.sayHi);    // placed in User.prototype
 console.log(User.prototype.name);     // undefined, not placed in User.prototype
