@@ -49,4 +49,3 @@ Werewolf.prototype.toString = function() {
   return this.mood + ' werewolf';
 };
 console.log(partyWerewolf + '');              // →  partying werewolf
-

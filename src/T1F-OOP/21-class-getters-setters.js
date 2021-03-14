@@ -7,16 +7,16 @@
  * @author F. de Sande
  * @since 20.feb.2020
  * @desc Class Getters & Setters
- * @tutorial {@link https://javascript.info/class#getters-setters-other-shorthands}
+ * @tutorial {@link https://javascript.info/class#getters-setters}
  */
 
 'use strict';
 
 /**
- * Getters/setters can be used as wrappers over “real” property values to gain more control over operations with them
+ * Getters/setters are used as wrappers over “real” property values to gain more control over operations with them
  * The name is stored in name_ property, and the access is done via getter and setter
  * Technically, external code is able to access the name directly by using user.name_
- * But there is a widely known convention that properties starting with an 
+ * But there is a widely known convention that properties ending with an 
  * underscore '_' are internal and should not be touched from outside the object
  */
 const MIN_NAME_LENGHT = 4;
@@ -28,6 +28,7 @@ class User {
   }
 
   get name() {
+    console.log('The getter executing...');
     return this.name_;
   }
 

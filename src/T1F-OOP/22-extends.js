@@ -7,6 +7,8 @@
  * @author F. de Sande
  * @since 20.feb.2020
  * @desc The extends keyword
+ *       The syntax to extend another class is:
+ *         class Child extends Parent
  * @tutorial {@link https://javascript.info/class-inheritance#the-extends-keyword}
  */
 

@@ -16,9 +16,9 @@
  * accessed or modified from outside the object. 
  * To access or modify a property we would use a getter (access) or a setter (modify)
  * 
- * The underscore in front of the properties is another example of a convention. 
+ * The trailing underscore in the properties names is another example of a convention. 
  * It also prevents a stack overflow when calling our methods. 
- * Also, note that we are calling “mary.name” not “maryname_”. So the output is being returned from our getter.
+ * Also, note that we are calling "mary.name" not "maryname_". So the output is being returned from our getter.
  */
 
 'use strict';
@@ -61,4 +61,3 @@ const mary = new User('Mary', 25, 'mary@ull.es');
 console.log(mary.name);
 mary.name = 'Helen Mary';
 console.log(mary.name);
-

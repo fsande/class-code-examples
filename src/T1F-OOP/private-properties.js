@@ -7,7 +7,6 @@
  * @author F. de Sande
  * @since 20.feb.2020
  * @desc Private Properties
- *       Node does't provide support for ES6 classes
  */
 
 'use strict';
@@ -26,5 +25,4 @@ class MyClass {
 let myObject = new MyClass();
 
 myObject.incB(); // → runs OK
-myObject.#b = 0; // → error - private property cannot be modified outside class
-
+// myObject.#b = 0; // → error - private property cannot be modified outside class

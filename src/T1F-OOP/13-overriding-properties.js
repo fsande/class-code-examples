@@ -7,6 +7,7 @@
  * @author F. de Sande
  * @since 20.feb.2020
  * @desc Overriding Properties
+ *       If you add a property directly to an object, it is added to the object itself, not the object's prototype
  */
 
 'use strict';

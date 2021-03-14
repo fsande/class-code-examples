@@ -12,10 +12,9 @@
 
 'use strict';
 
-/**
- * NOTE: waterAmount has been moved into the constructor to work on NodeJS
- */
 class CoffeeMachine {
+  waterAmount_ = 0;    
+
   set waterAmount(value) {
     if (value < 0) throw new Error('Negative amount of water');
     this.waterAmount_ = value;
@@ -26,8 +25,7 @@ class CoffeeMachine {
   }
 
   constructor(power) {
-    this._power = power;
-    this.waterAmount = 0;    // Call the setter
+    this.power_ = power;
     console.log( `Created a coffee-machine, power: ${power}` );
   }
 
@@ -37,5 +35,5 @@ class CoffeeMachine {
 let coffeeMachine = new CoffeeMachine(100);
 
 // Add water
-coffeeMachine.waterAmount = -10; // Error: Negative water
+// coffeeMachine.waterAmount = -10; // Error: Negative water
 coffeeMachine.waterAmount = 10; // Error: Negative water

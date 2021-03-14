@@ -12,6 +12,22 @@
 
 'use strict';
 
+// This is an anonymous class expression -- you can't refer to it by name within the class body
+const Food = class {
+  constructor (name, protein, carbs, fat) {
+    this.name = name;
+    this.protein = protein;
+    this.carbs = carbs;
+    this.fat = fat;
+  }
+  toString () {
+    return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+  }
+  print () {
+    console.log(this.toString());
+  }
+}
+
 // "Named Class Expression"
 // similar to Named Function Expression
 let User = class MyClass {
@@ -21,5 +37,7 @@ let User = class MyClass {
   }
 };
 
+let chickenBreast = new Food('Chicken Breast', 26, 0, 3.5);
+console.log(chickenBreast.fat); 
 new User().sayHi();   // works, shows MyClass definition
 // console.log(MyClass); // error, MyClass name isn't visible outside of the class
