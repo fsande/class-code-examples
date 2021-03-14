@@ -11,8 +11,6 @@
 
 // 'use strict';
 
-// console.log(global)
-
 function oopsGlobal() {
   mistake = 'yup';             // Declaring a variable!! use strict   !!!
 }
@@ -20,3 +18,5 @@ function oopsGlobal() {
 oopsGlobal();
 console.log(mistake);
 console.log(global.mistake);
+console.log('The global object: ');
+console.log(global)
