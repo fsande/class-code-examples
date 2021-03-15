@@ -9,6 +9,7 @@
  * @desc Class expression
  *       Just like functions, classes can be defined inside another expression, passed around, returned, assigned, etc.
  *       Assigning a class to a variable is called a class expression
+ *       A class expression is an alternative syntax for class definitions
  * @tutorial {@link https://javascript.info/class#class-expression}
  */
 
