@@ -32,6 +32,9 @@ class Animal {
 
 }
 
+// You must call super in the constructor of a derived class before you use this
+// Within normal method definitions, derived classes can refer to methods on 
+// the parent class with dot notation: super.methodName (see the stop() method in Rabbit)
 class Rabbit extends Animal {
   constructor(name, earLength) {
     super(name);
