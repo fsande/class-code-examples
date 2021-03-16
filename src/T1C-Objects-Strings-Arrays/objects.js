@@ -1,14 +1,13 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 16.ene.2020
-	* @desc Objects
-	*
-  * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#As_a_DOM_event_handler}
+  * @desc Objects
+  *
   */
 
 'use strict';
@@ -19,8 +18,8 @@ let course = {
     undergraduate:true
 };
 
-console.log(course.section);  		// → 2
-console.log(course["section"]);		// → 2
+console.log(course.section);      // → 2
+console.log(course["section"]);    // → 2
 
 let exclamation = 'wow!';
 let listOfExclamations = ['golly!', 'gosh!'];
@@ -65,12 +64,12 @@ console.log(course.hasOwnProperty('name'));
 // false
 console.log(course.hasOwnProperty('oh no, not here'));
 
-console.log('name' in course);					// → true
-console.log('oh no, not here' in course);		// → false
+console.log('name' in course);          // → true
+console.log('oh no, not here' in course);    // → false
 
 for (property in course) {
-	if (course.hasOwnProperty(property)) {
-		console.log(property +  " is " + course[property]);
-	}
+  if (course.hasOwnProperty(property)) {
+    console.log(property +  " is " + course[property]);
+  }
 }
 

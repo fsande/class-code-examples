@@ -1,12 +1,12 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 7.Mar.2021
-	* @desc Object references
+  * @desc Object references
   *       Objects are stored and copied “by reference”, whereas primitive values are always copied “as a whole value”
   *       A variable assigned to an object stores not the object itself, but its “address in memory” (a reference) to it
   *       
@@ -31,4 +31,3 @@ let c = {};
 let d = {}; // two independent objects
 
 console.log(c === d); // → false
-

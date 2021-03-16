@@ -1,15 +1,15 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 20.ene.2020
-	* @desc JS Strings and Arrays
+  * @desc JS Strings and Arrays
   *       Strings are primitives
   *       They just act like objects when they're called upon to do so
-	*
+  *
   */
 
 'use strict';
