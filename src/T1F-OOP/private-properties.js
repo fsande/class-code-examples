@@ -7,6 +7,7 @@
  * @author F. de Sande
  * @since 20.feb.2020
  * @desc Private Properties
+ * @tutorial {@link https://www.sitepoint.com/javascript-private-class-fields/}
  */
 
 'use strict';

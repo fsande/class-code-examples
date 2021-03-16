@@ -9,6 +9,7 @@
  * @desc Private and protected properties and methods
  * @tutorial {@link https://javascript.info/private-protected-properties-methods#private-waterlimit}
  *           {@link https://stackoverflow.com/questions/22156326/private-properties-in-javascript-es6-classes}
+ *           {@link https://dev.to/bhagatparwinder/classes-in-js-public-private-and-protected-1lok}
  */
 
 'use strict';
