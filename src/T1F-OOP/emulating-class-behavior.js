@@ -15,6 +15,12 @@
  *       is Function... Not FatFreeFood. 
  *       So, to keep everything sane, we have to manually set FatFreeFood.constructor by hand at Line B.
  * {@link https://scotch.io/tutorials/better-javascript-with-es6-pt-ii-a-deep-dive-into-classes}
+ * 
+ * The "old style" construction of objects in JS:
+ *    1.- Using the literal syntax, e.g. myObj = { ... }
+ *    2.-Using the more common "constructor pattern"
+ *    3.-Using the newer Object.create syntax
+ * {@link https://www.vikingcodeschool.com/falling-in-love-with-javascript/constructing-objects}
  */
 
 'use strict';
