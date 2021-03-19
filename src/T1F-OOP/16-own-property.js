@@ -49,7 +49,7 @@ Werewolf.prototype.toString = function() {
   return this.mood + ' werewolf';
 };
 console.log(partyWerewolf + '');              // →  partying werewolf
-console.log('========================');              
+console.log('======= Enumerating Properties: =================');              
 console.log('party:\n-----');
 for (let property in partyWerewolf) {
   console.log(property + ': ' + partyWerewolf[property]);
@@ -60,7 +60,7 @@ console.log('sad:\n---');
 for (let property in sadWerewolf) {
   console.log(property + ': ' + sadWerewolf[property]);
 }
-console.log('========================');              
+console.log('======= Enumerating own Properties: =================');              
 console.log('party:\n-----');
 for (let property in partyWerewolf) {
   if (partyWerewolf.hasOwnProperty(property)) {

@@ -28,7 +28,7 @@ let user = {
 console.log(user.fullName);     // → John Smith
 console.log(user);              // fullName property has been added 
 // set fullName is executed with the given value.
-user.fullName = 'Alice Cooper';
+user.fullName = 'Albert Einstein';
 
-console.log(user.name); // Alice
-console.log(user.surname); // Cooper
+console.log(user.name); // Albert
+console.log(user.surname); // Einstein

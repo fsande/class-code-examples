@@ -49,7 +49,7 @@ Werewolf.prototype.toString = function() {
   return this.mood + ' werewolf';
 };
 console.log(partyWerewolf + '');              // →  partying werewolf
-console.log('========================');              
+console.log('======= Enumerating Properties: =================');              
 for (let property in partyWerewolf) {
   console.log(property + ': ' + partyWerewolf[property]);
 }
