@@ -7,11 +7,18 @@
  * @author F. de Sande
  * @since 13.Mar.2021
  * @desc Class expression
+ *        You can make classes dynamically "on-demand"
+
  * @tutorial {@link https://javascript.info/class#class-expression}
  */
 
 'use strict';
 
+/**
+* Returns a class with a single method, sayHi that prints the phrase
+* @param {string} phrase 
+* @return {function (class)} 
+*/
 const makeClass = function(phrase) {
   // declare a class and return it
   return class {

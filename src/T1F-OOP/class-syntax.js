@@ -15,30 +15,55 @@
  *          When defining methods, you use shorthand method definitions;
  *          Unlike when creating objects, you do not separate method definitions in class bodies with commas; and
  *          You can refer to properties on instances of the class directly (Line A).
+ *
+ *          Set all of a concrete object’s fields (i.e. all properties other than methods) in the constructor. 
+ *          Annotate fields that are never reassigned with @const (these need not be deeply immutable). 
+ *          Annotate non-public fields with the proper visibility annotation (@private, @protected, @package), 
+ *          and end all @private fields' names with an underscore. 
+ *
+ *          Properties should never be added to or removed from an instance after the constructor is finished, 
+ *          since it significantly hinders VMs’ ability to optimize. 
+ *          If necessary, fields that are initialized later should be explicitly set to undefined in the 
+ *          constructor to prevent later shape changes. 
  *          
  * @tutorial {@link https://javascript.info/class}
+ *           {@link https://google.github.io/styleguide/jsguide.html#features-classes}
+ *           {@link https://www.healthline.com/nutrition/calories-in-chicken#breast}
  */
 
 'use strict';
 
-// Food is a base class (it doesn't use the extends keyword)
+/** Food is a base class (it doesn't use the extends keyword) */
 class Food {
+
   constructor (name, protein, carbs, fat) {
+    /** @type {string} The name of the food */
     this.name = name;
+    /** @type {number} Grams of proteins in 100g*/
     this.protein = protein;
+    /** @type {number} Grams of carbs in 100g */
     this.carbs = carbs;
+    /** @type {number} Grams of fat in 100g */
     this.fat = fat;
   }
 
-  toString () {
+  /**
+   * Returns a string with the representation of the object
+   * @return {string} 
+   */
+  toString() {
     return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
   }
 
-  print () {
+  /**
+   * Prints the string representation of the object. Calls toString()
+   */
+  print() {
     console.log(this.toString());
   }
 }
 
-const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
-chicken_breast.print();              // →  'Chicken Breast | 26g P :: 0g C :: 3.5g F'
-console.log(chicken_breast.protein); // →  26 (LINE A)
+const chicken_breast = new Food('Chicken Breast', 31, 0, 3.6);
+chicken_breast.print();              // →  Chicken Breast | 31g P :: 0g C :: 3.6g F
+console.log(chicken_breast.protein); // →  31 (LINE A)
+

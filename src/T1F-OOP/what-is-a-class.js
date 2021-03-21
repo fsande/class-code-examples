@@ -23,13 +23,13 @@ class User {
 }
 
 // class is a function
-console.log(typeof User); // function
+console.log(typeof User); // →  function
 
 // ...or, more precisely, the constructor method
-console.log(User === User.prototype.constructor); // true
+console.log(User === User.prototype.constructor); // →  true
 
 // The methods are in User.prototype, e.g:
-console.log(User.prototype.sayHi); // console.log(this.name);
+console.log(User.prototype.sayHi); // →  Function
 
 // there are exactly two methods in the prototype
-console.log(Object.getOwnPropertyNames(User.prototype)); // constructor, sayHi
+console.log(Object.getOwnPropertyNames(User.prototype)); // →  constructor, sayHi
