@@ -36,7 +36,6 @@ Werewolf.prototype.clothing = 'tattered shirt';
 console.log(partyWerewolf.clothing);          // →  tattered shirt
 
 partyWerewolf.clothing = 'backwards cap';
-
 console.log(partyWerewolf.clothing);          // →  backwards cap
 console.log(sadWerewolf.clothing);            // →  tattered shirt
 
@@ -48,4 +47,5 @@ console.log(partyWerewolf);                    // →  Werewolf { mood: 'partyin
 Werewolf.prototype.toString = function() {
   return this.mood + ' werewolf';
 };
+// If concatenate partyWerewof + '' It will use the toString() method to convert the object
 console.log(partyWerewolf + '');              // →  partying werewolf

@@ -46,7 +46,7 @@ function FatFreeFood (name, protein, carbs) {
 FatFreeFood.prototype = Object.create(Food.prototype);
 
 // LINE B :: Manually (re)setting constructor reference (!)
-Object.defineProperty(FatFreeFood.constructor, "constructor", {
+Object.defineProperty(FatFreeFood.constructor, 'constructor', {
   enumerable : false,
   writeable      : true,
   value             : FatFreeFood

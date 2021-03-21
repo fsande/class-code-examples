@@ -36,6 +36,5 @@ Werewolf.prototype.clothing = 'tattered shirt';
 console.log(partyWerewolf.clothing);          // →  tattered shirt
 
 partyWerewolf.clothing = 'backwards cap';
-
 console.log(partyWerewolf.clothing);          // →  backwards cap
 console.log(sadWerewolf.clothing);            // →  tattered shirt

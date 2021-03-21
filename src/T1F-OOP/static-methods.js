@@ -17,8 +17,6 @@
  * To access or modify a property we would use a getter (access) or a setter (modify)
  * 
  * The trailing underscore in the properties names is another example of a convention. 
- * It also prevents a stack overflow when calling our methods. 
- * Also, note that we are calling "mary.name" not "maryname_". So the output is being returned from our getter.
  */
 
 'use strict';

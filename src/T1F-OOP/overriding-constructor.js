@@ -53,6 +53,6 @@ class Rabbit extends Animal {
   }
 }
 
-let rabbit = new Rabbit("White Rabbit", 10);
+let rabbit = new Rabbit('White Rabbit', 10);
 console.log(rabbit.name); // White Rabbit
 console.log(rabbit.earLength); // 10
