@@ -14,9 +14,12 @@
 /**
  * The property name is not placed into User.prototype. 
  * Instead, it is created by new before calling the constructor, it’s a property of the object itself.
+ * 
+ * Class fields are set on individual objects, not User.prototype:
+ * {@link https://javascript.info/class#class-fields}
  */
 class User {
-  name = 'Anonymous';
+  name = 'Alan Turing';
 
   sayHi() {
     console.log(`Hello, ${this.name}!`);
