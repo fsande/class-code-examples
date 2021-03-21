@@ -7,21 +7,23 @@
  * @author F. de Sande
  * @since 21.Mar.2021
  * @desc Private properties and methods
- *       Privates should start with #. 
- *       They are only accessible from inside the class.
- *       For instance, here’s a private #waterLimit property and the water-checking private method #checkWater
- *       
- *       On the language level, # is a special sign that the field is private. 
- *       We can’t access it from outside or from inheriting classes.
- *       Unlike protected ones, private fields are enforced by the language itself. 
- *
  * @tutorial {@link https://javascript.info/private-protected-properties-methods#protecting-wateramount}
  *           {@link https://google.github.io/styleguide/jsguide.html#features-classes-fields}
  */
 
 'use strict';
 
+/** 
+ * Privates should start with #. 
+ * They are only accessible from inside the class.
+ * For instance, here’s a private #waterLimit property and the water-checking private method #checkWater
+ *       
+ * On the language level, # is a special sign that the field is private. 
+ * We can’t access it from outside or from inheriting classes.
+ * Unlike protected ones, private fields are enforced by the language itself. 
+*/
 class CoffeeMachine {
+  /** @private{number} */
   #waterLimit = 200;
 
   #fixWaterAmount(value) {
