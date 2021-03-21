@@ -15,6 +15,7 @@
  *         super.method(...) to call a parent method
  *         super(...) to call a parent constructor (inside our constructor only)
  * @tutorial {@link https://javascript.info/class-inheritance#overriding-a-method}
+ *           {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super}
  */
 
 'use strict';

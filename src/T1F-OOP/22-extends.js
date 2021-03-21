@@ -14,6 +14,11 @@
 
 'use strict';
 
+/**
+ * Internally, extends keyword works using the prototype mechanics:
+ * It sets Rabbit.prototype.[[Prototype]] to Animal.prototype. 
+ * So, if a method is not found in Rabbit.prototype, JavaScript takes it from Animal.prototype.
+*/
 class Animal {
   constructor(name) {
     this.speed = 0;
