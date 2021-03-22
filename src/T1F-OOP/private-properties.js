@@ -6,24 +6,29 @@
  *
  * @author F. de Sande
  * @since 20.feb.2020
- * @desc Private Properties
- * @tutorial {@link https://www.sitepoint.com/javascript-private-class-fields/}
+ * @desc Private and protected properties and methods
+ * @tutorial {@link https://javascript.info/private-protected-properties-methods#private-waterlimit}
+ *           {@link https://stackoverflow.com/questions/22156326/private-properties-in-javascript-es6-classes}
+ *           {@link https://dev.to/bhagatparwinder/classes-in-js-public-private-and-protected-1lok}
  */
 
 'use strict';
 
-class MyClass {
-  a = 1;          // .a is public
-  #b = 2;         // .#b is private
-  static #c = 3;  // .#c is private and static
+/**
+ * NOTE: Private fields (and methods) are being implemented in the ECMA standard. 
+ * You can start using them today with babel 7 and stage 3 preset.
+ */
+class CoffeeMachine {
+  #waterLimit = 200;
 
-  incB() {
-    this.#b++;
+  #checkWater(value) {
+    if (value < 0) throw new Error('Negative water');
+    if (value > this.#waterLimit) throw new Error('Too much water');
   }
-
 }
 
-let myObject = new MyClass();
+let coffeeMachine = new CoffeeMachine();
 
-myObject.incB(); // → runs OK
-// myObject.#b = 0; // → error - private property cannot be modified outside class
+// can't access privates from outside of the class
+// coffeeMachine.#checkWater(); // Error
+// coffeeMachine.#waterLimit = 1000; // Error

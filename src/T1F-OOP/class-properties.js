@@ -5,20 +5,28 @@
  * Programación de Aplicaciones Interactivas
  *
  * @author F. de Sande
- * @since 13.Mar.2021
- * @desc Class properties
- * @tutorial {@link https://javascript.info/class#class-fields}
+ * @since 20.feb.2020
+ * @desc class properties
  */
 
 'use strict';
 
+/**
+ * The property name is not placed into User.prototype. 
+ * Instead, it is created by new before calling the constructor, it’s a property of the object itself.
+ * 
+ * Class fields are set on individual objects, not User.prototype:
+ * {@link https://javascript.info/class#class-fields}
+ */
 class User {
-  name = 'Anonymous';
+  name = 'Alan Turing';
+
   sayHi() {
     console.log(`Hello, ${this.name}!`);
   }
 }
 
 new User().sayHi();
-console.log(User.prototype.sayHi);  // The method placed in User.prototype
-console.log(User.prototype.name);   // undefined, The property is not in User.prototype
+
+console.log(User.prototype.sayHi);    // placed in User.prototype
+console.log(User.prototype.name);     // undefined, not placed in User.prototype

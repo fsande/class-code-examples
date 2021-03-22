@@ -36,6 +36,6 @@ let user = {
 };
 
 user.name = 'Pete';
-console.log(user.name);      // Pete
+console.log(user.name);     // Pete
 user.name = '';             // Name is too short...
 console.log(user);
