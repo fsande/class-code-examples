@@ -23,7 +23,7 @@
  * Unlike protected ones, private fields are enforced by the language itself. 
 */
 class CoffeeMachine {
-  /** @private{number} */
+  /** @private} */
   #waterLimit = 200;
 
   #fixWaterAmount(value) {

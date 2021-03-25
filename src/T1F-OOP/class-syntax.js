@@ -37,13 +37,13 @@
 class Food {
 
   constructor (name, protein, carbs, fat) {
-    /** @type {string} The name of the food */
+    /** @property {string} name - The name of the food */
     this.name = name;
-    /** @type {number} Grams of proteins in 100g*/
+    /** @property {number} protein - Grams of proteins in 100g*/
     this.protein = protein;
-    /** @type {number} Grams of carbs in 100g */
+    /** @property {number} carbs - Grams of carbs in 100g */
     this.carbs = carbs;
-    /** @type {number} Grams of fat in 100g */
+    /** @property {number} fat - Grams of fat in 100g */
     this.fat = fat;
   }
 

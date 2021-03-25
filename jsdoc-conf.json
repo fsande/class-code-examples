@@ -4,8 +4,11 @@
         "dictionaries": ["jsdoc"]
     },
     "source": {
-        "include": ["src"],                     
-        //"include": ["src/T1A-IntroJS"],      
+        // "include": ["src"],                     
+        "include": ["src/T1A-IntroJS"],      
+        "include": ["src/T1B-Functions"],      
+        "include": ["src/T1C-Objects-Strings-Arrays"],      
+        "include": ["src/T1F-OOP"],      
         "includePattern": ".js$",
         "exclude": ["doc"],                     // Don't document the documents!
         "exclude": ["node_modules"],            // Be gone, node_modules.
@@ -27,6 +30,6 @@
         "encoding": "utf8",
         "private": true,
         "recurse": true,
-        "template": "./node_modules/jsdoc-template"
+        "template": "./node_modules/jsdoc/templates/braintree"
     }
 }

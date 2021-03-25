@@ -25,11 +25,11 @@
  * Now the access is under control, so setting the water amount below zero becomes impossible.
 */
 class CoffeeMachine {
-  /** @protected {number} */
+  /** @protected */
   waterAmount_ = 0;
 
   constructor(power) {
-    /** @protected @const {number} */
+    /** @protected @const */
     this.power_ = power;
   }
 

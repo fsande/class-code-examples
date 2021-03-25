@@ -20,11 +20,11 @@
  * To do so, we only need to make getter, but not the setter.
 */
 class CoffeeMachine {
-  /** @protected {number} */
+  /** @protected */
   waterAmount_ = 0;
 
   constructor(power) {
-    /** @protected @const {number} */
+    /** @protected @const */
     this.power_ = power;
   }
 

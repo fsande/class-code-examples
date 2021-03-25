@@ -19,10 +19,10 @@
  * We can easily get/set them from the outside to any value.
 */
 class CoffeeMachine {
-  /** @public {number} */
+  /** @public */
   waterAmount = 0; // the amount of water inside
   constructor(power) {
-    /** @public {number} */
+    /** @public */
     this.power = power;
     console.log(`Created a coffee-machine, power: ${power}`);
   }
