@@ -1,15 +1,7 @@
-# PAI Lab assignment (lab, class presentation with slides) structure
+### Programación de Aplicaciones Interactivas
+## Class Sessions Example programs
 
-This directory is organised as follows:
+These programs are used as examples for the slides used in class sessions.
+Please study the examples and feel free to copy, modify and experiment with them.
 
-      .
-      ├── bib          # Assignment bibliography
-      ├── report       # LaTeX template for the report
-      ├── slides       # LaTeX Beamer template for the slides
-      ├── tests        # Source code for tests
-      ├── src          # Source code
 
-For each assignment there should be a markdown file with the assignment description.
-Find that file and follow the instructions in it.
-
-When the evaluation session of the assignment is over, **do not forget** to upload the link to your repository to the virtual classroom.
