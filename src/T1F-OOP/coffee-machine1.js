@@ -21,6 +21,10 @@
 class CoffeeMachine {
   /** @public */
   waterAmount = 0; // the amount of water inside
+  /**
+   * Builds a new coffe machine
+   * @param  {number} power - Power of the machine
+   */
   constructor(power) {
     /** @public */
     this.power = power;

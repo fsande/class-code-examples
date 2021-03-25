@@ -26,13 +26,23 @@ class CoffeeMachine {
   /** @private} */
   #waterLimit = 200;
 
-  #fixWaterAmount(value) {
+
+  /**
+   * A private method
+   * Checks that the water amount is a value in the range [0, #waterLimit]
+   * @param  {number} value - The water amount to be ckecked
+   */
+  #checkWater(value) {
     if (value < 0) return 0;
     if (value > this.#waterLimit) return this.#waterLimit;
   }
 
+  /**
+   * Sets the water amount
+   * @param  {number} value - The water amount
+   */
   setWaterAmount(value) {
-    this.#waterLimit = this.#fixWaterAmount(value);
+    this.#waterLimit = this.#checkWater(value);
   }
 }
 
@@ -45,5 +55,5 @@ class MegaCoffeeMachine extends CoffeeMachine {
 let coffeeMachine = new CoffeeMachine();
 
 // can't access privates from outside of the class
-coffeeMachine.#fixWaterAmount(123); // Error
+coffeeMachine.#checkWater(123); // Error
 coffeeMachine.#waterLimit = 1000; // Error

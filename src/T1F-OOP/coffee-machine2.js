@@ -28,11 +28,19 @@ class CoffeeMachine {
   /** @protected */
   waterAmount_ = 0;
 
+  /**
+   * Builds a new coffe machine
+   * @param  {number} power - Power of the machine
+   */
   constructor(power) {
     /** @protected @const */
     this.power_ = power;
   }
 
+  /**
+   * Sets the water amount
+   * @param  {number} value - The water amount
+   */
   setWaterAmount(value) {
     if (value < 0) {
       value = 0;
@@ -40,6 +48,9 @@ class CoffeeMachine {
     this.waterAmount_ = value;
   }
 
+  /**
+   * Gets the water amount
+   */
   getWaterAmount() {
     return this.waterAmount_;
   }
