@@ -15,11 +15,11 @@
 
 "use strict";
 
-let readlineSync = require('/home/fsande/.node_modules_global/lib/node_modules/readline-sync/');
+const readlineSync = require('/home/fsande/.node_modules_global/lib/node_modules/readline-sync/');
 
-let age = readlineSync.question('What is your age? ');
+const AGE = readlineSync.question('What is your age? ');
 
-let welcome = (age < 18) ?
+let welcome = (AGE < 18) ?
   () => console.log('Hello') :
   () => console.log("Greetings!");
 
