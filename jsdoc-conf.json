@@ -1,0 +1,32 @@
+{
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc"]
+    },
+    "source": {
+        "include": ["src"],                     
+        //"include": ["src/T1A-IntroJS"],      
+        "includePattern": ".js$",
+        "exclude": ["doc"],                     // Don't document the documents!
+        "exclude": ["node_modules"],            // Be gone, node_modules.
+        "excludePattern": "(node_modules/|docs)"
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "templates": {
+        "referenceTitle": "My PAI",
+        "disableSort": false,
+        "collapse": true,
+        "resources": {
+            "google": "https://www.google.com/"
+        }
+    },
+    "opts": {
+        "destination": "./doc/",
+        "encoding": "utf8",
+        "private": true,
+        "recurse": true,
+        "template": "./node_modules/jsdoc-template"
+    }
+}
