@@ -168,25 +168,12 @@ class Clock {
   }
 
   /**
-   * Draws the central golden circle over the hands
-   * @param {Object} ctx - Canvas Drawing Context
-   */
-  #drawCentralCircle(ctx) {
-    ctx.beginPath();
-    ctx.arc(0, 0, this.#radius * 0.04, 0, 2 * Math.PI);
-    ctx.fillStyle = 'goldenrod';
-    ctx.fill();
-  }
-
-  /**
    * Draws the clock and performs it's animation
    */
   render(time) {
     this.#drawClockFace(this.#ctx);
     this.#drawNumbers(this.#ctx);
     this.#drawTime();
-    this.#drawCentralCircle(this.#ctx);
-    requestAnimationFrame(this.render);  // Animate the clock
   }
 }
 

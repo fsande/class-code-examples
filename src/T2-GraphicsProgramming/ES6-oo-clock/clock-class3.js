@@ -38,23 +38,6 @@ class Clock {
    */
   constructor(containerElement, size) {
     this.#radius = 0.95 * (size / 2);
-    this.#hands = {
-      second: {
-        length: this.#radius * 0.90,
-        color: 'lightgrey',
-        width: this.#radius * 0.01
-      },
-      minute: {
-        length: this.#radius * 0.90,
-        color: 'darkgrey',
-        width: this.#radius * 0.03
-      },
-      hour: {
-        length: this.#radius * 0.7,
-        color: 'black',
-        width: this.#radius * 0.05
-      }
-    };
     this.#canvas.width = size;
     this.#canvas.height = size;
     containerElement.appendChild(this.#canvas);
@@ -121,72 +104,11 @@ class Clock {
   }
 
   /**
-   * Draws each of the clock hands
-   * @param {string} handType- Hand type ('second' | 'minute' | 'hour')
-   * @param {Object} ctx - Canvas Drawing Context
-   */
-  #drawHand(handType, ctx) {
-    const NOW = new Date();
-    const SECONDS = NOW.getSeconds();
-    const MINUTES = NOW.getMinutes();
-    const HOURS = NOW.getHours() % 12;
-    const HAND = this.#hands[handType];
-    let angle = 0;
-
-	  switch(handType) {
-		  case 'second':
-			  angle = (SECONDS * Math.PI / 30);
-			  break;
-		  case 'minute':
-			  angle = (MINUTES * Math.PI / 30) + (SECONDS * Math.PI / (30 * 60));
-			  break;
-		  case 'hour':
-			  angle =  (HOURS * Math.PI / 6) + (MINUTES * Math.PI / (6 * 60)) + (SECONDS * Math.PI / (360 * 60));
-			  break;
-			default: 
-			  throw new Error('Error in handType');
-			  break;
-		}
-    ctx.beginPath();
-    ctx.lineWidth = HAND.width;
-    ctx.lineCap = 'round';
-    ctx.strokeStyle = HAND.color;
-    ctx.moveTo(0, 0);
-    ctx.rotate(angle);
-    ctx.lineTo(0, -HAND.length);
-    ctx.stroke();
-    ctx.rotate(-angle);
-  }
-
-  /**
-   * Draws the clock hands 
-   */
-  #drawTime() {
-    this.#drawHand('second', this.#ctx);
-    this.#drawHand('minute', this.#ctx);
-    this.#drawHand('hour', this.#ctx);
-  }
-
-  /**
-   * Draws the central golden circle over the hands
-   * @param {Object} ctx - Canvas Drawing Context
-   */
-  #drawCentralCircle(ctx) {
-    ctx.beginPath();
-    ctx.arc(0, 0, this.#radius * 0.04, 0, 2 * Math.PI);
-    ctx.fillStyle = 'goldenrod';
-    ctx.fill();
-  }
-
-  /**
    * Draws the clock and performs it's animation
    */
   render(time) {
     this.#drawClockFace(this.#ctx);
     this.#drawNumbers(this.#ctx);
-    this.#drawTime();
-    this.#drawCentralCircle(this.#ctx);
-    requestAnimationFrame(this.render);  // Animate the clock
   }
 }
 
