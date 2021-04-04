@@ -4,20 +4,16 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author       F. de Sande
- * @since 20.feb.2020
+ * @author F. de Sande
+ * @since 20.Feb.2020 04.Apr.2021
  * @desc Class to illustrate the use of a Rectangle class
- * It uses graphic capabilities using canvas
+ *       All properties and methods are public !!!
+ *       It uses graphic capabilities using canvas
  * 
  * [based on: Creating and Drawing on an HTML5 Canvas using JavaScript]
  *           {@link https://codeburst.io/creating-and-drawing-on-an-html5-canvas-using-javascript-93da75f001c1}
  */
 
-/**
- * @desc setup canvas
- */
-const CANVAS = document.getElementById('tutorial');
-const ctx = CANVAS.getContext('2d');
 
 /**
  * @desc A class to represent rectangle objects
@@ -38,81 +34,83 @@ class Rectangle {
    * @param {string} strokeColor  
    * @param {number} strokeWidth  
    */
-  constructor ( x = 0, y = 0, width = 0, height = 0,
+  constructor ( xPosition = 0, yPosition = 0, width = 0, height = 0,
     fillColor = '', strokeColor = '', strokeWidth = 2
   ) {
     // ensure the arguments passed in are numbers
     // a bit overkill for this tutorial
-    this.x = Number(x)
-    this.y = Number(y)
+    this.xPosition = Number(xPosition)
+    this.yPosition = Number(yPosition)
     this.width = Number(width)
     this.height = Number(height)
     this.fillColor = fillColor
     this.strokeColor = strokeColor
     this.strokeWidth = strokeWidth
+    /** setup canvas */
+    const CANVAS = document.getElementById('tutorial');
+    this.ctx = CANVAS.getContext('2d');
   }
 
   /**
-   * @desc get keyword causes this method to be called when you use myRectangle.area
+   * @desc Rectangle Area
 	 * @returns Area of the rectangle
    */
   getArea () {
     return this.width * this.height
   }
 
-  // gets the X position of the left side
+  /** gets the X position of the left side */
   getLeft () {
     // origin is at top left so just return x
-    return this.x
+    return this.xPosition
   }
 
-  // get X position of right side
+  /** get X position of right side */
   getRight () {
-    // x is left position + the width to get end point
-    return this.x + this.width
+    // xPosition is left position + the width to get end point
+    return this.xPosition + this.width
   }
 
-  // get the Y position of top side
+  /** get the Y position of top side */
   getTop () {
-    // origin is at top left so just return y
-    return this.y
+    // origin is at top left so just return yPosition
+    return this.yPosition
   }
 
-  // get Y position at bottom
+  /** get Y position at bottom */
   getBottom () {
-    return this.y + this.height
+    return this.yPosition + this.height
   }
 
-  // draw rectangle to screen
-
+  /** draw rectangle to screen */
   draw() {
     // destructuring
     const {
-      x, y, width, height,
+      xPosition, yPosition, width, height,
       fillColor, strokeColor, strokeWidth
     } = this
 
     // saves the current styles set elsewhere
     // to avoid overwriting them
-    ctx.save()
+    this.ctx.save()
   
     // set the styles for this shape
-    ctx.fillStyle = fillColor
-    ctx.lineWidth = strokeWidth
+    this.ctx.fillStyle = fillColor
+    this.ctx.lineWidth = strokeWidth
 
     // create the *path*
-    ctx.beginPath()
-    ctx.strokeStyle = strokeColor
-    ctx.rect(x, y, width, height)
+    this.ctx.beginPath()
+    this.ctx.strokeStyle = strokeColor
+    this.ctx.rect(xPosition, yPosition, width, height)
 
     // draw the path to screen
-    ctx.fill()
-    ctx.stroke()
+    this.ctx.fill()
+    this.ctx.stroke()
 
     // restores the styles from earlier
     // preventing the colors used here
     // from polluting other drawings
-    ctx.restore()
+    this.ctx.restore()
   }
 }
 
@@ -131,8 +129,8 @@ console.log(mySquare1)
 // strokeColor: ""
 // strokeWidth: 2
 // width: 50
-// x: 450
-// y: 100
+// xPosition: 450
+// yPosition: 100
 // area: (...)
 // bottom: (...)
 // left: (...)
