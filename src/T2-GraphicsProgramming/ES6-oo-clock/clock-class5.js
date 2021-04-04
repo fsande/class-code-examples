@@ -109,7 +109,7 @@ class Clock {
     ctx.textAlign = 'center';
     for(let hour = 1; hour <= 12; hour++){
       const RATIO = 0.85;         // 85%
-      const ANGLE = hour * Math.PI / 6;
+      const ANGLE = hour * Math.PI / 6;  // Pi/6 = 2*Pi/12
       ctx.rotate(ANGLE);
       ctx.translate(0, -this.#radius * RATIO);
       ctx.rotate(-ANGLE);
