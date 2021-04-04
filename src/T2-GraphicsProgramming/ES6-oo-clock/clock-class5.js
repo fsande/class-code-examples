@@ -55,6 +55,7 @@ class Clock {
         width: this.#radius * 0.05
       }
     };
+    debugger;
     this.#canvas.width = size;
     this.#canvas.height = size;
     containerElement.appendChild(this.#canvas);
@@ -63,7 +64,8 @@ class Clock {
     this.#ctx.translate(this.#centerX, this.#centerY);
 
     this.render = this.render.bind(this);
-    this.render(0, this.#ctx);
+    this.render();
+		// setInterval(this.render, 1000);
   }
 
   /**
@@ -181,7 +183,7 @@ class Clock {
   /**
    * Draws the clock and performs it's animation
    */
-  render(time) {
+  render() {
     this.#drawClockFace(this.#ctx);
     this.#drawNumbers(this.#ctx);
     this.#drawTime();
@@ -193,3 +195,4 @@ class Clock {
 // https://www.w3schools.com/jsref/prop_doc_body.asp
 // constructor(containerElement, size)
 let clock = new Clock(document.body, 800);
+console.log(clock);

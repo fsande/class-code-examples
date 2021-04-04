@@ -46,7 +46,7 @@ class Clock {
     this.#ctx.translate(this.#centerX, this.#centerY);
 
     this.render = this.render.bind(this);
-    this.render(0, this.#ctx);
+    this.render();
   }
 
   /**
@@ -82,9 +82,9 @@ class Clock {
   }
 
   /**
-   * Draws the clock and performs it's animation
+   * Draws the clock 
    */
-  render(time) {
+  render() {
     this.#drawClockFace(this.#ctx);
   }
 }
