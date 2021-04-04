@@ -53,6 +53,7 @@ class Clock {
    * @param {Object} ctx - Canvas Drawing Context
    */
   #drawClockFace(ctx) {
+    // Draw the white clock Face
     ctx.beginPath();
     ctx.arc(0, 0, this.#radius, 0, 2 * Math.PI);
     ctx.fillStyle = 'white';

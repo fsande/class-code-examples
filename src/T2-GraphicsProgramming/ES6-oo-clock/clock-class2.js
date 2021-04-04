@@ -25,7 +25,6 @@ class Clock {
   #centerX = undefined;
   #centerY = undefined;
   #radius = undefined;
-  #hands = {};
   #canvas = document.createElement("CANVAS");  // A new HTML element
 	#ctx = this.#canvas.getContext('2d');
 
@@ -54,7 +53,9 @@ class Clock {
    * @param {Object} ctx - Canvas Drawing Context
    */
   #drawClockFace(ctx) {
-	  const FILL_STYLE = '#333';
+	  const FILL_STYLE = '#333';  // For gradient (external ring)
+
+    // Draw the white clock Face
     ctx.beginPath();
     ctx.arc(0, 0, this.#radius, 0, 2 * Math.PI);
     ctx.fillStyle = 'white';
