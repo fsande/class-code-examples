@@ -1,0 +1,23 @@
+{
+  "name": "oop-clock-es6",
+  "version": "1.0.0",
+  "description": "ES6 OO Analog Clock",
+  "main": "clock-class.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-doc": "node_modules/.bin/jsdoc --configure jsdoc-conf.json --verbose"
+  },
+  "keywords": [
+    "OOP",
+    "ES6",
+    "classes",
+    "animation",
+    "clock"
+  ],
+  "author": "F de Sande",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "jsdoc": "^3.6.6"
+  }
+}
