@@ -55,7 +55,7 @@ class Clock {
         width: this.#radius * 0.05
       }
     };
-    debugger;
+    // debugger;
     this.#canvas.width = size;
     this.#canvas.height = size;
     containerElement.appendChild(this.#canvas);

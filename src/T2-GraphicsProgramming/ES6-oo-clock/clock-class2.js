@@ -53,7 +53,7 @@ class Clock {
    * @param {Object} ctx - Canvas Drawing Context
    */
   #drawClockFace(ctx) {
-	  const FILL_STYLE = '#333';  // For gradient (external ring)
+	  const FILL_STYLE = '#7fffd4';  // For gradient (external ring)
 
     // Draw the white clock Face
     ctx.beginPath();

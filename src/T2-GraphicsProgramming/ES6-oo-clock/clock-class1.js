@@ -25,7 +25,7 @@ class Clock {
   #centerX = undefined;
   #centerY = undefined;
   #radius = undefined;
-  #canvas = document.createElement("CANVAS");  // A new HTML element
+  #canvas = document.createElement('CANVAS');  // A new HTML element
 	#ctx = this.#canvas.getContext('2d');
 
   /**
@@ -36,6 +36,7 @@ class Clock {
    * @param {number} size - Size in pixels of the square in which the clock is inscribed
    */
   constructor(containerElement, size) {
+    debugger;
     this.#radius = 0.95 * (size / 2);
     this.#canvas.width = size;
     this.#canvas.height = size;
@@ -71,3 +72,5 @@ class Clock {
 // https://www.w3schools.com/jsref/prop_doc_body.asp
 // constructor(containerElement, size)
 let clock = new Clock(document.body, 800);
+console.log(Clock);
+
