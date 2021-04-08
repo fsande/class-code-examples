@@ -22,7 +22,7 @@
   */
 class ChessPositions {
   #black = []; /** @private */ // Position of the black piece 
-  #white = []; /** @private */ // Position of the black piece 
+  #white = []; /** @private */ // Position of the white piece 
 
   /**
     * The constructor takes an object as parameter and has a default parameter. 
