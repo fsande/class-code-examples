@@ -8,8 +8,6 @@
  * @since 08.Apr.2021
  * @desc Destructuring assignmet
  *       A fancy example of the use of destructuring assignment
- En algunos de los ejemplos que se han usado en clase se ha usado asignación por "desestructuración" (*destructuring assignment*)
-
  * @tutorial {@link https://javascript.info/destructuring-assignment}
  */
 
