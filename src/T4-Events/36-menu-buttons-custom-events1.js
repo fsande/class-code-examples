@@ -9,7 +9,7 @@
 	* @desc Events. Menu and buttons with custom Events
 */
 
-"use strict";
+'use strict';
 
 
 /**
@@ -38,7 +38,7 @@ class Menu {
    * @description Console logs and prints the button changing the DOM
    */
   showButtonClicked(event) {
-    console.log("Menu notified!");
+    console.log('Menu notified!');
     const buttonName = event.currentTarget.textContent;
     this.statusBar.textContent = buttonName + ' was clicked';
   }

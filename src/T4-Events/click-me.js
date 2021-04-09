@@ -10,7 +10,7 @@
  * onClick: executes when the button is clicked
  */
 
-"use strict";
+'use strict';
 
 function onClick() { 
   console.log('Executing the event listener: Button has been clicked');

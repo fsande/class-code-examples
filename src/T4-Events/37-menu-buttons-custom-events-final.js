@@ -9,7 +9,7 @@
 	* @desc Events. Menu and buttons with custom Events
   */
 
-"use strict";
+'use strict';
 
 /**
  * @description Class to hold the (array of) buttons of the page

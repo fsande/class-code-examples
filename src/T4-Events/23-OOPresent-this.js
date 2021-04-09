@@ -9,7 +9,7 @@
 	* @desc JS Events. OO Present Class with this bug
 */
 
-"use strict";
+'use strict';
 
 class Present {
   constructor(containerElement) {

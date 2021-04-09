@@ -10,10 +10,10 @@
   * @see {@link https://javascript.info/bind#solution-2-bind}
   */
 
-"use strict";
+'use strict';
 
 let user = {
-  firstName: "John",
+  firstName: 'John',
   sayHi() {
     console.log(`Hello, ${this.firstName}!`);
   }
@@ -29,5 +29,5 @@ setTimeout(sayHi, 1000); // Hello, John!
 // even if the value of user changes within 1 second
 // sayHi uses the pre-bound value
 user = {
-  sayHi() { console.log("Another user in setTimeout!"); }
+  sayHi() { console.log('Another user in setTimeout!'); }
 };

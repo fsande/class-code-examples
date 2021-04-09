@@ -9,7 +9,7 @@
  * @desc Present Example
  */
 
-"use strict";
+'use strict';
 
 function openPresent(event) {
   const newHeader = document.createElement('h1');

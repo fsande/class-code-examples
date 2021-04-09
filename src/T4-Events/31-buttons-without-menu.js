@@ -9,7 +9,7 @@
 	* @desc Events. OO Buttons without menu
 */
 
-"use strict";
+'use strict';
 
 /**
  * @class

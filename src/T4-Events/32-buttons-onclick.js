@@ -9,7 +9,7 @@
 	* @desc Events. OO Buttons event handler
 */
 
-"use strict";
+'use strict';
 
 /**
  * @description Class for the objects buttons to be placed in tha page

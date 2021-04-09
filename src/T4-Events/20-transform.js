@@ -10,7 +10,7 @@
   * @see {@link https://javascript.info/keyboard-events}
 */
 
-"use strict";
+'use strict';
 
 kinput.onkeydown = kinput.onkeyup = kinput.onkeypress = handle;
 
@@ -27,7 +27,7 @@ function handle(event) {
     (event.altKey ? ' altKey' : '') +
     (event.metaKey ? ' metaKey' : '') +
     (event.repeat ? ' (repeat)' : '') +
-    "\n";
+    '\n';
 
   if (area.value && Date.now() - lastTime > 250) {
     area.value += new Array(81).join('-') + '\n';

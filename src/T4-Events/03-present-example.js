@@ -9,7 +9,7 @@
  * @desc Present Example
  */
 
-"use strict";
+'use strict';
 
 function openPresent() {
   const image = document.querySelector('img');

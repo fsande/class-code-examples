@@ -14,7 +14,7 @@
   * @see {@link * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#As_a_DOM_event_handler}
 */
 
-"use strict";
+'use strict';
 
 /**
   * @description MDN: When a function is used as an event handler, 

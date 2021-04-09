@@ -15,7 +15,7 @@
   * Notifies Menu when clicked, so that Menu can update the <h1>
 */
 
-"use strict";
+'use strict';
 
 
 /**

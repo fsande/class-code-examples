@@ -9,7 +9,7 @@
 	* @desc Events. OO On click to console
 */
 
-"use strict";
+'use strict';
 
 
 /**

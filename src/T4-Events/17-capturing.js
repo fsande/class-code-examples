@@ -9,7 +9,7 @@
  * @desc JS Events. 2 Events Listeners. Capturing
  */
 
-"use strict";
+'use strict';
 
 function onOuterClick() {
   outer.classList.add('selected');

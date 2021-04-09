@@ -9,7 +9,7 @@
 	* @desc JS Events. OO Present Class
 */
 
-"use strict";
+'use strict';
 
 class Present {
   constructor(containerElement) {

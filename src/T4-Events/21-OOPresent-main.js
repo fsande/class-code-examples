@@ -9,7 +9,7 @@
 	* @desc JS Events. OO Present
 */
 
-"use strict";
+'use strict';
 
 const containerElement = document.querySelector('#presents');
 const present = new Present(containerElement);
