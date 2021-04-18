@@ -12,7 +12,7 @@
 'use strict';
 
 function openPresent(event) {
-  const image = event.currentTarget;
+  let image = event.currentTarget;
   image.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif';
   image.removeEventListener('click', openPresent);
 }

@@ -12,10 +12,10 @@
 'use strict';
 
 function openPresent(event) {
-  const image = event.currentTarget;
+  let image = event.currentTarget;
   image.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif';
 
-  const title = document.querySelector('h1');
+  let title = document.querySelector('h1');
   title.textContent = 'Bingo!';
 
   image.removeEventListener('click', openPresent);

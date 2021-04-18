@@ -12,7 +12,7 @@
 
 'use strict';
 
-function onClick() { 
+const onClick = function() { 
   console.log('Executing the event listener: Button has been clicked');
 }
 
