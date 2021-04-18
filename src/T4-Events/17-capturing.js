@@ -11,15 +11,15 @@
 
 'use strict';
 
-function onOuterClick() {
+function onOuterClick(event) {
   outer.classList.add('selected');
   console.log('Outer clicked!');
+  // event.stopPropagation();
 }
 
-function onInnerClick(event) {
+function onInnerClick() {
   inner.classList.add('selected');
   console.log('Inner clicked!');
-  // event.stopPropagation();
 }
 
 function onResetClick() {
@@ -29,6 +29,7 @@ function onResetClick() {
 
 const outer = document.querySelector('#outer');
 const inner = document.querySelector('#inner');
+
 outer.addEventListener('click', onOuterClick, { capture: true});
 inner.addEventListener('click', onInnerClick, { capture: true});
 

@@ -16,8 +16,6 @@ function openPresent(event) {
   newHeader.textContent = 'Bingo!';
   let newImage = document.createElement('img');
   newImage.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif';
-  console.log("Hello");
-  debugger;
 
   let container = document.querySelector('#container');
   container.innerHTML = '';

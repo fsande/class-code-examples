@@ -37,7 +37,7 @@ function toggleVisibility(event) {
     text.textContent = 'Show details';
   }
 }
-let isVisible = false;
 
+let isVisible = false;
 const detailToggle = document.querySelector('.show-details');
 detailToggle.addEventListener('click', toggleVisibility);
