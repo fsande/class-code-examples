@@ -11,12 +11,12 @@
 
 'use strict';
 
-const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
-const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
 
 function changeToX(event) {
-  const container = event.currentTarget;
-  const image = document.createElement('img');
+  const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
+  let container = event.currentTarget;
+  let image = document.createElement('img');
+
   image.src = X_IMAGE_URL;
   container.appendChild(image);
   container.removeEventListener('click', changeToX);
@@ -28,9 +28,10 @@ function changeToX(event) {
 }
 
 function computerChooseO() {
-  const allBoxes  = document.querySelectorAll('#grid div');
+  const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
   const index = Math.floor(Math.random() * freeBoxes.length);
   const freeSpace = freeBoxes[index];
+
   // Remove the chosen box from freeBoxes.
   freeBoxes.splice(index, 1);
   const image = document.createElement('img');
@@ -39,9 +40,9 @@ function computerChooseO() {
   freeSpace.appendChild(image);
 }
 
-const freeBoxes = [];
-const boxes = document.querySelectorAll('#grid div');
-for (const box of boxes) {
+let freeBoxes = []; // Global array
+let boxes = document.querySelectorAll('#grid div');
+for (let box of boxes) {
   box.addEventListener('click', changeToX);
   freeBoxes.push(box);
 }

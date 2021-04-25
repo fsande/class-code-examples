@@ -5,7 +5,7 @@
  * Programación de Aplicaciones Interactivas
  *
  * @author F. de Sande
- * @since 24.apr.2020
+ * @since 24.Apr.2020
  * @desc Tic Tac Toe Example. Initial Code
  */
 
@@ -28,6 +28,8 @@ function onClick(event) {
 }
 
 const gridItems = document.querySelectorAll('#grid div');
+
+// Add a listener to all elements that have grid and div (all divs)
 for (const item of gridItems) {
   item.addEventListener('click', onClick);
 }

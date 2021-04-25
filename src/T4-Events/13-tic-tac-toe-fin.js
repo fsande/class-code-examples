@@ -11,12 +11,20 @@
 
 'use strict';
 
-const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
-const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
 
+const HUMAN = 'x';
+const COMPUTER = 'o';
+
+/**
+ * Assigns an empty space (square) to its new owner (HUMAN or COMPUTER)
+ * @param {object} space - The HTML element corresponding to a game square
+ * @param {string} owner - HUMAN or COMPUTER	
+ */
 function assignSpace(space, owner) {
+  const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
+  const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
   const image = document.createElement('img');
-  image.src = owner === 'x' ? X_IMAGE_URL : O_IMAGE_URL;
+  image.src = owner === HUMAN ? X_IMAGE_URL : O_IMAGE_URL;
   space.appendChild(image);
 
   const index = parseInt(space.dataset.index);
@@ -27,8 +35,7 @@ function assignSpace(space, owner) {
 }
 
 function changeToX(event) {
-  assignSpace(event.currentTarget, 'x');
-
+  assignSpace(event.currentTarget, HUMAN);
   if (isGameOver()) {
     displayWinner();
   } else {
@@ -37,12 +44,9 @@ function changeToX(event) {
 }
 
 function computerChooseO() {
-  const allBoxes  = document.querySelectorAll('#grid div');
   const index = Math.floor(Math.random() * freeBoxes.length);
   const freeSpace = freeBoxes[index];
-
-  assignSpace(freeSpace, 'o');
-
+  assignSpace(freeSpace, COMPUTER);
   if (isGameOver()) {
     displayWinner();
   }
@@ -53,13 +57,12 @@ function isGameOver() {
 }
 
 function displayWinner() {
-  const winner = getWinner();
-
+  const WINNER = getWinner();
   const resultContainer = document.querySelector('#results');
   const header = document.createElement('h1');
-  if (winner === 'x') {
+  if (WINNER === HUMAN) {
     header.textContent = 'You win!';
-  } else if (winner === 'o') {
+  } else if (WINNER === COMPUTER) {
     header.textContent = 'Computer wins';
   } else {
     header.textContent = 'Tie';
@@ -67,11 +70,12 @@ function displayWinner() {
   resultContainer.appendChild(header);
 
   // Remove remaining event listeners
-  for (const box of freeBoxes) {
+  for (let box of freeBoxes) {
     box.removeEventListener('click', changeToX);
   }
 }
 
+// Returns HUMAN, COMPUTER, or null for no winner yet.
 function checkBoxes(one, two, three) {
   if (takenBoxes[one] !== undefined &&
       takenBoxes[one] === takenBoxes[two] &&
@@ -81,28 +85,26 @@ function checkBoxes(one, two, three) {
   return null;
 }
 
-// Returns 'x', 'o', or null for no winner yet.
+// Returns HUMAN, COMPUTER, or null for no winner yet.
 function getWinner() {
   for (let col = 0; col < 3; col++) {
-    const offset = col * 3;
+    const OFFSET = col * 3;
     // Check rows and columns.
-    let result = checkBoxes(offset, 1 + offset, 2 + offset) ||
+    let result = checkBoxes(OFFSET, 1 + OFFSET, 2 + OFFSET) ||
         checkBoxes(col, 3 + col, 6 + col);
     if (result) {
       return result;
     }
   }
-
   // Check diagonals
   return checkBoxes(0, 4, 8) || checkBoxes(2, 4, 6);
 }
 
 const freeBoxes = [];
-// Map of box number -> 'x' or 'o'
+// Map of box number -> HUMAN or COMPUTER
 const takenBoxes = {};
 const boxes = document.querySelectorAll('#grid div');
 for (const box of boxes) {
   box.addEventListener('click', changeToX);
   freeBoxes.push(box);
 }
-

@@ -26,7 +26,7 @@ function toggleVisibility(event) {
   const image = event.currentTarget.querySelector('img');
   const text = event.currentTarget.querySelector('span');
 
-  isVisible = !isVisible;
+  isVisible = !isVisible;  // Modifies a global variable!!
   if (isVisible) {
     details.classList.remove('hidden');
     image.src = DOWN_ARROW;
