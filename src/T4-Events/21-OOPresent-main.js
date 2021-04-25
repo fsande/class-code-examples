@@ -5,7 +5,7 @@
 	* Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
-  * @since 14.may.2020
+  * @since 14.May.2020
 	* @desc JS Events. OO Present
 */
 
