@@ -28,8 +28,6 @@ class Menu {
    */
   constructor() {
     this.buttonContainer = document.querySelector('#menu');
-    this.statusBar = document.querySelector('#status-bar');
-
     this.buttons = [
       new Button(this.buttonContainer, 'A'),
       new Button(this.buttonContainer, 'B'),

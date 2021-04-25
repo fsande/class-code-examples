@@ -30,7 +30,7 @@ class Button {
     this.onClick = this.onClick.bind(this);   // Use the current value of this in onClick
 
 
-    const button = document.createElement('button');
+    let button = document.createElement('button');
     button.textContent = text;
     button.addEventListener('click', this.onClick);
     this.containerElement.append(button);
