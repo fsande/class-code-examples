@@ -11,7 +11,7 @@
 
 'use strict';
 
-/** * @desc Class to hold the (array of) buttons of the page */
+/** @desc Class to hold the (array of) buttons of the page */
 class Menu {
   /** @private */
   #buttonContainer = undefined; /** The The DOM element that will host the button */

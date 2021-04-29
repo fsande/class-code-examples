@@ -11,22 +11,31 @@
 
 'use strict';
 
+
+/** 
+  * @desc Class to represent a present 
+	*       Displays an image that will be replaced by a different one when clicked.
+*/
 class Present {
+  /** @private */
+  #containerElement = undefined;  /** The The DOM element that will host the Present */
+  #image = undefined;             /** The DOM element that will be created to host the image */
+
   constructor(containerElement) {
-    this.containerElement = containerElement;
+    this.#containerElement = containerElement;
 
-    // Bind event listeners.
-    this._openPresent = this._openPresent.bind(this);
+    // Bind event listener
+    this.openPresent = this.openPresent.bind(this);
 
-    // Create image and append to container.
-    this.image = document.createElement('img');
-    this.image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
-		this.image.addEventListener('click', this._openPresent);
-    this.containerElement.append(this.image);
+    // Create image and append to container
+    this.#image = document.createElement('img');
+    this.#image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
+		this.#image.addEventListener('click', this.openPresent);
+    this.#containerElement.append(this.#image);
   }
 
-  _openPresent(event) {
-    this.image.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif';
-  	this.image.removeEventListener('click', this._openPresent);
+  openPresent(event) {
+    this.#image.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif';
+  	this.#image.removeEventListener('click', this.openPresent);
   }
 }
