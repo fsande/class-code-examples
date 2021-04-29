@@ -12,14 +12,14 @@
 'use strict';
 
 class Present {
-  #containerElement = undefined;
+  #containerElement = undefined; /** The The DOM element that will host the present image */
   constructor(containerElement) {
     this.#containerElement = containerElement;
 
     // Create image and append to container.
-    const image = document.createElement('img');
+    let image = document.createElement('img');
     image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
-		image.addEventListener('click', this.#openPresent);
+		image.addEventListener('click', this.openPresent);
     this.#containerElement.append(image);
   }
 
@@ -28,9 +28,9 @@ class Present {
 	 * @method
    * @description Changes the DOM with the new image and removes the listener
    */
-  #openPresent(event) {
+  openPresent(event) {
   	const image = event.currentTarget;
     image.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif'; // The new image
-  	image.removeEventListener('click', this._openPresent);
+  	image.removeEventListener('click', this.openPresent);
   }
 }
