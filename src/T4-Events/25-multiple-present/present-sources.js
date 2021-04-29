@@ -6,11 +6,13 @@
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc Events. OO Present. Multiple Presents. Present Class
+	* @desc Events. OO Present. Multiple Presents. 
+	*       Defines the URLs for the present images
 */
 
 "use strict";
 
+/** An array holding the presents images URLs */
 const PRESENT_SOURCES = [
   'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif',
   'https://media.giphy.com/media/LEcRaYyUptIxG/giphy.gif',

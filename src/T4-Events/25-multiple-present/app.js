@@ -11,19 +11,30 @@
 
 "use strict";
 
-class App {
-  constructor(presentContainer, titleContainer) {
-    this.presentContainer = presentContainer;
-    this.titleContainer = titleContainer;
 
-    this.presents = [];
-    this._fillPresentContainer();
+/** 
+  * @desc Class to represent a set of presents
+	*       The class holds Present objects in an array
+  */
+class App {
+  #presentContainer; /** DOM element to host the presents */
+  #titleContainer;   /** DOM element corresponding to the <h2> text */ 
+  #presents = [];    /** Array of presents */
+
+  constructor(presentContainer, titleContainer) {
+    this.#presentContainer = presentContainer;
+    this.#titleContainer = titleContainer;
+    this.#fillPresentContainer();
   }
 
-  _fillPresentContainer() {
+  /**
+	 * @method
+   * @desc Creates the Present objects and stores them in the #presents array 
+   */
+  #fillPresentContainer() {
     for (const source of PRESENT_SOURCES) {
-      const present = new Present(this.presentContainer, source);
-      this.presents.push(present);
+      const present = new Present(this.#presentContainer, source);
+      this.#presents.push(present);
     }
   }
 }
