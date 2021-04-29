@@ -15,6 +15,9 @@
  * @description Class for the objects buttons to be placed in tha page
  */
 class Button {
+  #containerElement;
+  #text = '';
+
   /**
    * @description Sets up a button object placing it in the page (DOM)
 	 *              It set up an event listener for the click event on the button
@@ -22,13 +25,13 @@ class Button {
    * @param {string} text - Button text
    */
   constructor(containerElement, text) {
-    this.containerElement = containerElement;
-    this.text = text;
+    this.#containerElement = containerElement;
+    this.#text = text;
 
     let button = document.createElement('button');
     button.textContent = text;
     button.addEventListener('click', this.onClick);
-    this.containerElement.append(button);
+    this.#containerElement.append(button);
   }
 
   /**
@@ -38,7 +41,7 @@ class Button {
 	 *              it is the <button> element to which we've attached the onClick event handler
    */
   onClick() {
-    console.log('clicked: ' + this.text);
+    console.log('clicked: ' + this.#text);
     console.log(this);
   }
 }

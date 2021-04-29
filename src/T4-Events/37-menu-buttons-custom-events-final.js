@@ -11,22 +11,24 @@
 
 'use strict';
 
-/**
- * @description Class to hold the (array of) buttons of the page
- */
+/** * @desc Class to hold the (array of) buttons of the page */
 class Menu {
+  /** @private */
+  #buttonContainer = undefined; /** The The DOM element that will host the button */
+  #statusBar = undefined;       /** The The DOM element that will host the <h1> text with the button info */
+  #buttons = undefined;         /** Array of Button objects */
   /**
    * @description Holds an array of Buttons
 	 *              The buttons are created when the Menu is created
    */
   constructor() {
-    this.buttonContainer = document.querySelector('#menu');
-    this.statusBar = document.querySelector('#status-bar');
+    this.#buttonContainer = document.querySelector('#menu');
+    this.#statusBar = document.querySelector('#status-bar');
     this.showButtonClicked = this.showButtonClicked.bind(this);
-    this.buttons = [
-      new Button(this.buttonContainer, 'A'),
-      new Button(this.buttonContainer, 'B'),
-      new Button(this.buttonContainer, 'C')
+    this.#buttons = [
+      new Button(this.#buttonContainer, 'A'),
+      new Button(this.#buttonContainer, 'B'),
+      new Button(this.#buttonContainer, 'C')
     ];
     document.addEventListener('button-clicked', this.showButtonClicked);
   }
@@ -36,15 +38,16 @@ class Menu {
    * @description prints the button changing the DOM
    */
   showButtonClicked(event) {
-    this.statusBar.textContent = event.detail.buttonName + ' was clicked';
+    this.#statusBar.textContent = event.detail.buttonName + ' was clicked';
   }
 }
 
-
-/**
- * @description Class for the buttons objects to be placed in tha page
- */
+/** @desc Class for the buttons objects to be placed in tha page */
 class Button {
+  /** @private */
+  #containerElement = undefined;  /** The The DOM element that will host the button */
+  #text = '';  /** The button text */
+
   /**
    * @description Sets up a button object placing it in the page (DOM)
 	 *              It set up an event listener for the click event on the button
@@ -53,24 +56,24 @@ class Button {
    * @param {String} text - Button text
    */
   constructor(containerElement, text) {
-    this.containerElement = containerElement;
-    this.text = text;
+    this.#containerElement = containerElement;
+    this.#text = text;
     this.onClick = this.onClick.bind(this);
 
-    const button = document.createElement('button');
+    let button = document.createElement('button');
     button.textContent = text;
     button.addEventListener('click', this.onClick);
-    this.containerElement.append(button);
+    this.#containerElement.append(button);
   }
 
   /**
 	 * @method
    * @description Event handler method for click events on the button
-	 *              It adds an eventInfo object to the customEvent
+	 *              It adds an EVENT_INFO object to the customEvent
    */
   onClick() {
-    const eventInfo = { buttonName: this.text };
-    document.dispatchEvent(new CustomEvent('button-clicked', { detail: eventInfo }));
+    const EVENT_INFO = { buttonName: this.#text };
+    document.dispatchEvent(new CustomEvent('button-clicked', { detail: EVENT_INFO }));
   }
 }
 

@@ -17,6 +17,10 @@
  * @description Class for the objects buttons to be placed in tha page
  */
 class Button {
+  /** @private */
+  #containerElement = undefined;  /** The The DOM element that will host the button */
+  #text = '';  /** The button text */
+
   /**
    * @description Sets up a button object placing it in the page (DOM)
 	 *              It set up an event listener for the click event on the button
@@ -24,25 +28,24 @@ class Button {
    * @param {String} text - Button text
    */
   constructor(containerElement, text) {
-    this.containerElement = containerElement;
-    this.text = text;
+    this.#containerElement = containerElement;
+    this.#text = text;
 
     this.onClick = this.onClick.bind(this);   // Use the current value of this in onClick
-
 
     let button = document.createElement('button');
     button.textContent = text;
     button.addEventListener('click', this.onClick);
-    this.containerElement.append(button);
+    this.#containerElement.append(button);
   }
-
 
   /**
 	 * @method
    * @description Event handler method for click events on the button
+   * The method can't be private as private methods are not writable
    */
   onClick() {
-    console.log('clicked: ' + this.text);
+    console.log('clicked: ' + this.#text);
   }
 }
 

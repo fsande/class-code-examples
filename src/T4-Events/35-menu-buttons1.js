@@ -9,23 +9,21 @@
 	* @desc Events. Buttons Menu example
 	* Using 2 classes:
   * Menu: 
-  * Has an array of Buttons
-  * Also updates the <h1> with what was clicked
+  *   Has an array of Buttons
   * Button:
-  * Notifies Menu when clicked, so that Menu can update the <h1>
+  *   console.log when clicked
 */
 
 'use strict';
-
 
 /**
  * @description Class to hold the (array of) buttons of the page
  */
 class Menu {
-  /**
-   * @description Holds an array of Buttons
-	 *              The buttons are created when the Menu is created
-   */
+  /** @private */
+  #buttonContainer = undefined; /** The The DOM element that will host the button */
+  #buttons = undefined;         /** Array of button objects */
+  /** @desc Holds an array of Buttons which are created when the Menu is created */
   constructor() {
     this.buttonContainer = document.querySelector('#menu');
     this.buttons = [
@@ -36,32 +34,32 @@ class Menu {
   }
 }
 
-
-/**
- * @description Class for the objects buttons to be placed in tha page
- */
+/** @desc Class for the objects buttons to be placed in tha page */
 class Button {
+  /** @private */
+  #containerElement = undefined;  /** The The DOM element that will host the button */
+  #text = '';  /** The button text */
   /**
-   * @description Sets up a button object placing it in the page (DOM)
-	 *              It set up an event listener for the click event on the button
-	 *              Notifies Menu when clicked, so that Menu can update the <h1>
-   * @param {Element} containerElement - The DOM element that will host the button
+   * @desc Sets up a button object placing it in the page (DOM)
+	 *       It set up an event listener for the click event on the button
+	 *       Notifies Menu when clicked, so that Menu can update the <h1>
+   * @param {object} containerElement - The DOM element that will host the button
    * @param {String} text - Button text
    */
   constructor(containerElement, text) {
-    this.containerElement = containerElement;
-    this.text = text;
+    this.#containerElement = containerElement;
+    this.#text = text;
 
     this.onClick = this.onClick.bind(this);
 
     const button = document.createElement('button');
     button.textContent = text;
     button.addEventListener('click', this.onClick);
-    this.containerElement.append(button);
+    this.#containerElement.append(button);
   }
 
   onClick() {
-    console.log('clicked: ' + this.text);
+    console.log('clicked: ' + this.#text);
   }
 }
 

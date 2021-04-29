@@ -1,3 +1,7 @@
+/** Buttons example
+    This css contains the minimum style for the buttons
+**/
+
 button {
   display: block;
   font-size: 24pt;
