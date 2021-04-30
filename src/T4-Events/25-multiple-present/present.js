@@ -17,6 +17,12 @@ class Present {
   #presentSrc;        /** URL of the present image */
   #image;             /** New DOM element to hold the present image */
 
+  /**
+   * @constructor
+   * @desc Fills the presents array
+   * @param {object} presentContainer- The DOM element that hosts the presents
+   * @param {string} presentSrc - URL of the new image for this present
+   */
   constructor(containerElement, presentSrc) {
     this.#containerElement = containerElement;
     this.#presentSrc = presentSrc;

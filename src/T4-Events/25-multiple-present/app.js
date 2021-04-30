@@ -21,6 +21,12 @@ class App {
   #titleContainer;   /** DOM element corresponding to the <h2> text */ 
   #presents = [];    /** Array of presents */
 
+  /**
+   * @constructor
+   * @desc Fills the presents array
+   * @param {object} presentContainer- The DOM element that hosts the presents
+   * @param {object} titleContainer - The DOM element that holds the header text
+   */
   constructor(presentContainer, titleContainer) {
     this.#presentContainer = presentContainer;
     this.#titleContainer = titleContainer;
