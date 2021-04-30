@@ -1,12 +1,12 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc Events. OO Present. Multiple Presents. App Class
+  * @desc Events. OO Present. Multiple Presents. App Class
 */
 
 "use strict";
@@ -14,7 +14,7 @@
 
 /** 
   * @desc Class to represent a set of presents
-	*       The class holds Present objects in an array
+  *       The class holds Present objects in an array
   */
 class App {
   #presentContainer; /** DOM element to host the presents */
@@ -28,7 +28,7 @@ class App {
   }
 
   /**
-	 * @method
+   * @method
    * @desc Creates the Present objects and stores them in the #presents array 
    */
   #fillPresentContainer() {
