@@ -31,7 +31,7 @@ class App {
     this.#presentContainer = presentContainer;
     this.#titleContainer = titleContainer;
     this.#fillPresentContainer();
-    document.addEventListener('present-opened', this.onPresentOpened);
+    document.addEventListener('present-opened', this.#onPresentOpened);
   }
 
   /**
@@ -46,11 +46,11 @@ class App {
   }
 
   /**
-   * @method onPresentOpened
+   * @method #onPresentOpened
    * @desc When a present is opened, the method updates the number of opened presents
    *       If it is the last present it modifies the page header message
    */
-  onPresentOpened() {
+  #onPresentOpened() {
     this.#openedCount++;
     if (this.#openedCount === this.#presents.length) {
       this.#titleContainer.textContent = 'Enjoy your presents!';
