@@ -17,10 +17,10 @@
  */
 class App {
   /** @private */
-  #presentContainer;
-  #titleContainer;
-  #presents = [];
-  #openedCount = 0;
+  #presentContainer; /** DOM element to host the presents */
+  #titleContainer;   /** DOM element corresponding to the <h2> text */ 
+  #presents = [];    /** Array of presents */
+  #openedCount = 0;  /** Holds the number of presents that have been opened */
 
   /*
    * @constructor

@@ -18,10 +18,10 @@
  *       by the present image when the original is clicked
  */
 class Present {
-   /** @private */
-  #containerElement;
-  #presentSrc;
-  #image;
+  /** @private */
+  #containerElement;  /** DOM element that holds the presents */
+  #presentSrc;        /** URL of the present image */
+  #image;             /** New DOM element to hold the present image */
 
   /*
    * @constructor
