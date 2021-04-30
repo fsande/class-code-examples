@@ -12,29 +12,34 @@
 "use strict";
 
 class App {
+  #presentContainer;
+  #titleContainer;
+  #presents = [];
+  #openedCount = 0;
+
   constructor(presentContainer, titleContainer) {
-    this.presentContainer = presentContainer;
-    this.titleContainer = titleContainer;
-    this.presents = [];
-    this._fillPresentContainer();
-    this._onPresentOpened = this._onPresentOpened.bind(this);
-    this.openedCount = 0;
-    document.addEventListener('present-opened', this._onPresentOpened);
+    this.#presentContainer = presentContainer;
+    this.#titleContainer = titleContainer;
+    this.#fillPresentContainer();
+    this.onPresentOpened = this.onPresentOpened.bind(this);
+    document.addEventListener('present-opened', this.onPresentOpened);
   }
 
-  /** @method _fillPresentContainer*/
-  _fillPresentContainer() {
-    for (const source of PRESENT_SOURCES) {
-      const present = new Present(this.presentContainer, source);
-      this.presents.push(present);
+  /** @method 
+    * @desc Creates the present objects and stores them in the #presents array
+    */
+  #fillPresentContainer() {
+    for (const SOURCE of PRESENT_SOURCES) {
+      const PRESENT = new Present(this.#presentContainer, SOURCE);
+      this.#presents.push(PRESENT);
     }
   }
 
-  /** @method _onPresentOpened*/
-  _onPresentOpened() {
-    this.openedCount++;
-    if (this.openedCount === this.presents.length) {
-      this.titleContainer.textContent = 'Enjoy your presents!';
+  /** @method onPresentOpened*/
+  onPresentOpened() {
+    this.#openedCount++;
+    if (this.#openedCount === this.#presents.length) {
+      this.#titleContainer.textContent = 'Enjoy your presents!';
     }
   }
 }
