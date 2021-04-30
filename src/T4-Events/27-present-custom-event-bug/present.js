@@ -6,33 +6,38 @@
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc OO Present custom Events with bug
+	* @desc OO Present with custom Events with bug. Present Class
 */
 
 "use strict";
 
 class Present {
+  #containerElement;
+  #presentSrc;
+  #image;
+
   constructor(containerElement, presentSrc) {
-    this.containerElement = containerElement;
-    this.presentSrc = presentSrc;
+    this.#containerElement = containerElement;
+    this.#presentSrc = presentSrc;
 
     // Bind event listeners.
-    this._openPresent = this._openPresent.bind(this);
+    this.openPresent = this.openPresent.bind(this);
 
     // Create image and append to container.
-    this.image = document.createElement('img');
-    this.image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
-		this.image.addEventListener('click', this._openPresent);
-    this.containerElement.append(this.image);
+    this.#image = document.createElement('img');
+    this.#image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
+		this.#image.addEventListener('click', this.openPresent);
+    this.#containerElement.append(this.#image);
   }
 
-
-  /** @method _openPresent 
+  /** @method openPresent 
 	    @desc Event handler for click events
+            It fires a custom 'present-opened' event
+      @param {object} event - Event object
 	*/
-  _openPresent(event) {
-    this.image.src = this.presentSrc;
-  	this.image.removeEventListener('click', this._openPresent);
+  openPresent(event) {
+    this.#image.src = this.#presentSrc;
+  	this.#image.removeEventListener('click', this.openPresent);
     document.dispatchEvent(new CustomEvent('present-opened'));
   }
 }

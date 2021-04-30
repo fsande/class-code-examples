@@ -6,34 +6,37 @@
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc OO Present. Present owns App
+	* @desc OO Present with custom Events. App class
 */
 
 "use strict";
 
 class App {
+  #presentContainer;
+  #titleContainer;
+  #presents = [];
+  #openedCount = 0;
+
   constructor(presentContainer, titleContainer) {
-    this.presentContainer = presentContainer;
-    this.titleContainer = titleContainer;
-    this.presents = [];
-    this._fillPresentContainer();
-    this.openedCount = 0;
-    document.addEventListener('present-opened', this._onPresentOpened);
+    this.#presentContainer = presentContainer;
+    this.#titleContainer = titleContainer;
+    this.#fillPresentContainer();
+    document.addEventListener('present-opened', this.onPresentOpened);
   }
 
-  /** @method _fillPresentContainer */
-  _fillPresentContainer() {
+  /** @method fillPresentContainer */
+  #fillPresentContainer() {
     for (const source of PRESENT_SOURCES) {
-      const present = new Present(this.presentContainer, source);
-      this.presents.push(present);
+      const present = new Present(this.#presentContainer, source);
+      this.#presents.push(present);
     }
   }
 
-  /** @method _onPresentOpened */
-  _onPresentOpened() {
-    this.openedCount++;
-    if (this.openedCount === this.presents.length) {
-      this.titleContainer.textContent = 'Enjoy your presents!';
+  /** @method onPresentOpened */
+  onPresentOpened() {
+    this.#openedCount++;
+    if (this.#openedCount === this.#presents.length) {
+      this.#titleContainer.textContent = 'Enjoy your presents!';
     }
   }
 }
