@@ -1,12 +1,12 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc Events. OO Buttons event handler
+  * @desc Events. OO Buttons event handler
 */
 
 'use strict';
@@ -20,7 +20,7 @@ class Button {
 
   /**
    * @description Sets up a button object placing it in the page (DOM)
-	 *              It set up an event listener for the click event on the button
+   *              It set up an event listener for the click event on the button
    * @param {object} containerElement - The DOM element that will host the button
    * @param {string} text - Button text
    */
@@ -35,10 +35,10 @@ class Button {
   }
 
   /**
-	 * @method 
+   * @method 
    * @description Event handler method for click events on the button
-	 *              The value of this in this method is not the Button object; 
-	 *              it is the <button> element to which we've attached the onClick event handler
+   *              The value of this in this method is not the Button object; 
+   *              it is the <button> element to which we've attached the onClick event handler
    */
   onClick() {
     console.log('clicked: ' + this.#text);

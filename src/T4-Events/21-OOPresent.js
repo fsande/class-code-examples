@@ -1,20 +1,20 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc JS Events. OO Present Class
-*/
+  * @desc JS Events. OO Present Class
+  */
 
 'use strict';
 
 
 /** 
   * @desc Class to represent a present 
-	*       Displays an image that will be replaced by a different one when clicked.
+  *       Displays an image that will be replaced by a different one when clicked.
   */
 class Present {
   constructor(containerElement) {

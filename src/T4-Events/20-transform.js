@@ -1,14 +1,14 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc JS Events. Keyboard Events
+  * @desc JS Events. Keyboard Events
   * @see {@link https://javascript.info/keyboard-events}
-*/
+  */
 
 'use strict';
 

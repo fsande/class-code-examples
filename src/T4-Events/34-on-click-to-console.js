@@ -1,16 +1,15 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc Events. OO On click to console
+  * @desc Events. OO On click to console
 */
 
 'use strict';
-
 
 /**
  * @class
@@ -23,7 +22,7 @@ class Button {
 
   /**
    * @description Sets up a button object placing it in the page (DOM)
-	 *              It set up an event listener for the click event on the button
+   *              It set up an event listener for the click event on the button
    * @param {Element} containerElement - The DOM element that will host the button
    * @param {String} text - Button text
    */
@@ -40,7 +39,7 @@ class Button {
   }
 
   /**
-	 * @method
+   * @method
    * @description Event handler method for click events on the button
    * The method can't be private as private methods are not writable
    */

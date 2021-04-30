@@ -11,7 +11,6 @@
 
 'use strict';
 
-
 function changeToX(event) {
   const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
   let container = event.currentTarget;

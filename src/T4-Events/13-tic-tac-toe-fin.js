@@ -18,7 +18,7 @@ const COMPUTER = 'o';
 /**
  * Assigns an empty space (square) to its new owner (HUMAN or COMPUTER)
  * @param {object} space - The HTML element corresponding to a game square
- * @param {string} owner - HUMAN or COMPUTER	
+ * @param {string} owner - HUMAN or COMPUTER  
  */
 function assignSpace(space, owner) {
   const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';

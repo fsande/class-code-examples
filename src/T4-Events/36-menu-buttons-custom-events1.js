@@ -1,13 +1,13 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc Events. Menu and buttons with custom Events
-*/
+  * @desc Events. Menu and buttons with custom Events
+  */
 
 'use strict';
 
@@ -32,7 +32,7 @@ class Menu {
   }
 
   /**
-	 * @method
+   * @method
    * @description Console logs and prints the button changing the DOM
    */
   showButtonClicked(event) {
@@ -52,8 +52,8 @@ class Button {
 
   /**
    * @desc Sets up a button object placing it in the page (DOM)
-	 *       It set up an event listener for the click event on the button
-	 *       Notifies Menu when clicked, so that Menu can update the <h1>
+   *       It set up an event listener for the click event on the button
+   *       Notifies Menu when clicked, so that Menu can update the <h1>
    * @param {Element} containerElement - The DOM element that will host the button
    * @param {String} text - Button text
    */
@@ -68,9 +68,9 @@ class Button {
   }
 
   /**
-	 * @method
+   * @method
    * @description Event handler method for click events on the button
-	 *              console logs and dispathes the even
+   *              console logs and dispathes the even
    */
   onClick() {
     console.log('clicked: ' + this.#text);

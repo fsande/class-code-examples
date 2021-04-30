@@ -1,17 +1,20 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc Events. Menu and buttons with custom Events
+  * @desc Events. Menu and buttons with custom Events
   */
 
 'use strict';
 
-/** @desc Class to hold the (array of) buttons of the page */
+/** 
+  * @class
+  * @desc Class to hold the (array of) buttons of the page 
+  */
 class Menu {
   /** @private */
   #buttonContainer = undefined; /** The The DOM element that will host the button */
@@ -19,7 +22,7 @@ class Menu {
   #buttons = undefined;         /** Array of Button objects */
   /**
    * @description Holds an array of Buttons
-	 *              The buttons are created when the Menu is created
+   *              The buttons are created when the Menu is created
    */
   constructor() {
     this.#buttonContainer = document.querySelector('#menu');
@@ -34,7 +37,7 @@ class Menu {
   }
 
   /**
-	 * @method
+   * @method
    * @description prints the button changing the DOM
    */
   showButtonClicked(event) {
@@ -42,7 +45,10 @@ class Menu {
   }
 }
 
-/** @desc Class for the buttons objects to be placed in tha page */
+/** 
+  * @class
+  * @desc Class for the buttons objects to be placed in tha page 
+  */
 class Button {
   /** @private */
   #containerElement = undefined;  /** The The DOM element that will host the button */
@@ -50,8 +56,8 @@ class Button {
 
   /**
    * @description Sets up a button object placing it in the page (DOM)
-	 *              It set up an event listener for the click event on the button
-	 *              Notifies Menu when clicked, so that Menu can update the <h1>
+   *              It set up an event listener for the click event on the button
+   *              Notifies Menu when clicked, so that Menu can update the <h1>
    * @param {Element} containerElement - The DOM element that will host the button
    * @param {String} text - Button text
    */
@@ -67,9 +73,9 @@ class Button {
   }
 
   /**
-	 * @method
+   * @method
    * @description Event handler method for click events on the button
-	 *              It adds an EVENT_INFO object to the customEvent
+   *              It adds an EVENT_INFO object to the customEvent
    */
   onClick() {
     const EVENT_INFO = { buttonName: this.#text };
