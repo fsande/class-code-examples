@@ -12,27 +12,30 @@
 "use strict";
 
 class App {
+  #presentContainer;
+  #titleContainer;
+  #presents = [];
+  #openedCount = 0;
+
   constructor(presentContainer, titleContainer) {
-    this.presentContainer = presentContainer;
-    this.titleContainer = titleContainer;
-    this.presents = [];
-    this._fillPresentContainer();
-    this.openedCount = 0;
+    this.#presentContainer = presentContainer;
+    this.#titleContainer = titleContainer;
+    this.#fillPresentContainer();
   }
 
-  /** @method _fillPresentContainer */
-  _fillPresentContainer() {
-    for (const source of PRESENT_SOURCES) {
-      const present = new Present(this.presentContainer, source, this._onPresentOpened);
-      this.presents.push(present);
+  /** @method #fillPresentContainer */
+  #fillPresentContainer() {
+    for (const SOURCE of PRESENT_SOURCES) {
+      const PRESENT = new Present(this.#presentContainer, SOURCE, this.onPresentOpened);
+      this.#presents.push(PRESENT);
     }
   }
 
-  /** @method _onPresentOpened */
-  _onPresentOpened() {
+  /** @method onPresentOpened */
+  onPresentOpened() {
     this.openedCount++;
-    if (this.openedCount === this.presents.length) {
-      this.titleContainer.textContent = 'Enjoy your presents!';
+    if (this.openedCount === this.#presents.length) {
+      this.#titleContainer.textContent = 'Enjoy your presents!';
     }
   }
 }
