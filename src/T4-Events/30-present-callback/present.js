@@ -6,33 +6,38 @@
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc OO Present custom Events with bug. Present class
+	* @desc OO Present application with callback. Present class
 */
 
 "use strict";
 
 class Present {
+  #containerElement;
+  #presentSrc;
+  #onOpenCallback;
+  #image;
+
   constructor(containerElement, presentSrc, onOpenCallback) {
-    this.containerElement = containerElement;
-    this.presentSrc = presentSrc;
-    this.onOpenCallback = onOpenCallback;
+    this.#containerElement = containerElement;
+    this.#presentSrc = presentSrc;
+    this.#onOpenCallback = onOpenCallback;
 
     // Bind event listeners.
-    this._openPresent = this._openPresent.bind(this);
+    this.openPresent = this.openPresent.bind(this);
 
     // Create image and append to container.
-    this.image = document.createElement('img');
-    this.image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
-		this.image.addEventListener('click', this._openPresent);
-    this.containerElement.append(this.image);
+    this.#image = document.createElement('img');
+    this.#image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
+		this.#image.addEventListener('click', this.openPresent);
+    this.#containerElement.append(this.#image);
   }
 
-  /** @method _openPresent 
+  /** @method openPresent 
 	    @desc Event handler for click events
 	*/
-  _openPresent(event) {
-    this.image.src = this.presentSrc;
-  	this.image.removeEventListener('click', this._openPresent);
-    this.onOpenCallback();
+  openPresent(event) {
+    this.#image.src = this.#presentSrc;
+  	this.#image.removeEventListener('click', this.openPresent);
+    this.#onOpenCallback();
   }
 }
