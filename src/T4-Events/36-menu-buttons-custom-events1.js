@@ -14,10 +14,14 @@
 /** @desc Class to hold the (array of) buttons of the page */
 class Menu {
   /** @private */
-  #buttonContainer = undefined; /** The The DOM element that will host the button */
-  #statusBar = undefined;       /** The The DOM element that will host the <h1> text with the button info */
-  #buttons = undefined;         /** Array of Button objects */
-  /** @desc Holds an array of Buttons which are created when the Menu is created */
+  #buttonContainer; /** The The DOM element that will host the button */
+  #statusBar;       /** The The DOM element that will host the <h1> text with the button info */
+  #buttons;         /** Array of Button objects */
+
+  /** 
+   * @constructor 
+   * @desc Holds an array of Buttons which are created when the Menu is created 
+   */
   constructor() {
     this.#buttonContainer = document.querySelector('#menu');
     this.#statusBar = document.querySelector('#status-bar');

@@ -12,13 +12,20 @@
 'use strict';
 
 /** 
-  * @desc Class to represent a present 
-  *       Replaces the image shown with a new one when it is clicked 
+  * @class
+  * @desc Represents a present 
+  *       Each present has an original image. When it is clicked, it is replaced
+  *       with a (new) present image.
   */
 class Present {
   /** @private */
   #containerElement; /** The The DOM element that will host the present image */
 
+  /**
+   * @constructor
+   * @desc Sets up a present object (new image) placing it in the page (DOM)
+   * @param {object} containerElement - The DOM element that will host the present (image)
+   */
   constructor(containerElement) {
     this.#containerElement = containerElement;
 
@@ -29,10 +36,10 @@ class Present {
     this.#containerElement.append(image);
   }
 
-
   /**
    * @method
-   * @description Changes the DOM with the new image and removes the listener
+   * @desc Listener. Changes the DOM with the new image and removes the listener
+   * @param {object} event - Event object 
    */
   openPresent(event) {
     const image = event.currentTarget;
@@ -40,3 +47,4 @@ class Present {
     image.removeEventListener('click', this.openPresent);
   }
 }
+

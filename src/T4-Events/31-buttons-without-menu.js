@@ -19,9 +19,10 @@ class Button {
   #containerElement;  /** HTML container for the button */
 
   /**
-   * @description Sets up a button object placing it in the page (DOM)
-   * @param {Element} containerElement - The DOM element that will host the button
-   * @param {String} text - Button text
+   * @constructor 
+   * @desc Sets up a button object placing it in the page (DOM)
+   * @param {object} containerElement - The DOM element that will host the button
+   * @param {string} text - Button text
    */
   constructor(containerElement, text) {
     this.#containerElement = containerElement;

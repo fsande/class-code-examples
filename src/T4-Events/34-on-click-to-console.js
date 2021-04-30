@@ -21,7 +21,8 @@ class Button {
   #text = '';  /** The button text */
 
   /**
-   * @description Sets up a button object placing it in the page (DOM)
+   * @constructor
+   * @desc Sets up a button object placing it in the page (DOM)
    *              It set up an event listener for the click event on the button
    * @param {Element} containerElement - The DOM element that will host the button
    * @param {String} text - Button text

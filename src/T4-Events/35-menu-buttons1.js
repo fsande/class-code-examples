@@ -17,12 +17,12 @@
 'use strict';
 
 /**
- * @description Class to hold the (array of) buttons of the page
+ * @desc Class to hold the (array of) buttons of the page
  */
 class Menu {
   /** @private */
-  #buttonContainer = undefined; /** The The DOM element that will host the button */
-  #buttons = undefined;         /** Array of button objects */
+  #buttonContainer; /** The The DOM element that will host the button */
+  #buttons;         /** Array of button objects */
   /** @desc Holds an array of Buttons which are created when the Menu is created */
   constructor() {
     this.buttonContainer = document.querySelector('#menu');

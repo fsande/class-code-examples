@@ -11,12 +11,19 @@
 
 'use strict';
 
-
 /** 
-  * @desc Class to represent a present 
-  *       Displays an image that will be replaced by a different one when clicked.
+  * @class
+  * @desc Represents a present 
+  *       Each present has an original image. When it is clicked, it is replaced
+  *       with a (new) present image.
   */
 class Present {
+  /**
+   * @constructor
+   * @desc Sets up a present object creating a new image and placing it in the page (DOM)
+   *       It set up an event listener for the click event on the button
+   * @param {object} containerElement - The DOM element that will host the present
+   */
   constructor(containerElement) {
     this.containerElement = containerElement;
     const image = document.createElement('img');

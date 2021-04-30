@@ -19,8 +19,9 @@ class Button {
   #text = '';
 
   /**
-   * @description Sets up a button object placing it in the page (DOM)
-   *              It set up an event listener for the click event on the button
+   * @constructor
+   * @desc Sets up a button object placing it in the page (DOM)
+   *       It set up an event listener for the click event on the button
    * @param {object} containerElement - The DOM element that will host the button
    * @param {string} text - Button text
    */
@@ -36,9 +37,9 @@ class Button {
 
   /**
    * @method 
-   * @description Event handler method for click events on the button
-   *              The value of this in this method is not the Button object; 
-   *              it is the <button> element to which we've attached the onClick event handler
+   * @desc Event handler method for click events on the button
+   *       The value of this in this method is not the Button object; 
+   *       it is the <button> element to which we've attached the onClick event handler
    */
   onClick() {
     console.log('clicked: ' + this.#text);

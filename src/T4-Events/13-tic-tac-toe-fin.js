@@ -11,7 +11,6 @@
 
 'use strict';
 
-
 const HUMAN = 'x';
 const COMPUTER = 'o';
 
