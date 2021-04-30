@@ -15,7 +15,7 @@
 /** 
   * @desc Class to represent a present 
 	*       Displays an image that will be replaced by a different one when clicked.
-*/
+  */
 class Present {
   constructor(containerElement) {
     this.containerElement = containerElement;

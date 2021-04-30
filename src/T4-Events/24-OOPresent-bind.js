@@ -15,11 +15,11 @@
 /** 
   * @desc Class to represent a present 
 	*       Displays an image that will be replaced by a different one when clicked.
-*/
+  */
 class Present {
   /** @private */
-  #containerElement = undefined;  /** The The DOM element that will host the Present */
-  #image = undefined;             /** The DOM element that will be created to host the image */
+  #containerElement;  /** The The DOM element that will host the Present */
+  #image;             /** The DOM element that will be created to host the image */
 
   constructor(containerElement) {
     this.#containerElement = containerElement;
@@ -34,6 +34,11 @@ class Present {
     this.#containerElement.append(this.#image);
   }
 
+  /**
+	 * @method
+   * @desc listener for the click event
+	 *       replaces the initial present image with the new one
+   */
   openPresent(event) {
     this.#image.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif';
   	this.#image.removeEventListener('click', this.openPresent);

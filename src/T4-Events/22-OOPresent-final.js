@@ -15,10 +15,10 @@
 /** 
   * @desc Class to represent a present 
 	*       Displays an image that will be replaced by a different one when clicked.
-*/
+  */
 class Present {
   /** @private */
-  #containerElement = undefined; /** The The DOM element that will host the present image */
+  #containerElement; /** The The DOM element that will host the present image */
 
   constructor(containerElement) {
     this.#containerElement = containerElement;
