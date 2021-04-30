@@ -7,16 +7,29 @@
   * @author F. de Sande
   * @since 14.may.2020
 	* @desc OO Present application with callback. Present class
-*/
+  */
 
 "use strict";
 
+/** 
+ * @class
+ * @desc Present Class. Represents a Present.
+ *       Initially the present has an image that will be replaced
+ *       by the present image when the original is clicked
+ */
 class Present {
+  /** @private */
   #containerElement;
   #presentSrc;
   #onOpenCallback;
   #image;
 
+  /*
+	 * @constructor
+   * @param {object} containerElement - DOM element that holds the present image
+   * @param {string} presentSrc - URL of the image to show when the present is opened
+   * @param {function} onOpenCallback - Callback to be invoked when the present is opened
+   */
   constructor(containerElement, presentSrc, onOpenCallback) {
     this.#containerElement = containerElement;
     this.#presentSrc = presentSrc;
@@ -32,9 +45,11 @@ class Present {
     this.#containerElement.append(this.#image);
   }
 
-  /** @method openPresent 
-	    @desc Event handler for click events
-	*/
+  /** 
+   * @method openPresent 
+	 * @desc Event handler for click events
+   * @param {object} event - Event object
+	 */
   openPresent(event) {
     this.#image.src = this.#presentSrc;
   	this.#image.removeEventListener('click', this.openPresent);
