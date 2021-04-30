@@ -37,9 +37,9 @@ class App {
    * @desc Creates the Present objects and stores them in the #presents array 
    */
   #fillPresentContainer() {
-    for (const source of PRESENT_SOURCES) {
-      const present = new Present(this.#presentContainer, source, this);
-      this.#presents.push(present);
+    for (const SOURCE of PRESENT_SOURCES) {
+      const PRESENT = new Present(this.#presentContainer, SOURCE, this);
+      this.#presents.push(PRESENT);
     }
   }
   
