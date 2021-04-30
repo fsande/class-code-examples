@@ -1,19 +1,19 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc OO Present. Present owns App
+  * @desc OO Present. Present owns App
 */
 
 "use strict";
 
 /** 
   * @desc Class to represent a set of presents
-	*       The class holds Present objects in an array
+  *       The class holds Present objects in an array
   */
 class App {
   #presentContainer; /** DOM element to host the presents */
@@ -33,7 +33,7 @@ class App {
   } 
   
   /**
-	 * @method
+   * @method
    * @desc Creates the Present objects and stores them in the #presents array 
    */
   #fillPresentContainer() {
@@ -44,10 +44,10 @@ class App {
   }
   
   /**
-	 * @method
+   * @method
    * @desc If the present opened is the last one, modifies the text
    */
-	onPresentOpened() {
+  onPresentOpened() {
     this.openedCount++;
     if (this.openedCount === this.#presents.length) {
       this.#titleContainer.textContent = 'Enjoy your presents!';
