@@ -19,10 +19,10 @@
  */
 class Present {
   /** @private */
-  #containerElement;
-  #presentSrc;
-  #onOpenCallback;
-  #image;
+  #containerElement;   /** DOM element that holds the presents */
+  #presentSrc;         /** URL of the present new image */
+  #onOpenCallback;     /** Callback function to be called when present opens */ 
+  #image;              /** New DOM element to hold the present image */
 
   /*
    * @constructor
