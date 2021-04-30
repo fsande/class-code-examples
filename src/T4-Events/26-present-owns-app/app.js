@@ -16,6 +16,7 @@
   *       The class holds Present objects in an array
   */
 class App {
+  /** @private */
   #presentContainer; /** DOM element to host the presents */
   #titleContainer;   /** DOM element corresponding to the <h2> text */ 
   #presents = [];    /** Array of presents */
@@ -48,8 +49,8 @@ class App {
    * @desc If the present opened is the last one, modifies the text
    */
   onPresentOpened() {
-    this.openedCount++;
-    if (this.openedCount === this.#presents.length) {
+    this.#openedCount++;
+    if (this.#openedCount === this.#presents.length) {
       this.#titleContainer.textContent = 'Enjoy your presents!';
     }
   } 
