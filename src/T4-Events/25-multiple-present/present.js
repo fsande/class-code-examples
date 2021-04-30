@@ -13,6 +13,7 @@
 
 /** @desc Class to represent a single present */
 class Present {
+  /** @private */
   #containerElement;  /** DOM element that holds the presents */
   #presentSrc;        /** URL of the present image */
   #image;             /** New DOM element to hold the present image */

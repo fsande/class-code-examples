@@ -17,6 +17,7 @@
   *       The class holds Present objects in an array
   */
 class App {
+  /** @private */
   #presentContainer; /** DOM element to host the presents */
   #titleContainer;   /** DOM element corresponding to the <h2> text */ 
   #presents = [];    /** Array of presents */
