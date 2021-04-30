@@ -1,22 +1,32 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 14.may.2020
-	* @desc OO Present with custom Events. App class
-*/
+  * @desc OO Present with custom Events. App class
+  */
 
 "use strict";
 
+/**
+ * @class
+ * @desc App Class. Holds and manages multiple presents (objects)
+ */
 class App {
+  /** @private */
   #presentContainer;
   #titleContainer;
   #presents = [];
   #openedCount = 0;
 
+  /*
+   * @constructor
+   * @param {object} presentContainer - DOM element that holds the array of presents
+   * @param {object} titleContainer - DOM element that holds the header title of the page
+   */
   constructor(presentContainer, titleContainer) {
     this.#presentContainer = presentContainer;
     this.#titleContainer = titleContainer;
@@ -24,7 +34,10 @@ class App {
     document.addEventListener('present-opened', this.onPresentOpened);
   }
 
-  /** @method fillPresentContainer */
+  /**
+   * @method #fillPresentContainer
+   * @desc Creates the present objects and stores them in the #presents array
+   */
   #fillPresentContainer() {
     for (const source of PRESENT_SOURCES) {
       const present = new Present(this.#presentContainer, source);
@@ -32,7 +45,11 @@ class App {
     }
   }
 
-  /** @method onPresentOpened */
+  /**
+   * @method onPresentOpened
+   * @desc When a present is opened, the method updates the number of opened presents
+   *       If it is the last present it modifies the page header message
+   */
   onPresentOpened() {
     this.#openedCount++;
     if (this.#openedCount === this.#presents.length) {
