@@ -17,10 +17,10 @@
  */
 class App {
   /** @private */
-  #presentContainer;
-  #titleContainer;
-  #presents = [];
-  #openedCount = 0;
+  #presentContainer; /** DOM element to host the presents */
+  #titleContainer;   /** DOM element corresponding to the <h2> text */ 
+  #presents = [];    /** Array of presents */
+  #openedCount = 0;  /** Holds the number of presents that have been opened */
 
   /*
    * @constructor
@@ -39,9 +39,9 @@ class App {
    * @desc Creates the present objects and stores them in the #presents array
    */
   #fillPresentContainer() {
-    for (const source of PRESENT_SOURCES) {
-      const present = new Present(this.#presentContainer, source);
-      this.#presents.push(present);
+    for (const SOURCE of PRESENT_SOURCES) {
+      const PRESENT = new Present(this.#presentContainer, SOURCE);
+      this.#presents.push(PRESENT);
     }
   }
 
