@@ -17,7 +17,7 @@
  */
 class Button {
   /** @private */
-  #containerElement = undefined;  /** The The DOM element that will host the button */
+  #containerElement;  /** The The DOM element that will host the button */
   #text = '';  /** The button text */
 
   /**
@@ -30,8 +30,6 @@ class Button {
   constructor(containerElement, text) {
     this.#containerElement = containerElement;
     this.#text = text;
-
-    this.onClick = this.onClick.bind(this);   // Use the current value of this in onClick
 
     let button = document.createElement('button');
     button.textContent = text;

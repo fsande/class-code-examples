@@ -31,7 +31,6 @@ class Menu {
       new Button(this.#buttonContainer, 'B'),
       new Button(this.#buttonContainer, 'C')
     ];
-
     document.addEventListener('button-click', this.showButtonClicked);
   }
 

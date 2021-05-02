@@ -28,7 +28,7 @@ class Button {
     this.#containerElement = containerElement;
 
     let button = document.createElement('button');
-    button.textContent = text;
+    button.textContent = text;  // textContent is a property of (DOM) Node
     this.#containerElement.append(button);
   }
 }

@@ -27,12 +27,12 @@ class Menu {
   constructor() {
     this.#buttonContainer = document.querySelector('#menu');
     this.#statusBar = document.querySelector('#status-bar');
-    this.showButtonClicked = this.showButtonClicked.bind(this);
     this.#buttons = [
       new Button(this.#buttonContainer, 'A'),
       new Button(this.#buttonContainer, 'B'),
       new Button(this.#buttonContainer, 'C')
     ];
+    this.showButtonClicked = this.showButtonClicked.bind(this);
     document.addEventListener('button-clicked', this.showButtonClicked);
   }
 
