@@ -17,9 +17,9 @@
   */
 class Menu {
   /** @private */
-  #buttonContainer = undefined; /** The The DOM element that will host the button */
-  #statusBar = undefined;       /** The The DOM element that will host the <h1> text with the button info */
-  #buttons = undefined;         /** Array of Button objects */
+  #buttonContainer; /** The The DOM element that will host the button */
+  #statusBar;       /** The The DOM element that will host the <h1> text with the button info */
+  #buttons;         /** Array of Button objects */
   /**
    * @description Holds an array of Buttons
    *              The buttons are created when the Menu is created
@@ -51,7 +51,7 @@ class Menu {
   */
 class Button {
   /** @private */
-  #containerElement = undefined;  /** The The DOM element that will host the button */
+  #containerElement;  /** The The DOM element that will host the button */
   #text = '';  /** The button text */
 
   /**

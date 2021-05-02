@@ -51,7 +51,7 @@ class Menu {
  */
 class Button {
   /** @private */
-  #containerElement = undefined;  /** The The DOM element that will host the button */
+  #containerElement;  /** The The DOM element that will host the button */
   #text = '';  /** The button text */
 
   /**

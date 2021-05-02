@@ -37,7 +37,7 @@ class Menu {
 /** @desc Class for the objects buttons to be placed in tha page */
 class Button {
   /** @private */
-  #containerElement = undefined;  /** The The DOM element that will host the button */
+  #containerElement;  /** The The DOM element that will host the button */
   #text = '';  /** The button text */
   /**
    * @desc Sets up a button object placing it in the page (DOM)
