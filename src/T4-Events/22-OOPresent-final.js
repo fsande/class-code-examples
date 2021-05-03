@@ -47,4 +47,3 @@ class Present {
     image.removeEventListener('click', this.openPresent);
   }
 }
-
