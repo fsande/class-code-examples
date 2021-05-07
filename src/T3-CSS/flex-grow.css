@@ -6,7 +6,7 @@
 
 .flex-item {
   border-radius: 10px;
-	flex-grow: 1;
+  flex-grow: 1;
   background-color: purple;
   margin: 5px;
 }

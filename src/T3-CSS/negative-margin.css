@@ -1,12 +1,12 @@
 /* No negative margin on img */
 
 #header {
-	background-color: lightblue;
-	height: 200px;
+  background-color: lightblue;
+  height: 200px;
 }
 
 img {
   margin-left: 50px;
-	height; 140;
+  height; 140;
   border: 2px solid LIGHTGRAY;
 }
