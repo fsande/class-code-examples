@@ -31,7 +31,7 @@
     "requizzle": "^0.2.3",
     "sprintf-js": "^1.1.2",
     "strip-json-comments": "^3.1.1",
-    "taffydb": "^2.6.2",
+    "taffydb": "^2.7.3",
     "uc.micro": "^1.0.6",
     "underscore": "^1.12.1",
     "xmlcreate": "^2.0.3"
