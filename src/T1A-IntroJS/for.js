@@ -1,15 +1,17 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 16.ene.2020
-	* @desc for statement
-	*
+  * @desc for statement
+  *
   * Computes 2^N
   */
+
+'use strict';
 
 const readlineSync = require('/home/fsande/.node_modules_global/lib/node_modules/readline-sync/');
 

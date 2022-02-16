@@ -1,15 +1,17 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 04.feb.2020
-	* @desc typeof operator
-	*       The typeof operator returns a string indicating the type of the unevaluated operand.
+  * @desc typeof operator
+  *       The typeof operator returns a string indicating the type of the unevaluated operand.
   * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof}
   */
+
+'use strict';
 
 // typeof 317.0
 
