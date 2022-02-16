@@ -1,16 +1,16 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 16.ene.2020
-	* @desc 
-	* @desc Hoisting Example
-	*
+  * @desc 
+  * @desc Hoisting Example
+  *
   * Yup, still undefined. 
-	* the declaration is hoisted ... but the initialization to a value is not
+  * the declaration is hoisted ... but the initialization to a value is not
   */
 
 // console.log(f);

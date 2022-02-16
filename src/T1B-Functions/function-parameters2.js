@@ -1,13 +1,13 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 26.Feb.2021
-	* @desc Function Parameters
-	*       JavaScript passes all arguments to a function by value
+  * @desc Function Parameters
+  *       JavaScript passes all arguments to a function by value
   *       In this code, the situation is that the item passed in is passed by value. 
   *       But the item that is passed by value is itself a reference. 
   *       Technically, this is called call-by-sharing.

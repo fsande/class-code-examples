@@ -1,12 +1,12 @@
 /**
   * Universidad de La Laguna
-	* Escuela Superior de Ingeniería y Tecnología
-	* Grado en Ingeniería Informática
-	* Programación de Aplicaciones Interactivas
+  * Escuela Superior de Ingeniería y Tecnología
+  * Grado en Ingeniería Informática
+  * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
   * @since 26.Feb.2021
-	* @desc Arrow Functions
+  * @desc Arrow Functions
   *       Arrow functions can be used in the same way as Function Expressions.
   *       For instance, to dynamically create a function:
   *
