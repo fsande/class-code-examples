@@ -13,6 +13,8 @@
     "test": "tests"
   },
   "dependencies": {
+    "readline-sync": "1.4.10",
+    "yargs": "17.3.1",
     "argparse": "^2.0.1",
     "bluebird": "^3.7.2",
     "catharsis": "^0.9.0",
@@ -60,3 +62,8 @@
   },
   "homepage": "https://github.com/fsande/PAI-class-code-examples#readme"
 }
+
+
+
+
+

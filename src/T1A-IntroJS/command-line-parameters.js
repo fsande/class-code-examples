@@ -16,7 +16,7 @@
 
 'use strict';
 
-let argv = require('../node_modules/yargs')(process.argv.slice(2)).argv;
+let argv = require('../../node_modules/yargs')(process.argv.slice(2)).argv;
 
 function main() {
   console.log('Params (%d, %d)', argv.x, argv.y);
