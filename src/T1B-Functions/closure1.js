@@ -10,7 +10,7 @@
   *
   */
 
-"use strict";
+'use strict';
 
 let misteryFunction = function() {
   let localVar = 'This is my value';

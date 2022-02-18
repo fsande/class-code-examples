@@ -11,8 +11,10 @@
   *
   */
 
+'use strict';
+
 f();
 var f = function(x) {
-  console.log("hello " + x);
+  console.log('hello ' + x);
 }
 

@@ -19,17 +19,17 @@
   * @see {@link https://javascript.info/function-basics}
   */
 
-"use strict";
+'use strict';
 
 function changeStuff(param1, param2, param3) {
   param1 = param1 * 10;
-  param2.item = "changed";
-  param3 = {item: "changed"};
+  param2.item = 'changed';
+  param3 = {item: 'changed'};
 }
 
 let num = 10;
-let obj1 = {item: "unchanged"};
-let obj2 = {item: "unchanged"};
+let obj1 = {item: 'unchanged'};
+let obj2 = {item: 'unchanged'};
 
 changeStuff(num, obj1, obj2);
 

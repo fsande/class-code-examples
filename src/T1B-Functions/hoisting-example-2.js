@@ -15,12 +15,12 @@
 
 // console.log(f);
 // var f = function(x) {
-//   console.log("hello " + x);
+//   console.log('hello ' + x);
 // }
 
 // it's executed as if it were
 var f;
 console.log(f);
 f = function(x) {
-  console.log("hello " + x);
+  console.log('hello ' + x);
 }

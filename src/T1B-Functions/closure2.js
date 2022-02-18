@@ -10,7 +10,7 @@
   *
   */
 
-"use strict";
+'use strict';
 
 function misteryFunction(param) {
   let local = param;

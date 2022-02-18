@@ -11,21 +11,21 @@
   * We can use the = operator to give a default value for the parameter it it is missing:
   */
 
-"use strict";
+'use strict';
 
 function greetTheWorld(greeting) {
-  console.log((greeting || "Hello") + " world!");
+  console.log((greeting || 'Hello') + ' world!');
 }
  
  
-function greetTheWorld1(greeting = "Hello") {
-  console.log(greeting + " world!");
+function greetTheWorld1(greeting = 'Hello') {
+  console.log(greeting + ' world!');
 }
 
-greetTheWorld("Hi");
+greetTheWorld('Hi');
 greetTheWorld();
 
 
-greetTheWorld1("Hi");
+greetTheWorld1('Hi');
 greetTheWorld1();
 

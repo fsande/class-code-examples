@@ -21,7 +21,7 @@
  * Así que cuando se llama así, multiplica su argumento por 2.
  */
 
-"use strict";
+'use strict';
 
 function wrapValue(n) {
   let local = n;

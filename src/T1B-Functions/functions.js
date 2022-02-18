@@ -10,7 +10,7 @@
   *
   */
 
-"use strict";
+'use strict';
 
 let readlineSync = require('/home/fsande/.node_modules_global/lib/node_modules/readline-sync/');
 
@@ -19,12 +19,12 @@ const square = function(x) {
 };
 
 const makeNoise = function() {
-  console.log("Pling!");
+  console.log('Pling!');
 };
 
 const power = (base, exponent) => {
   let result = 1;
-  for (let count = 0; count < exponent; count++) {
+  for (let count = 0; count < exponent; ++count) {
     result *= base;
   }
   return result;

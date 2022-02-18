@@ -12,10 +12,10 @@
   * The value of "i"  is readable outside of the for-loop because variables declared with var have function scope
   */
 
-"use strict";
+'use strict';
 
 function printMessage(message, times) {
-  for (var i = 0; i < times; i++) {
+  for (var i = 0; i < times; ++i) {
     console.log(message);
   }
   console.log('Value of i is ' + i);

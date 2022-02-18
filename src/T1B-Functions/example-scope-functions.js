@@ -10,16 +10,16 @@
   *
   */
 
-"use strict";
+'use strict';
 
-let myVar = "hi!";         // hello... I'm a global variable
+let myVar = 'hi!';         // hello... I'm a global variable
 
 let func1 = function() {
-  let myVar = "from func1";
+  let myVar = 'from func1';
 };
 
 let func2 = function() {
-  myVar = "from func2";
+  myVar = 'from func2';
 };
 
 console.log(myVar)

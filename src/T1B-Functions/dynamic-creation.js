@@ -13,7 +13,7 @@
   * @see {@link https://javascript.info/arrow-functions-basics}
   */
 
-"use strict";
+'use strict';
 
 const readlineSync = require('/home/fsande/.node_modules_global/lib/node_modules/readline-sync/');
 
@@ -21,6 +21,6 @@ const AGE = readlineSync.question('What is your age? ');
 
 let welcome = (AGE < 18) ?
   () => console.log('Hello') :
-  () => console.log("Greetings!");
+  () => console.log('Greetings!');
 
 welcome();

@@ -13,6 +13,8 @@
   * Which renders the first line of the function, inner = 5, a reassignment of the local inner, not the global
   */
 
+'use strict';
+
 var inner = 1000;
 function outer () {
     inner = 5;

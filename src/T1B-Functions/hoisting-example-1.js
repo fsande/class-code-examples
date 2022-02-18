@@ -13,7 +13,7 @@
   * Note the initialization is executed in the place where it occurs… consequently, num is undefined
   */
 
-"use strict";
+'use strict';
 
 var num = 1000;
 f();
