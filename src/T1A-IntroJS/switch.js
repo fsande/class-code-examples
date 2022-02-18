@@ -12,7 +12,7 @@
 
 'use strict';
 
-const readlineSync = require('/home/fsande/.node_modules_global/lib/node_modules/readline-sync/');
+const readlineSync = require('../../node_modules/readline-sync/');
 
 switch (readlineSync.question('Introduce weather: ')) {
   case "rainy":

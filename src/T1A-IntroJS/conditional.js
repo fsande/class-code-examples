@@ -13,34 +13,18 @@
 
 'use strict';
 
-const readline = require('readline');
+const readlineSync = require('../../node_modules/readline-sync/');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-rl.question('Introduzca texto: ', (answer) => {
-  // TODO: Log the answer in a database
-  console.log(`Textointroducido: ${answer}`);
- 
-  let theNumber = Number(answer);
-  if (!Number.isNaN(theNumber)) {
-    console.log("Your number is the square root of " + theNumber * theNumber);
-
-    let num = theNumber;
-    if (num < 10) {
-      console.log("Small");
-    } else if (num < 100) {
-      console.log("Medium");
-    } else {
-      console.log("Large");
-    }
-    
-
+let number = Number(readlineSync.question('Introduzca un número: '));
+if (!Number.isNaN(number)) { // Si es un número
+  console.log('El número es: ' + number);
+  if (number < 10) {
+    console.log('Pequeño');
+  } else if (number < 100) {
+    console.log('Medio');
   } else {
-    console.log("Hey. Why didn't you give me a number?");
+    console.log('Grande');
   }
-
-  rl.close();
-});
+} else {
+  console.log('No se introdujo un número...');
+}
