@@ -22,8 +22,12 @@ let func2 = function() {
   myVar = 'from func2';
 };
 
-console.log(myVar)
-func1();
-console.log(myVar);
-func2();
-console.log(myVar);
+function main() {
+  console.log(myVar)
+  func1();
+  console.log(myVar);
+  func2();
+  console.log(myVar);
+}
+
+main();
