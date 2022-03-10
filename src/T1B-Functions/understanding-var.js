@@ -29,6 +29,10 @@ function meaningless() {
   console.log('y is ' + y);
 }
 
-printMessage('hello', 3);
-meaningless();
-console.log('y is ' + y);
+function main() {
+  printMessage('hello', 3);
+  meaningless();
+  console.log('y is ' + y);
+}
+
+main();
