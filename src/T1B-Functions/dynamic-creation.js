@@ -17,9 +17,9 @@
 
 const readlineSync = require('../../node_modules/readline-sync/');
 
-const AGE = readlineSync.question('What is your age? ');
+let age = readlineSync.question('What is your age? ');
 
-let welcome = (AGE < 18) ?
+let welcome = (age < 18) ?
   () => console.log('Hello') :
   () => console.log('Greetings!');
 
