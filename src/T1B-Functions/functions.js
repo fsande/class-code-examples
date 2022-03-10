@@ -12,7 +12,7 @@
 
 'use strict';
 
-let readlineSync = require('/home/fsande/.node_modules_global/lib/node_modules/readline-sync/');
+const readlineSync = require('../../node_modules/readline-sync/');
 
 const square = function(x) {
   return x * x;
