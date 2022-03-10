@@ -13,6 +13,7 @@
 'use strict';
 
 let x = 1;
+
 function f() {
   let x = 2;
   function g() {
@@ -22,5 +23,6 @@ function f() {
   g();
   console.log(x);
 }
+
 f();
 console.log(x);

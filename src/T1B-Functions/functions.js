@@ -30,8 +30,11 @@ const power = (base, exponent) => {
   return result;
 };
 
+function main() {
+  let number = readlineSync.question('Introduce a number: ');
+  console.log(square(10));
+  makeNoise();
+  console.log(power(2, 10));
+}
 
-let number = readlineSync.question('Introduce a number: ');
-console.log(square(10));
-makeNoise();
-console.log(power(2, 10));
+main();
