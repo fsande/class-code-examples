@@ -14,11 +14,11 @@
 
 let myVar = 'hi!';         // hello... I'm a global variable
 
-let func1 = function() {
+const func1 = function() {
   let myVar = 'from func1';
 };
 
-let func2 = function() {
+const func2 = function() {
   myVar = 'from func2';
 };
 

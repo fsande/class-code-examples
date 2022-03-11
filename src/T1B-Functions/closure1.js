@@ -7,12 +7,11 @@
   * @author F. de Sande
   * @since 16.ene.2020
   * @desc Closure example
-  *
   */
 
 'use strict';
 
-let misteryFunction = function() {
+const misteryFunction = function() {
   let localVar = 'This is my value';
 
   return function() {
@@ -20,5 +19,5 @@ let misteryFunction = function() {
   }
 }
 
-let myFunction = misteryFunction();
+const myFunction = misteryFunction();
 myFunction();

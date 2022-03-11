@@ -16,7 +16,7 @@
 'use strict';
 
 // @returns {function} Returns a function which prints the localVar
-let gimmeFunction = function() {
+const gimmeFunction = function() {
   let localVar = "I'm in here!";
 
   return function() {
@@ -24,7 +24,7 @@ let gimmeFunction = function() {
   }
 }
 
-let myFunction = gimmeFunction(); // assigns to myFunction the function returned by gimmeFunction()
+const myFunction = gimmeFunction(); // assigns to myFunction the function returned by gimmeFunction()
 myFunction();
 
 // gimmeFunction();
