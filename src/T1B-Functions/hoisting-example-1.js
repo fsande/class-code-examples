@@ -16,6 +16,7 @@
 'use strict';
 
 var num = 1000;
+
 f();
 
 function f(){
