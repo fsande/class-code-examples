@@ -7,6 +7,7 @@
   * @author F. de Sande
   * @since 20.ene.2020
   * @desc Use of slice to copy
+  *       A common way of duplicating an Array is to use slice
   *
   */
 
