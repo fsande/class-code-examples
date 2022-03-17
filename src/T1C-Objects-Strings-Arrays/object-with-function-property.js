@@ -34,5 +34,5 @@ let bear = {
   greeting: sayHello
 };
 
-bird();    // Error: you can't invoke a regular object
+// bird();    // Error: you can't invoke a regular object
 bear.greeting();   // You can invoke the function property of the bear object

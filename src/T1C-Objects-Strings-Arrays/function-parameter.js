@@ -10,7 +10,6 @@
   *
   * Note: This is a silly and contrived example. You wouldn't/shoudln't write
   * JS code that looks like this.
-  *
   */
 
 'use strict';
@@ -20,11 +19,11 @@ function greetings(greeterFunction) {
 }
 
 const worldGreeting = function() {
-  console.log('hello world');
+  console.log('Hello world');
 };
 
 const hawaiianGreeting = () => {
-  console.log('aloha');
+  console.log('Aloha');
 };
 
 greetings(worldGreeting);
