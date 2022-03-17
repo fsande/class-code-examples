@@ -15,14 +15,17 @@
 
 'use strict';
 
-const greeting = function() {
-  console.log('hello, world');
-};
+function main() {
+  const greeting = function() {
+    console.log('Hello, world');
+  };
 
-console.log('Name: ', greeting.name);
-console.log('toString: ', greeting.toString());
+  console.log('Name: ', greeting.name);
+  console.log('toString: ', greeting.toString());
 
-//greeting.call();
+  greeting.call();
+  // This is the same as greeting.call();
+  //greeting();
+}
 
-// This is the same as greeting.call();
-//greeting();
+main();

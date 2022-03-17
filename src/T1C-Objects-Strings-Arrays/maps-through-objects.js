@@ -10,15 +10,18 @@
   *
   */
 
-
 'use strict';
 
-let scores = {
-  peach: 100,
-  mario: 88,
-  luigi: 91
-};
-scores.toad = 72;
-let name = 'wario';
-scores[name] = 102;
-console.log(scores);   // → 100
+function main() {
+  let scores = {
+    peach: 100,
+    mario: 88,
+    luigi: 91
+  };
+  scores.toad = 72;
+  let name = 'wario';
+  scores[name] = 102;
+  console.log(scores);   // → 100
+}
+
+main();
