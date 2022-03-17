@@ -17,7 +17,7 @@ function main() {
   console.log('Local var: ', localVar);
 }
 
-const myFunction= function() {
+const myFunction = function() {
   console.log('Welcome to PAI');
   return 17;
 }
