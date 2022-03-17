@@ -9,7 +9,6 @@
   * @desc JS Strings and Arrays
   *       Strings are primitives
   *       They just act like objects when they're called upon to do so
-  *
   */
 
 'use strict';

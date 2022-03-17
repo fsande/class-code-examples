@@ -9,6 +9,7 @@
   * @desc Callback example
   *
   * @see {@link https://medium.com/@javifont/javascript-qu%C3%A9-demonios-es-un-callback-9d0a548e3bf4}
+  * @see 
   * @fileOverview 
   * Un Callback (llamada de vuelta) es una función que se ejecutará después de que 
   * otra función haya terminado de ejecutarse, de aquí el nombre de Callback.
@@ -17,6 +18,7 @@
   * Estúdiese a continuación el ejemplo del callback en doHomework()
   * doHomework() recibe como segundo parámetro una función
   * 
+  * En la primera parte (first, second)
   * No es que JavaScript no haya ejecutado las funciones en el orden que queríamos, 
   * lo que sucede es que JavaScript no ha esperado a la respuesta de first para avanzar y ejecutar second.
   * ¿Por qué te mostramos esto? 
@@ -28,20 +30,23 @@
 
 function first(){
   // Simular retardo
-  setTimeout(function(){
+  setTimeout(function() {
     console.log(1);
   }, 500);
 }
 
-function second(){
+function second() {
   console.log(2);
 }
 
 first();
 second();
 
-///////////////////////////
-
+/**
+ * @desc writes the subject and calls the parameter function (callback)
+ * @param {string} subject
+ * @param {function} callback
+ */
 function doHomework(subject, callback) {
   console.log(`Starting my ${subject} homework.`);
   callback();
