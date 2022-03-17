@@ -7,7 +7,7 @@
   * @author F. de Sande
   * @since 20.ene.2020
   * @desc splice example
-  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+  * @see @link{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice}
   *
   */
 

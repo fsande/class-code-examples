@@ -7,6 +7,7 @@
   * @author F. de Sande
   * @since 20.ene.2020
   * @desc slice example
+  * @see @link{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice}
   *
   */
 
@@ -19,4 +20,3 @@ console.log(myArray.slice(1));    // →  [ 4, 6, 8 ]
 console.log(myArray.slice(1, 3)); // →  [ 4, 6 ]
 console.log(myArray.slice(-1));   // →  [ 8 ]
 console.log(myArray);             // →  [ 2, 4, 6, 8 ]
-
