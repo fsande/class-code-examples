@@ -38,10 +38,10 @@ let reverseArray = paramArray => {
 
 function reverseArrayInPlace1(paramArray) {
   let localArray = paramArray.slice(0);
-  const LEN = paramArray.length;
+  const LENGTH = paramArray.length;
 
-  for (let i = 0; i < LEN; i++) {
-    paramArray[i] = localArray[LEN - 1 - i];
+  for (let i = 0; i < LENGTH; ++i) {
+    paramArray[i] = localArray[LENGTH - 1 - i];
     // console.log(`i: ${i}  len-i: ${len - 1 - i}`);
   }
 }
@@ -51,7 +51,7 @@ function reverseArrayInPlace(paramArray) {
   let len = paramArray.length;
   let mid = Math.floor(len / 2);
   // console.log(`mid: ${mid}`);
-  for (let i = 0; i <= mid; i++) {
+  for (let i = 0; i <= mid; ++i) {
     temp = paramArray[i];
     paramArray[i] = paramArray[len - 1 - i];
     paramArray[len - 1 - i] = temp;
@@ -73,15 +73,18 @@ const doubleValuesInPlace = function(arr) {
 };
 
 const doubleValuesInPlace1 = function(arr) {
-  for(let i = 0; i < arr.length; i++) {
+  for(let i = 0; i < arr.length; ++i) {
     arr[i] *= 2;
   }
 };
 
+function main() {
+  let myArr = [1, 2, 3, 4, 5, 6];
+  let newArr = doubleValues(myArr);
+  console.log(newArr);
+  // let result = doubleValuesInPlace1(myArr);
+  // console.log(result);
+  // console.log(myArr);
+}
 
-let myArr = [1, 2, 3, 4, 5, 6];
-let newArr = doubleValues(myArr);
-console.log(newArr);
-// let result = doubleValuesInPlace1(myArr);
-// console.log(result);
-// console.log(myArr);
+main();
