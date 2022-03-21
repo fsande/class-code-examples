@@ -14,13 +14,13 @@
 
 function main() {
   let course = {
-    name:'Programación de Aplicaciones Interactivas',
-    section:3,
-    undergraduate:true
+    name: 'Programación de Aplicaciones Interactivas',
+    section: 3,
+    undergraduate: true
   };
 
   console.log(course.section);      // → 2
-  console.log(course["section"]);    // → 2
+  console.log(course['section']);    // → 2
 
   let exclamation = 'wow!';
   let listOfExclamations = ['golly!', 'gosh!'];
