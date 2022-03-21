@@ -18,9 +18,9 @@ const myFun = function() {
   // btw... ok - I get the funny coercion rules now
   console.log("typeof(arguments): " + typeof(arguments));
   console.log("number of args " + arguments.length);
-  for (let i = 0, j = arguments.length; i < j; i++) {
-    console.log(arguments[i]);
+  for (const argument of arguments) {
+    console.log(argument);
   }
 };
 
-myFun(1, 2, 3);
+myFun(1, 'alfa', 3);
