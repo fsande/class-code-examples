@@ -7,8 +7,8 @@
   * @author F. de Sande
   * @since Mar 14 2022
   * @desc Hoisting with function expressions
-  *        We can reference the let and const variables in the code (eg. main function body )
-  *        even before they are declared, as long as that code is not executed before the variable declaration.
+  *        We can reference the let localVar (myFunction) in the main function body
+  *        even before it is declared, as long as that code is not executed before the declaration.
   *
   * @see @link{https://blog.bitsrc.io/hoisting-in-modern-javascript-let-const-and-var-b290405adfda}
   * @see
