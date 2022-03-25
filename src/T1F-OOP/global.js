@@ -12,7 +12,7 @@
 // 'use strict';
 
 function oopsGlobal() {
-  mistake = 'yup';             // Declaring a variable!! use strict   !!!
+  mistake = 'yup';             // Declaring a variable!!    use strict to avoid this
 }
 
 oopsGlobal();

@@ -12,13 +12,17 @@
 'use strict';
 
 const speak = function() {
-  if(this.nationality === 'Japanese') {
-    console.log('nyan');
-  } else if (this.nationality === 'American') {
-    console.log('meow');
-  } else {
-    console.log('default cat noise');
-  }
+  switch(this.nationality) {  // this refers to the object that the method was called on
+    case 'Japanese':
+      console.log('nyan');
+      break;
+    case 'American':
+      console.log('meow');
+      break;
+    default:
+      console.log('default cat noise');
+      break;
+  } 
 }
 
 let japaneseCat = { nationality: 'Japanese', speak: speak };
