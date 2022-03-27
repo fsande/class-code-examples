@@ -25,7 +25,6 @@ const sayHi = function() {
   console.log(this.name);
 }
 
-
 // use the same function in two objects
 user.f = sayHi;
 admin.f = sayHi;
