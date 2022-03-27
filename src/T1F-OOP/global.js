@@ -18,5 +18,4 @@ function oopsGlobal() {
 oopsGlobal();
 console.log(mistake);
 console.log(global.mistake);
-console.log('The global object: ');
-console.log(global)
+console.log('The global object: ', global);
