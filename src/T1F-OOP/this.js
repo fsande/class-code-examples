@@ -7,6 +7,8 @@
  * @author F. de Sande
  * @since 20.feb.2020
  * @desc The this binding. In methods, this refers to the object that the method was called on
+ *       The call() allows for a function/method belonging to one object to be assigned and called for a different object.
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call}
  */
 
 'use strict';
