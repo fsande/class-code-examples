@@ -30,3 +30,7 @@ let americanCat = { nationality: 'American', speak: speak };
 
 japaneseCat.speak();    // →  nyan
 americanCat.speak();    // →  meow
+
+// Calling the speak function using its call method
+// The call method takes this as its first parameter
+speak.call(americanCat);
