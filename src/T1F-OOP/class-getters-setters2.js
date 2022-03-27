@@ -47,5 +47,5 @@ class User {
 }
 
 let user = new User('John');
-console.log(user.getName());            // John
+console.log(user.getName());      // John
 user = new User('');              // Name is too short.

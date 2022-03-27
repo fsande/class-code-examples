@@ -10,6 +10,10 @@
  *       All constructors have a property named prototype
  *       The default value of a constructor's prototype is a plain, empty object that derives from Object.prototype
  *       Every instance created with the constructor will have that object as its actual prototype
+ *
+ *       Google Style: Do not manipulate prototypes directly
+ *
+ * @see {@link https://google.github.io/styleguide/jsguide.html#features-classes-prototypes}
  */
 
 'use strict';
