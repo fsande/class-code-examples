@@ -22,4 +22,4 @@ let protoWerewolf = {
 // make a new werewolf with Object.create
 let sadWerewolf = Object.create(protoWerewolf);
 sadWerewolf.mood = 'sullen';  // "mood" is a property set on "sadWerewolf", but not on "protoWerewolf"
-sadWerewolf.howl('moon');  // howl() is a sadWerewolf method (inherited from its prototype)
+sadWerewolf.howl('moon');  // howl() is a sadWerewolf method (taken (inherited) from its prototype)
