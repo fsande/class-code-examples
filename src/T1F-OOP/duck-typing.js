@@ -31,7 +31,7 @@
 
 let duck = {
   appearance: 'feathers',
-  quack: function duck_quack(what) {
+  quack: function duckQuack(what) {
     console.log(what + ' quack-quack!');
   },
   color: 'black'
@@ -39,7 +39,7 @@ let duck = {
 
 let someAnimal = {
   appearance: 'feathers',
-  quack: function animal_quack(what) {
+  quack: function animalQuack(what) {
     console.log(what + ' whoof-whoof!');
   },
   eyes: 'yellow'
