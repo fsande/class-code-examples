@@ -7,7 +7,7 @@
  * @author F. de Sande
  * @since 20.feb.2020
  * @desc Arrow Functions have no this
- *       If we reference this from such a function, it’s taken from the outer “normal” function
+ *       If we reference this from such a function, it’s taken from the outer "normal" function
  * @tutorial {@link https://javascript.info/object-methods}
  */
 

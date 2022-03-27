@@ -7,7 +7,7 @@
  * @author F. de Sande
  * @since 20.feb.2020
  * @desc Overriding methods
- *       By default, all methods that are not specified in a child class are taken directly “as is” from its parent class
+ *       By default, all methods that are not specified in a child class are taken directly "as is" from its parent class
  *       But if we specify our own method in the child then it will be used instead
  *       Usually we don’t want to totally replace a parent method, but rather to build on top of it to tweak or extend its functionality
  *       We do something in our method, but call the parent method before/after it or in the process
