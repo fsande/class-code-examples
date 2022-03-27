@@ -48,17 +48,18 @@ console.log(partyWerewolf);                    // →  Werewolf { mood: 'partyin
 Werewolf.prototype.toString = function() {
   return this.mood + ' werewolf';
 };
-// If concatenate partyWerewof + '' It will use the toString() method to convert the object
+// If we concatenate partyWerewof + '' It will use the toString() method to convert the object
 console.log(partyWerewolf + '');              // →  partying werewolf
+
 console.log('======= Enumerating Properties: =================');              
 console.log('party:\n-----');
-for (let property in partyWerewolf) {
+for (const property in partyWerewolf) {
   console.log(property + ': ' + partyWerewolf[property]);
 }
 
 console.log('\n');
 
 console.log('sad:\n---');
-for (let property in sadWerewolf) {
+for (const property in sadWerewolf) {
   console.log(property + ': ' + sadWerewolf[property]);
 }

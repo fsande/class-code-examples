@@ -47,5 +47,6 @@ console.log(partyWerewolf);                    // →  Werewolf { mood: 'partyin
 Werewolf.prototype.toString = function() {
   return this.mood + ' werewolf';
 };
-// If concatenate partyWerewof + '' It will use the toString() method to convert the object
+
+// If we concatenate partyWerewof + '' It will use the toString() method to convert the object
 console.log(partyWerewolf + '');              // →  partying werewolf

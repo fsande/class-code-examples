@@ -12,8 +12,8 @@
  *       Instead of age we may decide to store birthday, because it’s more precise and convenient
  *       Now what to do with the old code that still uses age property?
  *       Adding a getter for age solves the problem
- * @tutorial {@link https://javascript.info/object-methods}
  *
+ * @tutorial {@link https://javascript.info/property-accessors#using-for-compatibility}
  */
 
 'use strict';
