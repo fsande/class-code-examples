@@ -10,10 +10,6 @@
  *       All constructors have a property named prototype
  *       The default value of a constructor's prototype is a plain, empty object that derives from Object.prototype
  *       Every instance created with the constructor will have that object as its actual prototype
- *       Note that there's a difference between
- *        - The constructor's prototype property that's used to set an instance's prototype versus
- *        - The constructor's actual prototype…
- *       Can you guess what that is? Function.prototype
  */
 
 'use strict';
@@ -32,5 +28,6 @@ console.log(partyWerewolf.mood);               // → partying
 Werewolf.prototype.howl = function(thing) {
   console.log('Werewolf howls at the ' + thing + '.');
 }
-sadWerewolf.howl('moon');                      // →  Werewolf howls at the moon.
+
+sadWerewolf.howl('moon');                     // →  Werewolf howls at the moon.
 partyWerewolf.howl('bowl of chips');          // →  Werewolf howls at the bowl of chips.
