@@ -45,6 +45,10 @@ let someAnimal = {
   eyes: 'yellow'
 };
 
+
+/**
+ * If it has feathers and sounds like a duck... It is a duck
+ */
 function check(who) {
   if ((who.appearance === 'feathers') && (typeof who.quack == 'function')) {
     who.quack('I look like a duck!\n');
