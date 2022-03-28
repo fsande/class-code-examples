@@ -6,7 +6,7 @@
  *
  * @author F. de Sande
  * @since March 27 2022
- * @desc If there’s this inside a function, it expects to be called in an object context
+ * @desc If there's this inside a function, it expects to be called in an object context
  *       Without strict mode, a standalone function's  this refers to the global object
  */
 
