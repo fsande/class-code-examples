@@ -18,7 +18,7 @@ console.log(Object.getPrototypeOf({}) === Object.prototype);          // → tru
 console.log(Object.getPrototypeOf(Object.prototype));                // → null
 
 // Prototypes of functions and Arrays ara Function.prototype and Array.prototype
-function myFunc(x) { return x; }
+const myFunc = function(x) { return x; }
 console.log(Object.getPrototypeOf(myFunc) === Function.prototype);   // → true
 console.log(Object.getPrototypeOf([1, 2, 3]) === Array.prototype);  // → true
 

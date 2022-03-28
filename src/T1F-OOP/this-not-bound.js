@@ -10,7 +10,8 @@
  *       In JS, the keyword behaves differently than in most programming languages;
  *       this can be used in any function
  *       The value of this is evaluated during the run-time, depending on the context
- *       For instance, in this code the same function is assigned to two different objects and has different this in the calls
+ *
+ *       In this code the same function is assigned to two different objects and has different this in the calls
  *       
  * @tutorial {@link https://javascript.info/object-methods}
  */

@@ -12,8 +12,12 @@
  *       Instead of age we may decide to store birthday, because it’s more precise and convenient
  *       Now what to do with the old code that still uses age property?
  *       Adding a getter for age solves the problem
- * @tutorial {@link https://javascript.info/object-methods}
  *
+ *       Object.defineProperty() defines a new property directly on an object, 
+ *       or modifies an existing property on an object, and returns the object.
+ *
+ * @see {@link * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty}
+ * @see {@link https://javascript.info/property-accessors#using-for-compatibility}
  */
 
 'use strict';
@@ -44,8 +48,8 @@ function User(name, birthday) {
   // age is calculated from the current date and birthday
   Object.defineProperty(this, 'age', {
     get() {
-      let todayYear = new Date().getFullYear();
-      return todayYear - this.birthday.getFullYear();
+      const TODAY_YEAR = new Date().getFullYear();
+      return TODAY_YEAR - this.birthday.getFullYear();
     }
   });
 }

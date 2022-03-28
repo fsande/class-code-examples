@@ -7,7 +7,7 @@
  * @author F. de Sande
  * @since 14.Mar.2021
  * @desc Overriding constructor
- *       If a class extends another class and has no constructor, then the “default” constructor calls the parent constructor passing it all the arguments
+ *       If a class extends another class and has no constructor, then the "default" constructor calls the parent constructor passing it all the arguments
  *       For the constructor in a child class to work, it needs to call super() before using this
  * @tutorial {@link https://javascript.info/class-inheritance#overriding-constructor}
  */
