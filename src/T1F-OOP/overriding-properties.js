@@ -7,7 +7,7 @@
  * @author F. de Sande
  * @since 20.feb.2020
  * @desc Overriding Properties
- *       If you add a property directly to an object, it is added to the object itself, not the object's prototype
+ *       If you add a property directly to an object, it is added to the object itself, not to the object's prototype
  */
 
 'use strict';
@@ -26,12 +26,10 @@ console.log(partyWerewolf.mood);               // → partying
 Werewolf.prototype.howl = function(thing) {
   console.log('Werewolf howls at the ' + thing + '.');
 }
-sadWerewolf.howl('moon');                      // →  Werewolf howls at the moon.
-partyWerewolf.howl('bowl of chips');          // →  Werewolf howls at the bowl of chips.
+sadWerewolf.howl('moon');                     // →  Werewolf howls at the moon
+partyWerewolf.howl('bowl of chips');          // →  Werewolf howls at the bowl of chips
 
-/** 
- *  If you add a property directly to an object, it is added to the object itself, not the object's prototype
- */
+// If you add a property directly to an object, it is added to the object itself, not to the object's prototype
 Werewolf.prototype.clothing = 'tattered shirt';
 console.log(partyWerewolf.clothing);          // →  tattered shirt
 

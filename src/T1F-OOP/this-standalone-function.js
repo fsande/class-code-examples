@@ -13,11 +13,13 @@
  *       This is a historical behavior that 'use strict' fixes
  */
 
-// 'use strict';              // If you use strict, this line is an error
+// 'use strict';              
 
-outside = 5;                // Declaring without let-const
+outside = 5;   // Declaring without let-const
+               // If you use strict, the previous line is an error
 
 const myFunc = function() {
+  console.log(this);
   console.log(this.outside);
 }
 

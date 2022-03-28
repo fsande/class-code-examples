@@ -14,8 +14,8 @@
 
 let person = {};
 
-const personEmote = function() {
+person.emote = function() {
   console.log('(っ˘̩╭╮˘̩)っ'); 
 };
 
-personEmote(); // → sad face - (っ˘̩╭╮˘̩)っ
+person.emote(); // → sad face - (っ˘̩╭╮˘̩)っ
