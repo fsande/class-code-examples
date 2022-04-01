@@ -11,7 +11,6 @@
  *       These are called class declarations. 
  *       Class declarations that don't use the extends keyword are called base classes
  *       A few things to note:
- *          Classes can only contain method definitions, not data properties;
  *          When defining methods, you use shorthand method definitions;
  *          Unlike when creating objects, you do not separate method definitions in class bodies with commas; and
  *          You can refer to properties on instances of the class directly (Line A).
