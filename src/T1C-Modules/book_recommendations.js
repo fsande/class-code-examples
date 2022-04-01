@@ -13,15 +13,15 @@
 
 'use strict';
 
-// stores the favorite author in a constant variable
+/** stores the favorite author in a constant variable */
 export const favoriteAuthor = { name: 'Ken Bruen', genre: 'Noir', nationality: 'Irish' };
 
-// returns the favorite book
+/** @return the favorite book */
 export function favoriteBook() {
   return { title: 'The Guards', author: 'Ken Bruen' };
 }
 
-// returns a list of good books
+/** returns a list of good books */
 export function getBookRecommendations() {
   return [
         {id: 1, title: 'The Guards', author: 'Ken Bruen'},

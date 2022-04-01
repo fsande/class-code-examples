@@ -27,17 +27,17 @@ let topIdeas = function() {
   return [musicAlbums[0], favoriteBook()];
 }
  
-// outputs a message specifying the customer's recommended gifting items
+/** outputs a message specifying the customer's recommended gifting items */
 const gifts = function() {
   console.log('Your recommended gifts are:\n');
-  console.log('######MUSIC######');
+  console.log('###### MUSIC ######');
 
-  for (let i = 0, len = musicAlbums.length; i < len; i++) {
+  for (let i = 0, len = musicAlbums.length; i < len; ++i) {
     console.log(musicAlbums[i].title + ' by ' + musicAlbums[i].artist);
   }
-  console.log('######BOOKS######');
+  console.log('###### BOOKS ######');
   let recommendedBooks = getBookRecommendations();
-  for (let i = 0, len = recommendedBooks.length; i < len; i++) {
+  for (let i = 0, len = recommendedBooks.length; i < len; ++i) {
     console.log(recommendedBooks[i].title + ' by ' + recommendedBooks[i].author);
   }
   console.log('\n\nYours');
