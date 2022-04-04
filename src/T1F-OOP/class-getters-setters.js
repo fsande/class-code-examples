@@ -15,9 +15,9 @@
 /**
  * Getters/setters are used as wrappers over "real" property values to gain more control over operations with them
  * The name is stored in name_ property, and the access is done via getter and setter
- * Technically, external code is able to access the name directly by using user.name_
- * But there is a widely known convention that properties ending with an 
- * underscore '_' are internal (private) and should not be accessed from outside the object
+ * Technically, external code is able to access the name directly by using user.name
+ * But there is a widely known convention that private properties 
+ * should not be accessed from outside the object
  *
  * Technically, this class declaration works by creating getters and setters in User.prototype.
  */

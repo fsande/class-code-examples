@@ -39,7 +39,7 @@ class Animal {
 */
 class Rabbit extends Animal {
   constructor(name, earLength) {
-    super(name);
+    super(name);    // PLAY changing the order of these 2 statements
     this.earLength = earLength;
   }
 

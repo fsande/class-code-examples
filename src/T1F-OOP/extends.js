@@ -34,7 +34,7 @@ class Animal {
   }
 }
 
-// Rabbit is a subclass or derived class
+/** Rabbit is a subclass or derived class */
 class Rabbit extends Animal {
   hide() {
     console.log(`${this.name} hides!`);

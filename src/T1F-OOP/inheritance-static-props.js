@@ -20,17 +20,17 @@ class Animal {
   static planet = 'Earth';
 
   constructor(name, speed) {
-    this.speed = speed;
-    this.name = name;
+    this.speed_ = speed;
+    this.name_ = name;
   }
 
   run(speed = 0) {
-    this.speed += speed;
-    console.log(`${this.name} runs with speed ${this.speed}.`);
+    this.speed_ += speed;
+    console.log(`${this.name_} runs with speed ${this.speed_}.`);
   }
 
   static compare(animalA, animalB) {
-    return animalA.speed - animalB.speed;
+    return animalA.speed_ - animalB.speed_;
   }
 
 }
@@ -38,7 +38,7 @@ class Animal {
 // Inherit from Animal
 class Rabbit extends Animal {
   hide() {
-    console.log(`${this.name} hides!`);
+    console.log(`${this.name_} hides!`);
   }
 }
 

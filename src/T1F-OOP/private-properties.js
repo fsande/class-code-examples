@@ -14,10 +14,6 @@
 
 'use strict';
 
-/**
- * NOTE: Private fields (and methods) are being implemented in the ECMA standard. 
- * You can start using them today with babel 7 and stage 3 preset.
- */
 class CoffeeMachine {
   #waterLimit = 200;
 
@@ -25,9 +21,15 @@ class CoffeeMachine {
     if (value < 0) throw new Error('Negative water');
     if (value > this.#waterLimit) throw new Error('Too much water');
   }
+
+  toString() {
+    return 'Water level in the machine: ' + this.#waterLimit;
+  }
+
 }
 
 let coffeeMachine = new CoffeeMachine();
+console.log(coffeeMachine.toString());
 
 // can't access privates from outside of the class
 // coffeeMachine.#checkWater(); // Error
