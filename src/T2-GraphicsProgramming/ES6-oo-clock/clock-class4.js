@@ -160,18 +160,14 @@ class Clock {
     ctx.rotate(-angle);
   }
 
-  /**
-   * Draws the clock hands 
-   */
+  /** Draws the clock hands */
   #drawTime() {
     this.#drawHand('second', this.#ctx);
     this.#drawHand('minute', this.#ctx);
     this.#drawHand('hour', this.#ctx);
   }
 
-  /**
-   * Draws the clock 
-   */
+  /** Draws the clock */
   render() {
     this.#drawClockFace(this.#ctx);
     this.#drawNumbers(this.#ctx);

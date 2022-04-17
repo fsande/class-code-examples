@@ -104,9 +104,7 @@ class Clock {
     }
   }
 
-  /**
-   * Draws the clock 
-   */
+  /** Draws the clock */
   render() {
     this.#drawClockFace(this.#ctx);
     this.#drawNumbers(this.#ctx);

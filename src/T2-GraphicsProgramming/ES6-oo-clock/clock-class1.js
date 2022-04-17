@@ -73,4 +73,3 @@ class Clock {
 // constructor(containerElement, size)
 let clock = new Clock(document.body, 800);
 console.log(Clock);
-

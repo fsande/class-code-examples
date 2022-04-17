@@ -82,9 +82,7 @@ class Clock {
     ctx.fill();
   }
 
-  /**
-   * Draws the clock 
-   */
+  /** Draws the clock */
   render() {
     this.#drawClockFace(this.#ctx);
   }
