@@ -41,7 +41,7 @@ class Rectangle {
    * @param {string} strokeColor  
    * @param {number} strokeWidth  
    */
-  constructor (xPosition = 0, yPosition = 0, width = 0, height = 0,
+  constructor(xPosition = 0, yPosition = 0, width = 0, height = 0,
     fillColor = '', strokeColor = '', strokeWidth = 2
   ) {
     console.log('Constructor is executing...');
@@ -64,30 +64,30 @@ class Rectangle {
    * @desc Rectangle Area
 	 * @returns Area of the rectangle
    */
-  getArea () {
+  getArea() {
     return this.#width * this.#height
   }
 
   /** gets the X position of the left side */
-  getLeft () {
+  getLeft() {
     // origin is at top left so just return x
     return this.#xPosition
   }
 
   /** get X position of right side */
-  getRight () {
+  getRight() {
     // xPosition is left position + the width to get end point
     return this.#xPosition + this.#width
   }
 
   /** get the Y position of top side */
-  getTop () {
+  getTop() {
     // origin is at top left so just return #yPosition
     return this.#yPosition
   }
 
   /** get Y position at bottom */
-  getBottom () {
+  getBottom() {
     return this.#yPosition + this.#height
   }
 
