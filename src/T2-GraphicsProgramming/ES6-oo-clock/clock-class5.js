@@ -26,7 +26,7 @@ class Clock {
   #centerY = undefined;
   #radius = undefined;
   #hands = {};
-  #canvas = document.createElement("CANVAS");  // A new HTML element
+  #canvas = document.createElement("CANVAS");  // Creates A new HTML element: a canvas
 	#ctx = this.#canvas.getContext('2d');
 
   /**
@@ -58,14 +58,14 @@ class Clock {
     // debugger;
     this.#canvas.width = size;
     this.#canvas.height = size;
-    containerElement.appendChild(this.#canvas);
+    containerElement.appendChild(this.#canvas);  // Adds the canvas HTML element as a 'child' of the containerElement (body)
     this.#centerX = this.#canvas.width / 2;
     this.#centerY = this.#canvas.height / 2;
     this.#ctx.translate(this.#centerX, this.#centerY);
 
     this.render = this.render.bind(this);
     this.render();
-		// setInterval(this.render, 1000);
+		// setInterval(this.render, 1000);  // An alternative for animation
   }
 
   /**
@@ -192,5 +192,7 @@ class Clock {
 
 // https://www.w3schools.com/jsref/prop_doc_body.asp
 // constructor(containerElement, size)
+// Notice: the HTML code for the clock does not contain a canvas tag:
+//         the canvas is created in the JS code (in the class constructor)
 let clock = new Clock(document.body, 800);
 console.log(clock);
