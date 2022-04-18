@@ -63,9 +63,11 @@ class Clock {
     this.#centerY = this.#canvas.height / 2;
     this.#ctx.translate(this.#centerX, this.#centerY);
 
-    this.render = this.render.bind(this);
-    this.render();
+    // this.render = this.render.bind(this);
+    // this.render();
 		// setInterval(this.render, 1000);  // An alternative for animation
+
+    this.renderArrow();
   }
 
   /**
@@ -188,6 +190,22 @@ class Clock {
     this.#drawCentralCircle(this.#ctx);
     requestAnimationFrame(this.render);  // Animate the clock
   }
+
+  /** 
+    * Draws the clock and performs it's animation 
+    * 
+    * Alternatively, the render method can be written as an arrow function (renderArrow)
+    * In this case the binding done in the constructor can be avoided:
+    *    this.render = this.render.bind(this);
+    */
+  renderArrow = () => {
+    this.#drawClockFace(this.#ctx);
+    this.#drawNumbers(this.#ctx);
+    this.#drawTime();
+    this.#drawCentralCircle(this.#ctx);
+    requestAnimationFrame(this.renderArrow);  // Animate the clock
+  }
+
 }
 
 // https://www.w3schools.com/jsref/prop_doc_body.asp
