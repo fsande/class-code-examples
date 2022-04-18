@@ -162,9 +162,7 @@ class Clock {
     ctx.rotate(-angle);
   }
 
-  /**
-   * Draws the clock hands 
-   */
+  /** Draws the clock hands */
   #drawTime() {
     this.#drawHand('second', this.#ctx);
     this.#drawHand('minute', this.#ctx);
@@ -182,9 +180,7 @@ class Clock {
     ctx.fill();
   }
 
-  /**
-   * Draws the clock and performs it's animation
-   */
+  /** Draws the clock and performs it's animation */
   render() {
     this.#drawClockFace(this.#ctx);
     this.#drawNumbers(this.#ctx);
