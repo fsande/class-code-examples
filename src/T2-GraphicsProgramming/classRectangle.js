@@ -14,12 +14,13 @@
  *           {@link https://codeburst.io/creating-and-drawing-on-an-html5-canvas-using-javascript-93da75f001c1}
  */
 
+'use strict';
 
 /**
  * @desc A class to represent rectangle objects
  * @class
  */
-class Rectangle {
+export class Rectangle {
   #xPosition = 0;
   #yPosition = 0;
   #width = 0; 
@@ -44,8 +45,8 @@ class Rectangle {
   constructor(xPosition = 0, yPosition = 0, width = 0, height = 0,
     fillColor = '', strokeColor = '', strokeWidth = 2
   ) {
-    console.log('Constructor is executing...');
-    alert('Constructor is executing...');
+    // console.log('Constructor is executing...');
+    // alert('Constructor is executing...');
     // ensure the arguments passed in are numbers
     // a bit overkill for this tutorial
     this.#xPosition = Number(xPosition)
@@ -114,32 +115,3 @@ class Rectangle {
     this.ctx.restore()
   }
 }
-
-// create a new rectangle object using the Rectangle class
-const mySquare1 = new Rectangle(400, 85, 50, 50, 'gold');
-const mySquare2 = new Rectangle(50, 35, 50, 50, 'blue');
-const mySquare3 = new Rectangle(125, 35, 50, 50, 'red');
-const mySquare4 = new Rectangle(200, 35, 50, 50, 'black');
-
-
-// now we have data and methods to describe our square
-console.log(mySquare1)
-// Object
-// #fillColor: "gold"
-// #height: 50
-// #strokeColor: ""
-// #strokeWidth: 2
-// #width: 50
-// #xPosition: 450
-// #yPosition: 100
-// area: (...)
-// bottom: (...)
-// left: (...)
-// right: (...)
-// top: (...)
-
-// draw the square data to screen
-mySquare1.draw();
-mySquare2.draw();
-mySquare3.draw();
-mySquare4.draw();
