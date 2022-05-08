@@ -11,10 +11,8 @@
 
 'use strict';
 
-const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
-const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
-
 function changeToX(event) {
+  const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
   const container = event.currentTarget;
   const image = document.createElement('img');
   image.src = X_IMAGE_URL;
@@ -24,6 +22,7 @@ function changeToX(event) {
 }
 
 function computerChooseO() {
+  const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
   const allBoxes  = document.querySelectorAll('#grid div');
   const freeBoxes = [];
   for (const box of allBoxes) {
