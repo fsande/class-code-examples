@@ -32,11 +32,11 @@ function computerChooseO() {
     }
   }
   const index = Math.floor(Math.random() * freeBoxes.length);
-  const freeSpace = freeBoxes[index];
+  const emptyBox = freeBoxes[index];
   const image = document.createElement('img');
   image.src = O_IMAGE_URL;
-  freeSpace.removeEventListener('click', changeToX);
-  freeSpace.appendChild(image);									// Include an 'O' Image in the empty box
+  emptyBox.removeEventListener('click', changeToX);
+  emptyBox.appendChild(image);									// Include an 'O' Image in the empty box
 }
 
 const boxes = document.querySelectorAll('#grid div');
