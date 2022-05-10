@@ -11,11 +11,10 @@
 
 'use strict';
 
-function onClick(event) {
+const onClick = function(event) {
   const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
   const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
-  // Get the element that was clicked
-  const element = event.target;
+  const element = event.target;   // Get the element that was clicked
 
   // Create an <img> tag with the X img src
   const image = document.createElement('img');
@@ -25,9 +24,14 @@ function onClick(event) {
   element.appendChild(image);
 }
 
-const gridItems = document.querySelectorAll('#grid div');
+const main = function() {
+  // All elements that have grid and div (all divs)
+  const gridItems = document.querySelectorAll('#grid div');
 
-// Add a listener to all elements that have grid and div (all divs)
-for (const item of gridItems) {
-  item.addEventListener('click', onClick);
+  // Add a listener to all thouse elements 
+  for (const item of gridItems) {
+    item.addEventListener('click', onClick);
+  }
 }
+
+main();
