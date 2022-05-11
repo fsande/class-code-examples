@@ -15,10 +15,10 @@
 
 'use strict';
 
-const RIGHT_ARROW = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/forward-arrow.png';
-const DOWN_ARROW = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/down-arrow.png';
-
 function toggleVisibility(event) {
+  const RIGHT_ARROW = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/forward-arrow.png';
+  const DOWN_ARROW = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/down-arrow.png';
+
   console.log('event.target is: ' + event.target.tagName);
   console.log('event.currentTarget is: ' + event.currentTarget.tagName);
 
