@@ -11,7 +11,7 @@
 
 'use strict';
 
-function changeToX(event) {
+const changeToX = function(event) {
   const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
   const container = event.currentTarget;
   const image = document.createElement('img');
@@ -21,7 +21,7 @@ function changeToX(event) {
   computerChooseO();
 }
 
-function computerChooseO() {
+const computerChooseO = function() {
   const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
   const allBoxes  = document.querySelectorAll('#grid div');
   const freeBoxes = [];
@@ -39,8 +39,11 @@ function computerChooseO() {
   emptyBox.appendChild(image);									// Include an 'O' Image in the empty box
 }
 
-const boxes = document.querySelectorAll('#grid div');
-for (const box of boxes) {
-  box.addEventListener('click', changeToX);
+const main = function() {
+  const boxes = document.querySelectorAll('#grid div');
+  for (const box of boxes) {
+    box.addEventListener('click', changeToX);
+  }
 }
 
+main();

@@ -11,7 +11,7 @@
 
 'use strict';
 
-function changeToX(event) {
+const changeToX = function(event) {
   const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
   let container = event.currentTarget;
   let image = document.createElement('img');
@@ -26,7 +26,7 @@ function changeToX(event) {
   computerChooseO();
 }
 
-function computerChooseO() {
+const computerChooseO = function() {
   const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
   const index = Math.floor(Math.random() * freeBoxes.length);
   const freeSpace = freeBoxes[index];
@@ -40,9 +40,13 @@ function computerChooseO() {
 }
 
 let freeBoxes = []; // Global array
-let boxes = document.querySelectorAll('#grid div');
-for (let box of boxes) {
-  box.addEventListener('click', changeToX);
-  freeBoxes.push(box);
+
+const main = function() {
+  let boxes = document.querySelectorAll('#grid div');
+  for (let box of boxes) {
+    box.addEventListener('click', changeToX);
+    freeBoxes.push(box);
+  }
 }
 
+main();
