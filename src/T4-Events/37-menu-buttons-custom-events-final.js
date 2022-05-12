@@ -32,15 +32,14 @@ class Menu {
       new Button(this.#buttonContainer, 'B'),
       new Button(this.#buttonContainer, 'C')
     ];
-    this.showButtonClicked = this.showButtonClicked.bind(this);
-    document.addEventListener('button-clicked', this.showButtonClicked);
+    document.addEventListener('button-clicked', this.#showButtonClicked);
   }
 
   /**
    * @method
    * @description prints the button changing the DOM
    */
-  showButtonClicked(event) {
+  #showButtonClicked = (event) => {
     this.#statusBar.textContent = event.detail.buttonName + ' was clicked';
   }
 }
@@ -64,11 +63,9 @@ class Button {
   constructor(containerElement, text) {
     this.#containerElement = containerElement;
     this.#text = text;
-    this.onClick = this.onClick.bind(this);
-
     let button = document.createElement('button');
     button.textContent = text;
-    button.addEventListener('click', this.onClick);
+    button.addEventListener('click', this.#onClick);
     this.#containerElement.append(button);
   }
 
@@ -77,7 +74,7 @@ class Button {
    * @description Event handler method for click events on the button
    *              It adds an EVENT_INFO object to the customEvent
    */
-  onClick() {
+  #onClick = () => {
     const EVENT_INFO = { buttonName: this.#text };
     document.dispatchEvent(new CustomEvent('button-clicked', { detail: EVENT_INFO }));
   }
