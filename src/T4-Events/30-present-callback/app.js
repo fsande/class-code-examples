@@ -31,7 +31,6 @@ class App {
   constructor(presentContainer, titleContainer) {
     this.#presentContainer = presentContainer;
     this.#titleContainer = titleContainer;
-    this.onPresentOpened = this.onPresentOpened.bind(this);
     this.#fillPresentContainer();
   }
 
@@ -41,17 +40,17 @@ class App {
    */
   #fillPresentContainer() {
     for (const SOURCE of PRESENT_SOURCES) {
-      const PRESENT = new Present(this.#presentContainer, SOURCE, this.onPresentOpened);
+      const PRESENT = new Present(this.#presentContainer, SOURCE, this.#onPresentOpened);
       this.#presents.push(PRESENT);
     }
   }
 
   /**
-   * @method onPresentOpened
+   * @method #onPresentOpened
    * @desc When a present is opened, the method updates the number of opened presents
    *       If it is the last present it modifies the page header message
    */
-  onPresentOpened() {
+  #onPresentOpened = () => {
     this.#openedCount++;
     if (this.#openedCount === this.#presents.length) {
       this.#titleContainer.textContent = 'Enjoy your presents!';
