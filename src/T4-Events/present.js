@@ -6,7 +6,7 @@
   *
   * @author F. de Sande
   * @since 14.may.2020
-  * @desc JS Events. OO Present Class with this bug
+  * @desc JS Events. OO Present Class
   */
 
 'use strict';
@@ -19,8 +19,7 @@
   */
 class Present {
   /** @private */
-  #containerElement;  /** The The DOM element that will host the Present */
-  #image;             /** The DOM element that will be created to host the image */
+  #containerElement; /** The The DOM element that will host the present image */
 
   /**
    * @constructor
@@ -30,20 +29,21 @@ class Present {
   constructor(containerElement) {
     this.#containerElement = containerElement;
 
-    // Create image and append to container
-    this.#image = document.createElement('img');
-    this.#image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
-    this.#image.addEventListener('click', this.#openPresent);
-    this.#containerElement.append(this.#image);
+    // Create image and append to container.
+    let image = document.createElement('img');
+    image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
+    image.addEventListener('click', this.#openPresent);
+    this.#containerElement.append(image);
   }
 
   /**
    * @method
-   * @desc Listener. Changes the #image property with the new image and removes the listener
+   * @desc Listener. Changes the DOM with the new image and removes the listener
    * @param {object} event - Event object 
    */
   #openPresent = (event) => {
-    this.#image.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif';
-    this.#image.removeEventListener('click', this.openPresent);
+    const image = event.currentTarget;
+    image.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif'; // The new image
+    image.removeEventListener('click', this.#openPresent);
   }
 }
