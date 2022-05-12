@@ -47,6 +47,17 @@ class Button {
   onClick() {
     console.log('clicked: ' + this.#text);
   }
+
+  /**
+   * @method
+   * @description Event handler method for click events on the button
+   *              Implemented as an arrow function
+   *              Using this version we don't need the bind statement in the constructor
+   *              And the method can be private
+   */
+  #onClick1 = () => {
+    console.log('Arrow clicked: ' + this.#text);
+  }
 }
 
 const buttonContainer = document.querySelector('#menu');
