@@ -33,14 +33,11 @@ class Present {
     this.#presentSrc = presentSrc;
     this.#app = app;  // <-- POOR STYLE: DON'T DO THIS:
     
-    // Bind event listeners.
-    this.openPresent = this.openPresent.bind(this);
-    
     // Create image and append to container.
     this.#image = document.createElement('img');
     const INITIAL_IMAGE = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
     this.#image.src = INITIAL_IMAGE;  
-    this.#image.addEventListener('click', this.openPresent);
+    this.#image.addEventListener('click', this.#openPresent);
     this.#containerElement.append(this.#image);
   } 
   
@@ -51,7 +48,7 @@ class Present {
    *       Removes the click event listener
    * @param {object} event - The event object 
    */
-  openPresent(event) {
+  #openPresent = (event) => {
     this.#image.src = this.#presentSrc;
     this.#image.removeEventListener('click', this.openPresent);
     this.#app.onPresentOpened(); // <-- POOR STYLE: DON'T DO THIS:
