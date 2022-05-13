@@ -36,7 +36,7 @@ class Menu {
   }
 
   /**
-   * @method
+   * @method #showButtonClicked
    * @description prints the button changing the DOM
    */
   #showButtonClicked = (event) => {
@@ -51,7 +51,7 @@ class Menu {
 class Button {
   /** @private */
   #containerElement;  /** The The DOM element that will host the button */
-  #text = '';  /** The button text */
+  #text = '';         /** The button text */
 
   /**
    * @description Sets up a button object placing it in the page (DOM)
@@ -70,7 +70,7 @@ class Button {
   }
 
   /**
-   * @method
+   * @method #onClick
    * @description Event handler method for click events on the button
    *              It adds an EVENT_INFO object to the customEvent
    */
