@@ -16,9 +16,7 @@
 
 'use strict';
 
-/**
- * @desc Class to hold the (array of) buttons of the page
- */
+/** @desc Class to hold the (array of) buttons of the page */
 class Menu {
   /** @private */
   #buttonContainer; /** The The DOM element that will host the button */
@@ -49,16 +47,13 @@ class Button {
   constructor(containerElement, text) {
     this.#containerElement = containerElement;
     this.#text = text;
-
-    this.onClick = this.onClick.bind(this);
-
     const button = document.createElement('button');
     button.textContent = text;
-    button.addEventListener('click', this.onClick);
+    button.addEventListener('click', this.#onClick);
     this.#containerElement.append(button);
   }
 
-  onClick() {
+  #onClick = () => {
     console.log('clicked: ' + this.#text);
   }
 }
