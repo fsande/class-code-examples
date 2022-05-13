@@ -25,20 +25,19 @@ class Menu {
   constructor() {
     this.#buttonContainer = document.querySelector('#menu');
     this.#statusBar = document.querySelector('#status-bar');
-    this.showButtonClicked = this.showButtonClicked.bind(this);
     this.#buttons = [
       new Button(this.#buttonContainer, 'A'),
       new Button(this.#buttonContainer, 'B'),
       new Button(this.#buttonContainer, 'C')
     ];
-    document.addEventListener('button-click', this.showButtonClicked);
+    document.addEventListener('button-click', this.#showButtonClicked);
   }
 
   /**
    * @method
    * @description Console logs and prints the button changing the DOM
    */
-  showButtonClicked(event) {
+  #showButtonClicked = (event) => {
     console.log('Menu notified!');
     const BUTTON_NAME = event.currentTarget.textContent;
     this.#statusBar.textContent = BUTTON_NAME + ' was clicked';
@@ -63,19 +62,18 @@ class Button {
   constructor(containerElement, text) {
     this.#containerElement = containerElement;
     this.#text = text;
-    this.onClick = this.onClick.bind(this);
     const button = document.createElement('button');
     button.textContent = text;
-    button.addEventListener('click', this.onClick);
+    button.addEventListener('click', this.#onClick);
     this.#containerElement.append(button);
   }
 
   /**
-   * @method
+   * @method #onClick
    * @description Event handler method for click events on the button
    *              console logs and dispathes the even
    */
-  onClick() {
+  #onClick = () => {
     console.log('clicked: ' + this.#text);
     document.dispatchEvent(new CustomEvent('button-click'));
   }
