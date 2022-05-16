@@ -23,11 +23,11 @@ class Menu {
   #buttons;         /** Array of button objects */
   /** @desc Holds an array of Buttons which are created when the Menu is created */
   constructor() {
-    this.buttonContainer = document.querySelector('#menu');
-    this.buttons = [
-      new Button(this.buttonContainer, 'A'),
-      new Button(this.buttonContainer, 'B'),
-      new Button(this.buttonContainer, 'C')
+    this.#buttonContainer = document.querySelector('#menu');
+    this.#buttons = [
+      new Button(this.#buttonContainer, 'A'),
+      new Button(this.#buttonContainer, 'B'),
+      new Button(this.#buttonContainer, 'C')
     ];
   }
 }
