@@ -53,7 +53,7 @@ class App {
   #onPresentOpened = () => {
     this.#openedCount++;
     if (this.#openedCount === this.#presents.length) {
-      this.#titleContainer.textContent = 'Enjoy your presents!';
+      this.#titleContainer.textContent = 'Enjoy your 5 presents!';
     }
   }
 }
