@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "push": "rm *~; git pull; git add . ; git commit -m 'Code improvement'; git push",
+    "pull": "git pull",
     "start": "tsc-watch --onSuccess \"node dist/index.js\""
   },
-  "keywords": [],
+  "keywords": ["PAI"],
   "author": "F. de Sande <fsande@ull.es>",
   "license": "MIT",
   "devDependencies": {

@@ -6,7 +6,8 @@
     "rootDir": "./",
     "outDir": "./dist",
     "declaration": true,
-    "strictNullChecks": true,                         /* When type checking, take into account `null` and `undefined`. */
+    "strictNullChecks": true,                 /* When type checking, take into account `null` and `undefined`. */
+    "noImplicitAny": true,                    /* will issue an error whenever it would have inferred any:*/ 
     "forceConsistentCasingInFileNames": true
   },
   "exclude": [
