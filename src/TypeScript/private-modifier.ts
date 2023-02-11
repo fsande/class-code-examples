@@ -16,7 +16,7 @@ class Person {
     this.lastName = lastName;
   }
 
-  getFullName(): string {
+  getFullName(): string {  // Default visibility is public
     return `${this.firstName} ${this.lastName}`; 
   }
 
