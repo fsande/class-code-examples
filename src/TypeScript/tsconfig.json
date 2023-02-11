@@ -11,6 +11,7 @@
     "noImplicitAny": true,                    /* will issue an error whenever it would have inferred any:*/ 
     "forceConsistentCasingInFileNames": true
   },
+  "files": ["getters-setters.ts"],
   "exclude": [
         "node_modules",
         "build",

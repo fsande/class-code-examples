@@ -11,11 +11,11 @@
   */
 
 class TwitterProfile {
-  name: String;
+  name: string;
   followers: number;
   verified: boolean = false;
   
-  constructor(name: string, followers: number, verification: boolean){
+  constructor(name: string, followers: number, verification: boolean) {
     this.name = name;
     this.followers = followers;
     this.verified = verification;
