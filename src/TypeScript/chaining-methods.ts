@@ -6,30 +6,32 @@
   *
   * @author F. de Sande
   * @since Feb 11, 2023
-  * @desc TS classes. Method example
+  * @desc TS classes. 
+  *       Chaining methods
   */
 
 class Team {    
-    teamFirst: string = '';    
-    teamLast: string = '';     
-    makeName(): string {        
-        return this.teamFirst + ' ' + this.teamLast;    
-    }
+  teamFirst: string = '';    
+  teamLast: string = '';     
+  makeName(): string {        
+    return this.teamFirst + ' ' + this.teamLast;    
+  }
 } 
-class Mascot {    
-    team: Team;     
-    cheer(name: string): string {        
-        return 'go ' + name + '!!!';    
-    }
+
+class Supporter {    
+  team: Team;     
+  cheer(name: string): string {        
+    return 'go ' + name + '!!!';    
+  }
 } 
 
 export let main = async () => {
-  let heels: Team = new Team();
-  heels.teamFirst = 'tar';
-  heels.teamLast = 'heels';
-  let rameses: Mascot = new Mascot();
-  rameses.team = heels;
-  console.log(rameses.cheer(rameses.team.makeName()).toUpperCase());
+  let canarias: Team = new Team();
+  canarias.teamFirst = 'Lenovo';
+  canarias.teamLast = 'Tenerife';
+  let hincha: Supporter = new Supporter();
+  hincha.team = canarias;
+  console.log(hincha.cheer(hincha.team.makeName()).toUpperCase());
 };
 
 main();
