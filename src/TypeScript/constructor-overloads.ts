@@ -22,6 +22,9 @@ class Point1 {
 }
 
 class Point2 {
+  coordX: number = 0;
+  coordY: number = 0;
+
   // Overloads
   constructor(coordX: number, coordY: string);
   constructor(coord: string);
