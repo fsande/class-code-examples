@@ -21,9 +21,9 @@ class Counter {
   count(target?: number): number | number[] {
     if (target) {
       let values = [];
-        for (let start = this.current; start <= target; start++) {
-          values.push(start);
-        }
+      for (let start = this.current; start <= target; start++) {
+        values.push(start);
+      }
       this.current = target;
       return values;
     }
