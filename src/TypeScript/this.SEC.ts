@@ -12,9 +12,9 @@
 
 class Leaf {
   color: string = 'green';
-  changeColor(season: string): void {
+  changeColor1(season: string): void {
     console.log('original color: ' + this.color);
-    switch(season) {
+    switch(season): {
       case 'winter': 
         this.color = 'brown';
         break;
@@ -35,7 +35,7 @@ class Leaf {
 
 export let main = async () => {
   let aLeaf: Leaf = new Leaf();
-  aLeaf.changeColor('fall');
+  aLeaf.changeColor1('winter');
 };
 
 main();
