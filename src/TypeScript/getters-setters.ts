@@ -10,10 +10,6 @@
   */
 
 class Person {
-  age: number;
-  firstName: string;
-  lastName: string;
-
   constructor(age: number, firstName: string, lastName: string) {
     this.age = age;
     this.firstName = firstName;
@@ -31,9 +27,20 @@ class Person {
     this.age= theAge;
   }
 
-  getFullName(): string {
+  getFirstName() {
+    return this.firstName;
+  }
+
+  getLastName() {
+    return this.lastName;
+  }
+
+  private getFullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }
+  private age: number;
+  private firstName: string;
+  private lastName: string;
 }
 
 export let main = async () => {
