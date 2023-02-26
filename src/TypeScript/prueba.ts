@@ -16,7 +16,7 @@
 
 abstract class Employee {
   constructor(private firstName: string, private lastName: string) { }
-  abstract getSalary(): number;
+  getSalary(): number
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }
@@ -25,30 +25,8 @@ abstract class Employee {
   }
 }
 
-class FullTimeEmployee extends Employee {
-  constructor(firstName: string, lastName: string, private salary: number) {
-    super(firstName, lastName);
-  }
-  getSalary(): number {
-    return this.salary;
-  }
-}
-
-class Contractor extends Employee {
-  constructor(firstName: string, lastName: string, private rate: number, private hours: number) {
-    super(firstName, lastName);
-  }
-  getSalary(): number {
-    return this.rate * this.hours;
-  }
-}
-
 export let main = async () => {
   // const employee = new Employee('Alan', 'Turing', 'Front-end Developer'); // This is an error, because Employee is abstract
-  const alan = new Contractor('Alan', 'Turing', 100, 160); 
-  const noam = new FullTimeEmployee('Noam', 'Chomsky', 12000);
-  console.log(alan.compensationStatement());
-  console.log(noam.compensationStatement());
 };
 
 main();
