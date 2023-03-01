@@ -10,18 +10,18 @@
   *       Chaining methods
   */
 
+class Supporter {    
+  team: Team;     
+  cheer(name: string): string {        
+    return 'go ' + name + '!!!';    
+  }
+} 
+
 class Team {    
   teamFirst: string = '';    
   teamLast: string = '';     
   makeName(): string {        
     return this.teamFirst + ' ' + this.teamLast;    
-  }
-} 
-
-class Supporter {    
-  team: Team;     
-  cheer(name: string): string {        
-    return 'go ' + name + '!!!';    
   }
 } 
 
