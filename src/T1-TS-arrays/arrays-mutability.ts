@@ -7,6 +7,7 @@
  * @author F. de Sande
  * @since Mar 2, 2023
  * @desc Arrays mutability
+ *       Arrays are just objects anyway (so, yeah, they're mutable)
  */
 
 export function main(): void { 
