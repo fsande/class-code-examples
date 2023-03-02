@@ -5,6 +5,7 @@
  * Programación de Aplicaciones Interactivas
  *
  * @author F. de Sande
+ * @since Mar 2, 2023
  */
 
 export function main(): void { 
