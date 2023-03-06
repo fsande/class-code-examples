@@ -7,6 +7,9 @@
  * @author F. de Sande
  * @since Mar 2, 2023
  * @desc Looping over arrays
+ *       - The for..of doesn’t give access to the number of the current element, just its value, but in most cases that’s enough. And it’s shorter.
+ *       - Technically, because arrays are objects, it is also possible to use for..in, But that’s actually a bad idea. There are potential problems with it:
+ * @see {@link https://javascript.info/array#loops}
  */
 
 export function main(): void { 
@@ -23,18 +26,18 @@ export function main(): void {
     console.log(array[i]);
   }
   console.log(LINE);
-  // for-in
-  for (let i in array) {
-    console.log(array[i]);
-  }
   // for-of PREFERRED
-  console.log(LINE);
   for (const component of array) {
     console.log(component);
   }
   console.log(LINE);
   // forEach
   array.forEach(component => console.log(component));
+  console.log(LINE);
+  // for-in Not a good idea...
+  for (let i in array) {
+    console.log(array[i]);
+  }
 }
 
 main();
