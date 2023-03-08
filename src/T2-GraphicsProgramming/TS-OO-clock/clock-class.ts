@@ -14,6 +14,25 @@
  * Also, check out {@link https://gist.github.com/fixiecoder/a6146501aaa8ad3bf885fa30a66ba079}
  */
 
+
+
+/*
+export class Rational {
+   constructor(
+    private readonly numeratorPart: number,
+    private readonly denominatorPart: number = 1
+  ) {
+    if (denominatorPart === 0) {
+      throw new Error('The denominator cannot be lower or equal than zero');
+    }
+  }
+*/
+
+
+
+
+
+/** @classdesc Represents an analog clock */
 class Clock {
   private centerX: number;
   private centerY: number;
@@ -24,6 +43,12 @@ class Clock {
   private canvas = document.createElement("CANVAS") as HTMLCanvasElement; // Creates A new HTML element: a canvas
   private ctx = this.canvas.getContext('2d');
 
+
+  /**
+   * @description Creates a 
+   * @param 
+   * @param 
+   */
   constructor(containerElement: HTMLElement, size: number) {
     this.radius = 0.95 * (size / 2);
     this.hands = {
