@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Universidad de La Laguna
  * Escuela Superior de Ingeniería y Tecnología
@@ -13,21 +14,22 @@
  * @tutorial Adapted from {@link https://www.w3schools.com/graphics/canvas_clock.asp}
  * Also, check out {@link https://gist.github.com/fixiecoder/a6146501aaa8ad3bf885fa30a66ba079}
  */
-var Clock = /** @class */ (function () {
-    function Clock(containerElement, size) {
-        var _this = this;
-        this.hands = {};
-        // By default document.createElement returns a HTMLElementtype which is a generic type.
-        // In order to make your app understand it is a canvas element you need to cast it 
-        this.canvas = document.createElement("CANVAS"); // Creates A new HTML element: a canvas
-        this.ctx = this.canvas.getContext('2d');
-        this.renderArrow = function () {
-            _this.drawClockFace(_this.ctx);
-            _this.drawNumbers(_this.ctx);
-            _this.drawTime();
-            _this.drawCentralCircle(_this.ctx);
-            requestAnimationFrame(_this.renderArrow); // Animate the clock
-        };
+/** @classdesc Represents an analog clock */
+class Clock {
+    centerX;
+    centerY;
+    radius;
+    hands = {};
+    // By default document.createElement returns a HTMLElementtype which is a generic type.
+    // In order to make your app understand it is a canvas element you need to cast it 
+    canvas = document.createElement("CANVAS"); // Creates A new HTML element: a canvas
+    ctx = this.canvas.getContext('2d');
+    /**
+     * @description Creates a
+     * @param
+     * @param
+     */
+    constructor(containerElement, size) {
         this.radius = 0.95 * (size / 2);
         this.hands = {
             second: {
@@ -57,13 +59,13 @@ var Clock = /** @class */ (function () {
         // setInterval(this.render, 1000);  // An alternative for animation
         this.renderArrow();
     }
-    Clock.prototype.drawClockFace = function (ctx) {
-        var FILL_STYLE = '#333'; // For gradient (external ring)
+    drawClockFace(ctx) {
+        const FILL_STYLE = '#333'; // For gradient (external ring)
         ctx.beginPath();
         ctx.arc(0, 0, this.radius, 0, 2 * Math.PI);
         ctx.fillStyle = 'white';
         ctx.fill();
-        var gradient = ctx.createRadialGradient(0, 0, this.radius * 0.95, 0, 0, this.radius * 1.05);
+        let gradient = ctx.createRadialGradient(0, 0, this.radius * 0.95, 0, 0, this.radius * 1.05);
         gradient.addColorStop(0, FILL_STYLE);
         gradient.addColorStop(0.5, 'white');
         gradient.addColorStop(1, FILL_STYLE);
@@ -74,15 +76,15 @@ var Clock = /** @class */ (function () {
         ctx.arc(0, 0, this.radius * 0.1, 0, 2 * Math.PI);
         ctx.fillStyle = FILL_STYLE;
         ctx.fill();
-    };
-    Clock.prototype.drawNumbers = function (ctx) {
+    }
+    drawNumbers(ctx) {
         ctx.font = this.radius * 0.15 + 'px arial';
         ctx.fillStyle = 'black'; // Numbers color
         ctx.textBaseline = 'middle';
         ctx.textAlign = 'center';
-        for (var hour = 1; hour <= 12; hour++) {
-            var RATIO = 0.85; // 85%
-            var ANGLE = hour * Math.PI / 6; // Pi/6 = 2*Pi/12
+        for (let hour = 1; hour <= 12; hour++) {
+            const RATIO = 0.85; // 85%
+            const ANGLE = hour * Math.PI / 6; // Pi/6 = 2*Pi/12
             ctx.rotate(ANGLE);
             ctx.translate(0, -this.radius * RATIO);
             ctx.rotate(-ANGLE);
@@ -91,14 +93,14 @@ var Clock = /** @class */ (function () {
             ctx.translate(0, this.radius * RATIO);
             ctx.rotate(-ANGLE);
         }
-    };
-    Clock.prototype.drawHand = function (handType, ctx) {
-        var NOW = new Date();
-        var SECONDS = NOW.getSeconds();
-        var MINUTES = NOW.getMinutes();
-        var HOURS = NOW.getHours() % 12;
-        var HAND = this.hands[handType];
-        var angle = 0;
+    }
+    drawHand(handType, ctx) {
+        const NOW = new Date();
+        const SECONDS = NOW.getSeconds();
+        const MINUTES = NOW.getMinutes();
+        const HOURS = NOW.getHours() % 12;
+        const HAND = this.hands[handType];
+        let angle = 0;
         switch (handType) {
             case 'second':
                 angle = (SECONDS * Math.PI / 30);
@@ -122,26 +124,32 @@ var Clock = /** @class */ (function () {
         ctx.lineTo(0, -HAND.length);
         ctx.stroke();
         ctx.rotate(-angle);
-    };
-    Clock.prototype.drawTime = function () {
+    }
+    drawTime() {
         this.drawHand('second', this.ctx);
         this.drawHand('minute', this.ctx);
         this.drawHand('hour', this.ctx);
-    };
-    Clock.prototype.drawCentralCircle = function (ctx) {
+    }
+    drawCentralCircle(ctx) {
         ctx.beginPath();
         ctx.arc(0, 0, this.radius * 0.04, 0, 2 * Math.PI);
         ctx.fillStyle = 'goldenrod';
         ctx.fill();
-    };
-    Clock.prototype.render = function () {
+    }
+    render() {
         this.drawClockFace(this.ctx);
         this.drawNumbers(this.ctx);
         this.drawTime();
         this.drawCentralCircle(this.ctx);
         requestAnimationFrame(this.render); // Animate the clock
+    }
+    renderArrow = () => {
+        this.drawClockFace(this.ctx);
+        this.drawNumbers(this.ctx);
+        this.drawTime();
+        this.drawCentralCircle(this.ctx);
+        requestAnimationFrame(this.renderArrow); // Animate the clock
     };
-    return Clock;
-}());
-var clock = new Clock(document.body, 800);
+}
+let clock = new Clock(document.body, 800);
 console.log(clock);

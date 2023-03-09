@@ -14,24 +14,6 @@
  * Also, check out {@link https://gist.github.com/fixiecoder/a6146501aaa8ad3bf885fa30a66ba079}
  */
 
-
-
-/*
-export class Rational {
-   constructor(
-    private readonly numeratorPart: number,
-    private readonly denominatorPart: number = 1
-  ) {
-    if (denominatorPart === 0) {
-      throw new Error('The denominator cannot be lower or equal than zero');
-    }
-  }
-*/
-
-
-
-
-
 /** @classdesc Represents an analog clock */
 class Clock {
   private centerX: number;
