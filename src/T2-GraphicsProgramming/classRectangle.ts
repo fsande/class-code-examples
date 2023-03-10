@@ -6,32 +6,21 @@
  *
  * @author F. de Sande
  * @since Mar 10, 2023
- * @desc Class to illustrate the use of a Rectangle class
- *       It uses graphic capabilities using canvas
- * 
- * [based on: Creating and Drawing on an HTML5 Canvas using JavaScript]
- *           {@link https://codeburst.io/creating-and-drawing-on-an-html5-canvas-using-javascript-93da75f001c1}
+ * @description Class to illustrate the use of a Rectangle class
+ *              It uses graphic capabilities using canvas
+ *              [based on: Creating and Drawing on an HTML5 Canvas using JavaScript]
+ * @see {@link https://codeburst.io/creating-and-drawing-on-an-html5-canvas-using-javascript-93da75f001c1}
  */
-
 
 /**
  * @desc A class to represent rectangle objects
  * @class
  */
 export class Rectangle {
-  #xPosition = 0;
-  #yPosition = 0;
-  #width = 0; 
-  #height = 0;
-  #fillColor = ''; 
-  #strokeColor = ''; 
-  #strokeWidth = 2;
 	/**
    * Create a rectangle
 	 * these are the arguments you pass in
    * add default values to avoid errors on empty arguments
-   * @constructor
-   * @public
    * @param {number} xPosition - X coord of the rectangle's position
    * @param {number} yPosition - Y coord of the rectangle's position
    * @param {number} width  
@@ -40,76 +29,73 @@ export class Rectangle {
    * @param {string} strokeColor  
    * @param {number} strokeWidth  
    */
-  constructor(xPosition = 0, yPosition = 0, width = 0, height = 0,
-    fillColor = '', strokeColor = '', strokeWidth = 2
-  ) {
+  constructor(
+    private xPosition: number = 0, 
+    private yPosition: number = 0, 
+    private width: number = 0, 
+    private height: number = 0,
+    private fillColor: string = '', 
+    private strokeColor: string = '', 
+    private strokeWidth: number = 2,
+    private canvas: HTMLCanvasElement = document.getElementById('tutorial') as HTMLCanvasElement,
+    private context: CanvasRenderingContext2D = canvas.getContext('2d')) {
     // console.log('Constructor is executing...');
     // alert('Constructor is executing...');
     // ensure the arguments passed in are numbers
     // a bit overkill for this tutorial
-    this.#xPosition = Number(xPosition)
-    this.#yPosition = Number(yPosition)
-    this.#width = Number(width)
-    this.#height = Number(height)
-    this.#fillColor = fillColor
-    this.#strokeColor = strokeColor
-    this.#strokeWidth = strokeWidth
-    /** setup canvas */
-    const CANVAS = document.getElementById('tutorial');
-    this.ctx = CANVAS.getContext('2d');
   }
 
   /**
    * @desc Rectangle Area
 	 * @returns Area of the rectangle
    */
-  getArea() {
-    return this.#width * this.#height
+  getArea(): number {
+    return this.width * this.height
   }
 
   /** gets the X position of the left side */
-  getLeft() {
+  getLeft(): number {
     // origin is at top left so just return x
-    return this.#xPosition
+    return this.xPosition
   }
 
   /** get X position of right side */
-  getRight() {
+  getRight(): number {
     // xPosition is left position + the width to get end point
-    return this.#xPosition + this.#width
+    return this.xPosition + this.width
   }
 
   /** get the Y position of top side */
-  getTop() {
-    // origin is at top left so just return #yPosition
-    return this.#yPosition
+  getTop(): number {
+    // origin is at top left so just return yPosition
+    return this.yPosition
   }
 
   /** get Y position at bottom */
-  getBottom() {
-    return this.#yPosition + this.#height
+  getBottom(): number {
+    return this.yPosition + this.height
   }
 
   /** draw rectangle to screen */
-  draw() {
+  draw(): void {
     // saves the current styles set elsewhere to avoid overwriting them
-    this.ctx.save()
+    this.context.save()
   
     // set the styles for this shape
-    this.ctx.fillStyle = this.#fillColor
-    this.ctx.lineWidth = this.#strokeWidth
+    this.context.fillStyle = this.fillColor
+    this.context.lineWidth = this.strokeWidth
 
     // create the *path*
-    this.ctx.beginPath()
-    this.ctx.strokeStyle = this.#strokeColor
-    this.ctx.rect(this.#xPosition, this.#yPosition, this.#width, this.#height)
+    this.context.beginPath()
+    this.context.strokeStyle = this.strokeColor
+    this.context.rect(this.xPosition, this.yPosition, this.width, this.height)
 
     // draw the path to screen
-    this.ctx.fill()
-    this.ctx.stroke()
+    this.context.fill()
+    this.context.stroke()
 
     // restores the styles from earlier preventing the colors used here
     // from polluting other drawings
-    this.ctx.restore()
+    this.context.restore()
   }
 }
