@@ -86,15 +86,15 @@ class Clock {
     context.textBaseline = 'middle';
     context.textAlign = 'center';
     for (let hour = 1; hour <= 12; hour++) {
-        const RATIO: number = 0.85; // 85%
-        const ANGLE: number = hour * Math.PI / 6; // Pi/6 = 2*Pi/12
-        context.rotate(ANGLE);
-        context.translate(0, -this.radius * RATIO);
-        context.rotate(-ANGLE);
-        context.fillText(hour.toString(), 0, 0);
-        context.rotate(ANGLE);
-        context.translate(0, this.radius * RATIO);
-        context.rotate(-ANGLE);
+      const RATIO: number = 0.85; // 85%
+      const ANGLE: number = hour * Math.PI / 6; // Pi/6 = 2*Pi/12
+      context.rotate(ANGLE);
+      context.translate(0, -this.radius * RATIO);
+      context.rotate(-ANGLE);
+      context.fillText(hour.toString(), 0, 0);
+      context.rotate(ANGLE);
+      context.translate(0, this.radius * RATIO);
+      context.rotate(-ANGLE);
     }
     return;
   }

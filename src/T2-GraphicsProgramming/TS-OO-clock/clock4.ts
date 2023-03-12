@@ -56,11 +56,6 @@ class Clock {
     this.centerX = this.canvas.width / 2;
     this.centerY = this.canvas.height / 2;
     this.context.translate(this.centerX, this.centerY);
-
-    // this.render = this.render.bind(this);
-    // this.render();
-    // setInterval(this.render, 1000);  // An alternative for animation
-
     this.renderArrow();
   }
 
@@ -169,48 +164,14 @@ class Clock {
     return;
   }
 
-  /**
-   * @description Draws the central golden circle over the hands
-   * @param context  - Canvas Drawing Context
-   */
-  private drawCentralCircle(context: CanvasRenderingContext2D): void {
-    context.beginPath();
-    context.arc(0, 0, this.radius * 0.04, 0, 2 * Math.PI);
-    context.fillStyle = 'goldenrod';
-    context.fill();
-    return;
-  }
-
-  /** @description Draws the clock and performs it's animation */
-  public render(): void {
-    this.drawClockFace(this.context);
-    this.drawNumbers(this.context);
-    this.draw3Hands();
-    this.drawCentralCircle(this.context);
-    requestAnimationFrame(this.render);  // Animate the clock
-    return;
-  }
-
-  /** 
-    * @description Draws the clock and performs it's animation 
-    * 
-    * Alternatively, the render method can be written as an arrow function (renderArrow)
-    * In this case the binding done in the constructor can be avoided:
-    *    this.render = this.render.bind(this);
-    */
+  /** * @description Draws the clock and performs it's animation */
   public renderArrow = (): void => {
     this.drawClockFace(this.context);
     this.drawNumbers(this.context);
     this.draw3Hands();
-    this.drawCentralCircle(this.context);
-    requestAnimationFrame(this.renderArrow);  // Animate the clock
     return;
   }
 }
 
-// https://www.w3schools.com/jsref/prop_doc_body.asp
-// constructor(containerElement, size)
-// Notice: the HTML code for the clock does not contain a canvas tag:
-//         the canvas is created in the TS code (in the class constructor)
 let clock: Clock = new Clock(document.body, 800);
 console.log(clock);
