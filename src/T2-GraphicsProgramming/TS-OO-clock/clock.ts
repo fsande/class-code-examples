@@ -78,7 +78,7 @@ class Clock {
     context.fill();
 
     // Create a radial gradient (95% and 105% of radius):
-    //                 createRadialGradient(x0, y0, r0,                 x1, y1, r1);
+    //                                     createRadialGradient(x0, y0, r0,              x1, y1, r1);
     let gradient: CanvasGradient = context.createRadialGradient(0, 0, this.radius * 0.95, 0, 0, this.radius * 1.05);
 
 		// Create 3 color stops, corresponding with the inner, middle, and outer edge of the arc:
