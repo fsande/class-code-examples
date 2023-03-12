@@ -7,11 +7,11 @@
  * @author F. de Sande <fsande@ull.es>
  * @since Mar 9, 2023
  * @version 1
- * @desc Drawing a Face on HTML canvas
+ * @description Drawing a Face on HTML canvas
  */
-/** @classdesc A class for drawing on Canvas  */
+/** @classdesc A class for drawing a Face */
 var Face = /** @class */ (function () {
-    /** @description Draw 2 squares */
+    /** @description Creates the canvas drawing context */
     function Face(canvas, context) {
         if (canvas === void 0) { canvas = document.getElementById('tutorial'); }
         if (context === void 0) { context = canvas.getContext('2d'); }
