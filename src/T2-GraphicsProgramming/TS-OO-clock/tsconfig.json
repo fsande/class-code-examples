@@ -17,7 +17,7 @@
     "forceConsistentCasingInFileNames": true  /* Force all file names to have the same case style. */
   },
   "files": [
-    "clock-class.ts"
+    "clock.ts"
   ],
   "exclude": [
         "node_modules",
