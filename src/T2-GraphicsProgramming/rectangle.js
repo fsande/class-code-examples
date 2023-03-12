@@ -1,4 +1,3 @@
-"use strict";
 /**
  * Universidad de La Laguna
  * Escuela Superior de Ingeniería y Tecnología
@@ -12,12 +11,7 @@
  *              [based on: Creating and Drawing on an HTML5 Canvas using JavaScript]
  * @see {@link https://codeburst.io/creating-and-drawing-on-an-html5-canvas-using-javascript-93da75f001c1}
  */
-exports.__esModule = true;
-exports.Rectangle = void 0;
-/**
- * @desc A class to represent rectangle objects
- * @class
- */
+/** @classdesc A class to represent rectangles */
 var Rectangle = /** @class */ (function () {
     /**
    * Create a rectangle
@@ -52,35 +46,7 @@ var Rectangle = /** @class */ (function () {
         this.context = context;
         // console.log('Constructor is executing...');
         // alert('Constructor is executing...');
-        // ensure the arguments passed in are numbers
-        // a bit overkill for this tutorial
     }
-    /**
-     * @desc Rectangle Area
-       * @returns Area of the rectangle
-     */
-    Rectangle.prototype.getArea = function () {
-        return this.width * this.height;
-    };
-    /** gets the X position of the left side */
-    Rectangle.prototype.getLeft = function () {
-        // origin is at top left so just return x
-        return this.xPosition;
-    };
-    /** get X position of right side */
-    Rectangle.prototype.getRight = function () {
-        // xPosition is left position + the width to get end point
-        return this.xPosition + this.width;
-    };
-    /** get the Y position of top side */
-    Rectangle.prototype.getTop = function () {
-        // origin is at top left so just return yPosition
-        return this.yPosition;
-    };
-    /** get Y position at bottom */
-    Rectangle.prototype.getBottom = function () {
-        return this.yPosition + this.height;
-    };
     /** draw rectangle to screen */
     Rectangle.prototype.draw = function () {
         // saves the current styles set elsewhere to avoid overwriting them
@@ -101,4 +67,45 @@ var Rectangle = /** @class */ (function () {
     };
     return Rectangle;
 }());
-exports.Rectangle = Rectangle;
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Programación de Aplicaciones Interactivas
+ *
+ * @author F. de Sande
+ * @since Mar 10, 2023
+ * @description Client program for the Rectangle class
+ *              Compile using: tsc --out rectangle.js rectangle-client.ts
+ * @see Triple-Slash Directives {@link * https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html}
+ * @see Compiling TypeScript project composed of many files/modules to single file {@link https://stackoverflow.com/q/22336763/12791643}
+ */
+///<reference path='rectangle.ts'/>
+var main = function () {
+    // creates rectangle objects 
+    var mySquare1 = new Rectangle(400, 85, 200, 200, 'gold'); // (x, y, width, height, color)
+    var mySquare2 = new Rectangle(50, 35, 50, 50, 'blue');
+    var mySquare3 = new Rectangle(125, 35, 50, 50, 'red');
+    var mySquare4 = new Rectangle(200, 35, 100, 100, 'black');
+    // now we have data and methods to describe our square
+    console.log(mySquare1);
+    // Object
+    // #fillColor: "gold"
+    // #height: 50
+    // #strokeColor: ""
+    // #strokeWidth: 2
+    // #width: 50
+    // #xPosition: 450
+    // #yPosition: 100
+    // area: (...)
+    // bottom: (...)
+    // left: (...)
+    // right: (...)
+    // top: (...)
+    // draw the square data to screen
+    mySquare1.draw();
+    mySquare2.draw();
+    mySquare3.draw();
+    mySquare4.draw();
+};
+main();

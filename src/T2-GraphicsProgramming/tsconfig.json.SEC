@@ -1,7 +1,7 @@
 {
   "display": "Configuration for Graphics Programming in PAI",
   "compilerOptions": {
-    "target": "es6",
+    "target": "esnext",
     "module": "commonjs",
     "allowJs": true,
     "rootDir": "./",

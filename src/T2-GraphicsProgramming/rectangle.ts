@@ -12,11 +12,8 @@
  * @see {@link https://codeburst.io/creating-and-drawing-on-an-html5-canvas-using-javascript-93da75f001c1}
  */
 
-/**
- * @desc A class to represent rectangle objects
- * @class
- */
-export class Rectangle {
+/** @classdesc A class to represent rectangles */
+class Rectangle {
 	/**
    * Create a rectangle
 	 * these are the arguments you pass in
@@ -41,43 +38,10 @@ export class Rectangle {
     private context: CanvasRenderingContext2D = canvas.getContext('2d')) {
     // console.log('Constructor is executing...');
     // alert('Constructor is executing...');
-    // ensure the arguments passed in are numbers
-    // a bit overkill for this tutorial
-  }
-
-  /**
-   * @desc Rectangle Area
-	 * @returns Area of the rectangle
-   */
-  getArea(): number {
-    return this.width * this.height
-  }
-
-  /** gets the X position of the left side */
-  getLeft(): number {
-    // origin is at top left so just return x
-    return this.xPosition
-  }
-
-  /** get X position of right side */
-  getRight(): number {
-    // xPosition is left position + the width to get end point
-    return this.xPosition + this.width
-  }
-
-  /** get the Y position of top side */
-  getTop(): number {
-    // origin is at top left so just return yPosition
-    return this.yPosition
-  }
-
-  /** get Y position at bottom */
-  getBottom(): number {
-    return this.yPosition + this.height
   }
 
   /** draw rectangle to screen */
-  draw(): void {
+  public draw(): void {
     // saves the current styles set elsewhere to avoid overwriting them
     this.context.save()
   
