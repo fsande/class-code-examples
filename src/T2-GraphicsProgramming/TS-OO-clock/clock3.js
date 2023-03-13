@@ -97,7 +97,7 @@ var Clock = /** @class */ (function () {
             context.rotate(ANGLE);
             context.translate(0, -this.radius * RATIO);
             context.rotate(-ANGLE);
-            context.fillText(hour.toString(), 0, 0);
+            context.fillText(String(hour), 0, 0);
             context.rotate(ANGLE);
             context.translate(0, this.radius * RATIO);
             context.rotate(-ANGLE);
