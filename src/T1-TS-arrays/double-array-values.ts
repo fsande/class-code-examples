@@ -43,11 +43,34 @@ function doubleArrayEvery(numbers: number[]): void {
   return;
 }
 
+/** @description with forEach and every using anonymous functions */
+function doubleArrayAnonymous(numbers: number[]): void {
+  numbers.forEach(function(value: number): void {
+    console.log(2 * value);
+  });
+  printLine();
+  numbers.every(function(value: number): boolean {
+    if (value >= 3) return false;
+    console.log(2 * value);
+    return true;
+  });
+  return;
+}
+
+function printLine(): void {
+  console.log('=============================');
+  return;
+}
+
 export function main(): void { 
   let numbers: number[] = [1, 2, 3, 4];
   doubleArrayClassic(numbers);
+  printLine();
   doubleArrayForEach(numbers);
+  printLine();
   doubleArrayEvery(numbers);
+  printLine();
+  doubleArrayAnonymous(numbers);
 }
 
 main();
