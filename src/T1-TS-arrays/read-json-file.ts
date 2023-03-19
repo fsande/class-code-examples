@@ -10,12 +10,14 @@
  * @description Read a JSON object from file
  */
 
-import * as countries from './country-by-abbreviation.json';
+import * as data from './country-by-abbreviation.json';
 
 const main = function (): void {
-  console.log(typeof(countries));  
-  console.log(countries);  
-  console.log(countries[5].country, countries[5].abbreviation);
+  console.log(typeof(data));  
+  console.log(data);  
+  for (let i = 0; i < data.length; ++i) {
+    console.log(data[i].country, data[i].abbreviation);
+  }
 }
 
 main();
