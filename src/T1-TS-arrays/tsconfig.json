@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es2022",
     "module": "commonjs",
+    "resolveJsonModule": true,                /* Allows importing modules with a ‘.json’ extension */
     "allowJs": true,
     "rootDir": "./",
     "outDir": "./dist",
