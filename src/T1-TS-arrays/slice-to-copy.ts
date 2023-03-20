@@ -11,10 +11,10 @@
  */
 
 export function main(): void { 
-  let a = [1, 2, 3];
-  let b = a.slice();
-  a.push(4);
-  console.log(b);
+  let myArray: number[] = [1, 2, 3];
+  let other: number[] = myArray.slice();
+  myArray.push(4);
+  console.log(other);
 }
 
 main();
