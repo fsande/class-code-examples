@@ -15,8 +15,8 @@ import * as data from './country-by-abbreviation.json';
 const main = function (): void {
   console.log(typeof(data));  
   console.log(data);  
-  for (let i = 0; i < data.length; ++i) {
-    console.log(data[i].country, data[i].abbreviation);
+  for (const datum of data) {
+    console.log(datum.country, datum.abbreviation);
   }
 }
 
