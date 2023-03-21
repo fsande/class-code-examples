@@ -9,8 +9,16 @@
  * @since Mar 10, 2023
  * @description Client program for the Rectangle class
  *              Compile using: tsc --out rectangle.js rectangle-client.ts
- * @see Triple-Slash Directives {@link * https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html}
- * @see Compiling TypeScript project composed of many files/modules to single file {@link https://stackoverflow.com/q/22336763/12791643}
+ * @see {@link https://stackoverflow.com/questions/71621472/compile-typescript-to-run-in-the-browser-using-modules}
+ *              Ha de tenerse en cuenta que:
+ *              - El proyecto ha de compilarse usando tsc (sin pasar parámetros, ni el nombre del fichero a compilar) para que tsc utilice la información del tsconfig.json
+ *              - El código HTML ha de usar la etiqueta incluyendo type="module" (véase rectangulo.html)
+ *              - El código del programa cliente ha de importar el módulo poniendo explícitamente 
+ *                la extensión .js del fichero importado (sentencia import {Rectangle} from './rectangle.js'; )
+ *              - En el fichero tsconfig ha de usarse "module": "es2015",
+ *              - La página rectangulo.html no funciona si se carga directamente desde un navegador, 
+ *                sino que ha de utilizarse un servidor para alojarla (el que configuraron en su máquina 
+ *                virtual o bien usar la extensión live server de VSC).
  */
 
 import {Rectangle} from './rectangle.js';
