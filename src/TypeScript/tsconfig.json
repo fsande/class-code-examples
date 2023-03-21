@@ -4,7 +4,8 @@
     "module": "commonjs",
     "allowJs": true,
     "rootDir": "./",
-    "outDir": "./dist",
+    "outDir": "./",
+    "declaration": false,                     /* Generate (or not) .d.ts files for every TypeScript file inside your project */
     "declaration": true,
     "alwaysStrict": true,                     /* Parse in strict mode and emit "use strict" for each source file. */
     "strict": true,                           /* Enable all strict type-checking options. */
