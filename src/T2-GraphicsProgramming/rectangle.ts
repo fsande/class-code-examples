@@ -14,6 +14,9 @@
 
 /** @classdesc A class to represent rectangles */
 class Rectangle {
+  /// All rectangles share (static) the same canvas and context
+  private static canvas: HTMLCanvasElement = document.getElementById('tutorial') as HTMLCanvasElement;
+  private static context: CanvasRenderingContext2D = Rectangle.canvas.getContext('2d');
 	/**
    * Create a rectangle
 	 * these are the arguments you pass in
@@ -33,9 +36,7 @@ class Rectangle {
     private height: number = 0,
     private fillColor: string = '', 
     private strokeColor: string = '', 
-    private strokeWidth: number = 2,
-    private canvas: HTMLCanvasElement = document.getElementById('tutorial') as HTMLCanvasElement,
-    private context: CanvasRenderingContext2D = canvas.getContext('2d')) {
+    private strokeWidth: number = 2) {
     // console.log('Constructor is executing...');
     // alert('Constructor is executing...');
   }
@@ -43,23 +44,23 @@ class Rectangle {
   /** draw rectangle to screen */
   public draw(): void {
     // saves the current styles set elsewhere to avoid overwriting them
-    this.context.save()
+    Rectangle.context.save()
   
     // set the styles for this shape
-    this.context.fillStyle = this.fillColor
-    this.context.lineWidth = this.strokeWidth
+    Rectangle.context.fillStyle = this.fillColor
+    Rectangle.context.lineWidth = this.strokeWidth
 
     // create the *path*
-    this.context.beginPath()
-    this.context.strokeStyle = this.strokeColor
-    this.context.rect(this.xPosition, this.yPosition, this.width, this.height)
+    Rectangle.context.beginPath()
+    Rectangle.context.strokeStyle = this.strokeColor
+    Rectangle.context.rect(this.xPosition, this.yPosition, this.width, this.height)
 
     // draw the path to screen
-    this.context.fill()
-    this.context.stroke()
+    Rectangle.context.fill()
+    Rectangle.context.stroke()
 
     // restores the styles from earlier preventing the colors used here
     // from polluting other drawings
-    this.context.restore()
+    Rectangle.context.restore()
   }
 }
