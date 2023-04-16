@@ -6,7 +6,8 @@
  *
  * @author F. de Sande
  * @since Apr 16, 2023
- * @desc Tic Tac Toe Example. Initial Code
+ * @description Tic Tac Toe Example. Initial Code
+ *              Compile with tsc --target es2015 <source.ts>
  */
 
 const onClick = function(event) {

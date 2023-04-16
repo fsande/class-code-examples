@@ -5,7 +5,7 @@
  * Programación de Aplicaciones Interactivas
  *
  * @author F. de Sande
- * @since Apr 16, 2020
+ * @since Apr 16, 2023
  * @description JS Events. Stop propagation
  */
 

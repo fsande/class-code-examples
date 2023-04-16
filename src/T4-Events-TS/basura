@@ -1,0 +1,1 @@
+  const boxes: NodeList = document.querySelectorAll('#grid div')! as NodeList;
