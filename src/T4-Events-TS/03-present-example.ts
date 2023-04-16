@@ -12,9 +12,7 @@
  */
 
 
-/** 
- * @description Listener function
- */
+/** @description Listener function */
 const openPresent = function(): void {
   let image: HTMLImageElement = document.querySelector('img')! as HTMLImageElement;
   image.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif';

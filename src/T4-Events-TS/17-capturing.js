@@ -1,0 +1,29 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Programación de Aplicaciones Interactivas
+ *
+ * @author F. de Sande
+ * @since Apr 16, 2020
+ * @desc JS Events. 2 Events Listeners. Capturing
+ */
+function onOuterClick(event) {
+    outer.classList.add('selected');
+    console.log('Outer clicked!');
+    // event.stopPropagation();
+}
+function onInnerClick() {
+    inner.classList.add('selected');
+    console.log('Inner clicked!');
+}
+function onResetClick() {
+    inner.classList.remove('selected');
+    outer.classList.remove('selected');
+}
+var outer = document.querySelector('#outer');
+var inner = document.querySelector('#inner');
+outer.addEventListener('click', onOuterClick, { capture: true });
+inner.addEventListener('click', onInnerClick, { capture: true });
+var reset = document.querySelector('button');
+reset.addEventListener('click', onResetClick);
