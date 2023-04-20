@@ -1,0 +1,10 @@
+/** Buttons example
+    This css contains the minimum style for the buttons
+**/
+
+button {
+  display: block;
+  font-size: 24pt;
+  width: 100px;
+  margin: 5px 0;
+}
