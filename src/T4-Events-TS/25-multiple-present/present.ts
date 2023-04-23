@@ -6,47 +6,44 @@
  *
  * @author F. de Sande
  * @since Apr 23, 2023
- * @desc Events. OO Present. Multiple Presents. Present class
+ * @description Events. OO Present. Multiple Presents. Present class
 */
 
-"use strict";
-
-/** @desc Class to represent a single present */
-class Present {
-  /** @private */
-  #containerElement;  /** DOM element that holds the presents */
-  #presentSrc;        /** URL of the present image */
-  #image;             /** New DOM element to hold the present image */
+/** @description Class to represent a single present */
+export class Present {
+  private containerElement;  /** DOM element that holds the presents */
+  private presentSrc;        /** URL of the present image */
+  private image;             /** New DOM element to hold the present image */
 
   /**
    * @constructor
-   * @desc Fills the presents array
-   * @param {object} presentContainer- The DOM element that hosts the presents
-   * @param {string} presentSrc - URL of the new image for this present
+   * @description Fills the presents array
+   * @param presentContainer- The DOM element that hosts the presents
+   * @param presentSrc - URL of the new image for this present
    */
-  constructor(containerElement, presentSrc) {
-    this.#containerElement = containerElement;
-    this.#presentSrc = presentSrc;
+  constructor(containerElement: HTMLElement, presentSrc: string) {
+    this.containerElement = containerElement;
+    this.presentSrc = presentSrc;
 
     // Bind event listeners.
     this.openPresent = this.openPresent.bind(this);
 
     // Create image and append to container.
-    this.#image = document.createElement('img');
-    const INITIAL_IMAGE = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
-    this.#image.src = INITIAL_IMAGE;  
-    this.#image.addEventListener('click', this.openPresent);
-    this.#containerElement.append(this.#image);
+    this.image = document.createElement('img');
+    const INITIAL_IMAGE: string = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
+    this.image.src = INITIAL_IMAGE;  
+    this.image.addEventListener('click', this.openPresent);
+    this.containerElement.append(this.image);
   }
 
   /**
    * @method
-   * @desc Listener for the click event on images (presents)
-   *       Replaces the initial image with the present (new) image
-   *       Removes the click event listener
+   * @description Listener for the click event on images (presents)
+   *              Replaces the initial image with the present (new) image
+   *              Removes the click event listener
    */
-  openPresent(event) {
-    this.#image.src = this.#presentSrc;
-    this.#image.removeEventListener('click', this.openPresent);
+  private openPresent(event: Event): void {
+    this.image.src = this.presentSrc;
+    this.image.removeEventListener('click', this.openPresent);
   }
 }
