@@ -11,9 +11,9 @@
 
 /** @description Class to represent a single present */
 export class Present {
-  private containerElement;  /** DOM element that holds the presents */
-  private presentSrc;        /** URL of the present image */
-  private image;             /** New DOM element to hold the present image */
+  private containerElement: HTMLElement;  /** DOM element that holds the presents */
+  private presentSrc: string;             /** URL of the present image */
+  private image: HTMLImageElement;        /** New DOM element to hold the present image */
 
   /**
    * @constructor
@@ -26,7 +26,7 @@ export class Present {
     this.presentSrc = presentSrc;
 
     // Bind event listeners.
-    this.openPresent = this.openPresent.bind(this);
+    // this.openPresent = this.openPresent.bind(this);
 
     // Create image and append to container.
     this.image = document.createElement('img');
@@ -42,8 +42,9 @@ export class Present {
    *              Replaces the initial image with the present (new) image
    *              Removes the click event listener
    */
-  private openPresent(event: Event): void {
+  private openPresent = (event: Event): void => {
     this.image.src = this.presentSrc;
     this.image.removeEventListener('click', this.openPresent);
   }
+
 }
