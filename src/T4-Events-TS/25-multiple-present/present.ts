@@ -25,9 +25,6 @@ export class Present {
     this.containerElement = containerElement;
     this.presentSrc = presentSrc;
 
-    // Bind event listeners.
-    // this.openPresent = this.openPresent.bind(this);
-
     // Create image and append to container.
     this.image = document.createElement('img');
     const INITIAL_IMAGE: string = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
