@@ -27,7 +27,7 @@ class Button {
     this.containerElement = containerElement;
     this.text = text;
 
-    let button = document.createElement('button');
+    let button: HTMLButtonElement = document.createElement('button');
     button.textContent = text;
     button.addEventListener('click', this.onClick);
     this.containerElement.append(button);
