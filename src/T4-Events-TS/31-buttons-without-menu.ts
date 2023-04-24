@@ -14,15 +14,13 @@
  * @description Class for the objects buttons to be placed in tha page
  */
 class Button {
-  private containerElement: HTMLElement;  /** HTML container for the button */
-
   /**
    * @constructor 
    * @desc Sets up a button object placing it in the page (DOM)
    * @param containerElement - The DOM element that will host the button
    * @param text - Button text
    */
-  constructor(containerElement: HTMLElement, text: string) {
+  constructor(private containerElement: HTMLElement, text: string) {
     this.containerElement = containerElement;
 
     let button: HTMLButtonElement = document.createElement('button');
@@ -30,7 +28,6 @@ class Button {
     this.containerElement.append(button);
   }
 }
-
 
 function main(): void {
   const buttonContainer: HTMLElement = document.querySelector('#menu')! as HTMLElement;
