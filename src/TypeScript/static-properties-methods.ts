@@ -10,14 +10,14 @@
   */
 
 class Employee {
-  private static headcount: number = 0;  // A private property is shared among all instances of a class.
-                                         // This value cannot be changed outside of the class 
   constructor(private firstName: string, private lastName: string, private jobTitle: string) {
     Employee.headcount++;
   }
   public static getHeadcount() {
     return Employee.headcount;
   }
+  private static headcount: number = 0;  // A static property is shared among all instances of a class.
+                                         // This value cannot be changed outside of the class 
 }
 
 export let main = async () => {
