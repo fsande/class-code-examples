@@ -26,8 +26,6 @@ class Square implements Shape, Editable {
   commitChanges(): void {
     if(this.canEdit) {
       console.log('changes committed');
-    } else {
-      console.log('The figure is not editable. Changes NOT committed');
     }
   }
 
