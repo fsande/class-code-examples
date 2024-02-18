@@ -16,26 +16,26 @@ class Person {
     this.lastName = lastName;
   }
 
-  getAge() {
+  getAge(): number {
     return this.age;
   }
 
-  setAge(theAge: number) {
+  setAge(theAge: number): void {
     if (theAge <= 0 || theAge >= 200) {
       throw new Error('The age is invalid');
     }
     this.age= theAge;
   }
 
-  getFirstName() {
+  getFirstName(): string {
     return this.firstName;
   }
 
-  getLastName() {
+  getLastName(): string {
     return this.lastName;
   }
 
-  private getFullName(): string {
+  getFullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }
   private age: number;
