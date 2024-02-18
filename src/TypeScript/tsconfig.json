@@ -6,7 +6,9 @@
     "rootDir": "./",
     "outDir": "./",
     "declaration": false,                     /* Generate (or not) .d.ts files for every TypeScript file inside your project */
-    "declaration": true,
+                                              /* When a TypeScript script gets compiled there is an option to generate a declaration file (with the extension .d.ts) that
+                                                functions as an interface to the components in the compiled JavaScript. In the process the compiler strips away all
+                                                function and method bodies and preserves only the signatures of the types that are exported.  */
     "alwaysStrict": true,                     /* Parse in strict mode and emit "use strict" for each source file. */
     "strict": true,                           /* Enable all strict type-checking options. */
     "noImplicitAny": true,                    /* will issue an error whenever it would have inferred any:*/ 
@@ -14,7 +16,34 @@
     "noImplicitReturns": true,                /* Report error when not all code paths in function return a value. */
     "forceConsistentCasingInFileNames": true  /* Force all file names to have the same case style. */
   },
-  "files": ["optional-parameters.ts"],
+  "files": [
+    "abstract-class.ts",
+    "chaining-methods.ts",
+    "class-types.ts",
+    "constructor2.ts",
+    "constructor-overloads.ts",
+    "constructor.ts",
+    "declare-and-initialize.ts",
+    "default-parameters.ts",
+    "fibonacci-class.ts",
+    "function-overloads.ts",
+    "function-overloads-with-optional-parameters.ts",
+    "function-types.ts",
+    "getters-setters.ts",
+    "inheritance.ts",
+    "interface1.ts",
+    "method-overloading.ts",
+    "methods.ts",
+    "optional-parameters.ts",
+    "point-class.ts",
+    "private-modifier.ts",
+    "readonly-properties2.ts",
+    "readonly-properties.ts",
+    "rest-parameters.ts",
+    "static-properties-methods.ts",
+    "super-calls.ts",
+    "this.ts"
+  ],
   "exclude": [
         "node_modules",
         "build",
