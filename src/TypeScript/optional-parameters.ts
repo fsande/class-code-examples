@@ -19,7 +19,10 @@ class Dog {
     this.name = name;        
     if (favoriteToy !== undefined) {            
       this.favoriteToy = favoriteToy;        
-    }    
+    }
+    else {
+      this.favoriteToy = 'ball';        
+    }
   }
 }
 
