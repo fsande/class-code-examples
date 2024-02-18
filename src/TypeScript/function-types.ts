@@ -21,6 +21,7 @@ export let main = async () => {
     return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
   };
   console.log(format('En un lugar de la Mancha', true));
+  console.log(format('To Be or Not To Be', false));
 };
 
 main();
