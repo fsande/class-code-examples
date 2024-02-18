@@ -11,8 +11,9 @@
                                                 function and method bodies and preserves only the signatures of the types that are exported.  */
     "alwaysStrict": true,                     /* Parse in strict mode and emit "use strict" for each source file. */
     "strict": true,                           /* Enable all strict type-checking options. */
+    "strictPropertyInitialization": false,    /* When set to true, TS will raise an error when a class property was declared but not set in the constructor */
     "noImplicitAny": true,                    /* will issue an error whenever it would have inferred any:*/ 
-    "noFallthroughCasesInSwitch": true,      /* Report errors for fallthrough cases in switch statement. */
+    "noFallthroughCasesInSwitch": true,       /* Report errors for fallthrough cases in switch statement. */
     "noImplicitReturns": true,                /* Report error when not all code paths in function return a value. */
     "forceConsistentCasingInFileNames": true  /* Force all file names to have the same case style. */
   },
