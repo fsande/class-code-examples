@@ -37,8 +37,8 @@ class Rectangle {
     private fillColor: string = '', 
     private strokeColor: string = '', 
     private strokeWidth: number = 2) {
-    // console.log('Constructor is executing...');
-    // alert('Constructor is executing...');
+      // console.log('Constructor is executing...');
+      // alert('Constructor is executing...');
   }
 
   /** draw rectangle to screen */

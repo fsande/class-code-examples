@@ -61,6 +61,7 @@ var Rectangle = /** @class */ (function () {
         // from polluting other drawings
         Rectangle.context.restore();
     };
+    /// All rectangles share (static) the same canvas and context
     Rectangle.canvas = document.getElementById('tutorial');
     Rectangle.context = Rectangle.canvas.getContext('2d');
     return Rectangle;
