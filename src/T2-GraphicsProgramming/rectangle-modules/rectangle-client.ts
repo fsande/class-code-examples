@@ -12,7 +12,7 @@
  * @see {@link https://stackoverflow.com/questions/71621472/compile-typescript-to-run-in-the-browser-using-modules}
  *              Ha de tenerse en cuenta que:
  *              * El proyecto ha de compilarse usando tsc (sin pasar parámetros, ni el nombre del fichero a compilar) para que tsc utilice la información del tsconfig.json
- *              * El código HTML ha de usar la etiqueta incluyendo type="module" (véase rectangulo.html)
+ *              * El código HTML ha de usar la etiqueta script incluyendo type="module" (véase rectangle.html)
  *              * El código del programa cliente ha de importar el módulo poniendo explícitamente 
  *                la extensión .js del fichero importado (sentencia import {Rectangle} from './rectangle.js'; )
  *              * En el fichero tsconfig ha de usarse "module": "es2015",
