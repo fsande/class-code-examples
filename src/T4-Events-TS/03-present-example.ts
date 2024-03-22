@@ -15,7 +15,8 @@
 /** @description Listener function */
 const openPresent = function(): void {
   let image: HTMLImageElement = document.querySelector('img')! as HTMLImageElement;
-  image.src = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif';
+  const NEW_IMAGE_URL = 'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif';
+  image.src = NEW_IMAGE_URL;
   image.removeEventListener('click', openPresent);
   return;
 };
