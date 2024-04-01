@@ -7,6 +7,7 @@
  * @author F. de Sande
  * @since Apr 16, 2023
  * @description Tic Tac Toe Example. Final solution
+ *              Compile with tsc --target es2015 <source.ts>
  */
 
 const HUMAN = 'x';
@@ -33,7 +34,7 @@ const assignSpace = function(space, owner) {
   space.removeEventListener('click', changeToX);
 }
 
-const changeToX = function(event) {
+const changeToX = function(event: Event) {
   assignSpace(event.currentTarget, HUMAN);
   if (isGameOver()) {
     displayWinner();

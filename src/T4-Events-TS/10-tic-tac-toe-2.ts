@@ -7,11 +7,12 @@
  * @author F. de Sande
  * @since Apr 16, 2023
  * @description Tic Tac Toe Example. Step 2
+ *              Compile with tsc --target es2015 <source.ts>
  */
 
-const changeToX = function(event) {
+const changeToX = function(event: Event) {
   const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
-  const container = event.currentTarget;
+  const container: HTMLElement = event.currentTarget as HTMLElement;
   const image = document.createElement('img');
   image.src = X_IMAGE_URL;
   container.appendChild(image);
@@ -45,3 +46,5 @@ const main = function() {
 }
 
 main();
+
+

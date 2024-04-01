@@ -10,10 +10,10 @@
  *              Compile with tsc --target es2015 <source.ts>
  */
 
-const onClick = function(event) {
+const onClick = function(event: Event) {
   const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
   const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
-  const element = event.target;   // Get the element that was clicked
+  const element: HTMLElement = event.target as HTMLElement;   // Get the element that was clicked
 
   // Create an <img> tag with the X img src
   const image = document.createElement('img');

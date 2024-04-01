@@ -7,6 +7,7 @@
  * @author F. de Sande
  * @since Apr 16, 2023
  * @description Tic Tac Toe Example. Step 2. Better(?) approach: Global Variable
+ *              Compile with tsc --target es2015 <source.ts>
  */
 
 const HUMAN = 'x';
@@ -19,7 +20,7 @@ const COMPUTER = 'o';
   * @param {object} space. The HTML Element that represents the Box (it is a div)
   * @param {string} owner It can be HUMAN or COMPUTER 
   */
-const assignSpace = function(space, owner) {
+const assignSpace = function(space: HTMLElement, owner: string) {
   const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
   const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
   let image = document.createElement('img');
@@ -32,8 +33,8 @@ const assignSpace = function(space, owner) {
   space.removeEventListener('click', changeToX);
 }
 
-const changeToX = function(event) {
-  assignSpace(event.currentTarget, HUMAN);
+const changeToX = function(event: Event) {
+  assignSpace(event.currentTarget as HTMLElement, HUMAN);
   if (isGameOver()) {
     displayWinner();
   } else {

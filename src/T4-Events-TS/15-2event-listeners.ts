@@ -30,3 +30,4 @@ const reset = document.querySelector('button');
 outer.addEventListener('click', onOuterClick);
 inner.addEventListener('click', onInnerClick);
 reset.addEventListener('click', onResetClick);
+
