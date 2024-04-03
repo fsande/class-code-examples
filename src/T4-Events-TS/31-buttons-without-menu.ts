@@ -7,6 +7,8 @@
  * @author F. de Sande
  * @since Apr 20, 2023
  * @description Events. OO Buttons without menu
+ *              The code uses the Non-Null Assertion Operator (!)
+ * @see https://medium.com/@bobjunior542/how-to-use-the-operator-in-typescript-for-cleaner-more-efficient-code-7fd528f8f8b1
 */
 
 /**
