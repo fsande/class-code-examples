@@ -18,7 +18,7 @@
 class Button {
   /**
    * @constructor 
-   * @desc Sets up a button object placing it in the page (DOM)
+   * @description Sets up a button object placing it in the page (DOM)
    * @param containerElement - The DOM element that will host the button
    * @param text - Button text
    */
