@@ -6,8 +6,8 @@
  *
  * @author F. de Sande
  * @since Apr 23, 2023
- * @desc Events. OO Present. Multiple Presents. 
- *       Defines the URLs for the present images
+ * @description Events. OO Present. Multiple Presents. 
+ *              Defines the URLs for the present images
  */
 
 /** An array holding the presents images URLs */

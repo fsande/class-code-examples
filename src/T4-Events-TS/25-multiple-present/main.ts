@@ -6,7 +6,7 @@
  *
  * @author F. de Sande
  * @since Apr 23, 2023
- * @desc Events. OO Present. Multiple Presents. Main program
+ * @description Events. OO Present. Multiple Presents. Main program
  */
 
 import {App} from './app.js';
