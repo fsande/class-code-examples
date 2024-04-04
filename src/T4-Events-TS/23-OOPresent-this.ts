@@ -19,10 +19,10 @@ class Present {
   /**
    * @constructor
    * @description Sets up a present object (new image) placing it in the page (DOM)
+   *              Creates an image and appends it to the container
    * @param containerElement - The DOM element that will host the present (image)
    */
   constructor(private containerElement: HTMLElement, private image?: HTMLImageElement) {
-    // Create image and append to container
     this.image = document.createElement('img');
     this.image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
     this.image.addEventListener('click', this.openPresent);

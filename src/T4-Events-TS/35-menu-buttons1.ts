@@ -7,11 +7,11 @@
  * @author F. de Sande
  * @since Apr 23, 2023
  * @description Events. Buttons Menu example
- * Using 2 classes:
- * Menu: 
- *   Has an array of Buttons
- * Button:
- *   console.log when clicked
+ *              Using 2 classes:
+ *              Menu: 
+ *                Has an array of Buttons
+ *              Button:
+ *                console.log when clicked
 */
 
 /** @description Class to hold the (array of) buttons of the page */

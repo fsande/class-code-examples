@@ -18,8 +18,8 @@ class Button {
 
   /**
    * @constructor
-   * @desc Sets up a button object placing it in the page (DOM)
-   *       It set up an event listener for the click event on the button
+   * @description Sets up a button object placing it in the page (DOM)
+   *              It set up an event listener for the click event on the button
    * @param containerElement - The DOM element that will host the button
    * @param text - Button text
    */
@@ -53,20 +53,3 @@ function main(): void {
 }
 
 main();
-
-
-/*
-
-class Button {
-
-  constructor(containerElement: HTMLElement, text: string) {
-    this.containerElement = containerElement;
-
-    let button = document.createElement('button');
-    button.textContent = text;  // textContent is a property of (DOM) Node
-    this.containerElement.append(button);
-  }
-}
-
-*/
-

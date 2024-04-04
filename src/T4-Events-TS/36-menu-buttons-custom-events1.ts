@@ -43,7 +43,7 @@ class Menu {
 }
 
 /**
- * @description Class for the buttons objects to be placed in tha page
+ * @description Class for the buttons objects to be placed in the page
  */
 class Button {
   private containerElement;  /** The The DOM element that will host the button */
