@@ -19,7 +19,7 @@ import {PRESENT_SOURCES} from './present-sources.js';
 export class App {
   private presentContainer: HTMLElement; /** DOM element to host the presents */
   private titleContainer: HTMLElement;   /** DOM element corresponding to the <h2> text */ 
-  private presents: Present[] = [];       /** Array of presents */
+  private presents: Present[] = [];      /** Array of presents */
 
   /**
    * @constructor
