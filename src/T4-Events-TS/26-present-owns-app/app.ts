@@ -7,7 +7,11 @@
  * @author F. de Sande
  * @since Apr 23, 2023
  * @description OO Present. Present owns App
-*/
+ *              In this version, each present has a reference to this app
+ *              When presents are created in fillPresentContainer(), each present receives a reference (this)
+ *              to this app
+ *              This is a BAD PRACTICE !!!!
+ */
 
 import {Present} from './present.js';
 import {PRESENT_SOURCES} from './present-sources.js';
@@ -19,7 +23,7 @@ import {PRESENT_SOURCES} from './present-sources.js';
 export class App {
   private presentContainer: HTMLElement; /** DOM element to host the presents */
   private titleContainer: HTMLElement;   /** DOM element corresponding to the <h2> text */ 
-  private presents: Present[] = [];     /** Array of presents */
+  private presents: Present[] = [];      /** Array of presents */
   private openedCount: number = 0;       /** Holds the number of presents that have been opened */
 
   /**
@@ -36,6 +40,7 @@ export class App {
   /**
    * @method
    * @description Creates the Present objects and stores them in the presents array 
+   *              Each present is given a reference (this) to this app
    */
   private fillPresentContainer(): void {
     for (const SOURCE of PRESENT_SOURCES) {
