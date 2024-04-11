@@ -6,7 +6,8 @@
  *
  * @author F. de Sande
  * @since Apr 23, 2023
- * @description OO Present custom Events with bug. Present class
+ * @description OO Multiple Present application
+ *              communication between App and Present objects is implemented using custom events
  */
 
 /**
@@ -16,21 +17,14 @@
  *              by the present image when the original is clicked
  */
 export class Present {
-  private containerElement: HTMLElement;
-  private presentSrc: string;
-  private image: HTMLImageElement;
   /*
    * @constructor
    * @param containerElement - DOM element that holds the present image
    * @param presentSrc - URL of the image to show when the present is opened
    */
-  constructor(containerElement: HTMLElement, presentSrc: string) {
+  constructor(private containerElement: HTMLElement, private presentSrc: string, private image?: HTMLImageElement) {
     this.containerElement = containerElement;
     this.presentSrc = presentSrc;
-
-    // this.containerElement = containerElement;
-    // this.presentSrc = presentSrc;
-    // Create image and append to container.
     this.image = document.createElement('img');
     this.image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
     this.image.addEventListener('click', this.openPresent);
@@ -43,8 +37,8 @@ export class Present {
    *  @param {object} event - Event object
    */
   private openPresent = (event: Event): void => {
-    this.image.src = this.presentSrc;
-    this.image.removeEventListener('click', this.openPresent);
+    this.image!.src = this.presentSrc;
+    this.image!.removeEventListener('click', this.openPresent);
     document.dispatchEvent(new CustomEvent('present-opened'));
   }
 }
