@@ -11,17 +11,13 @@
 
 /** @description Class to represent a single present */
 export class Present {
-  private containerElement: HTMLElement;  /** DOM element that holds the presents */
-  private presentSrc: string;             /** URL of the present image */
-  private image: HTMLImageElement;        /** New DOM element to hold the present image */
-
   /**
    * @constructor
    * @description Fills the presents array
    * @param presentContainer- The DOM element that hosts the presents
    * @param presentSrc - URL of the new image for this present
    */
-  constructor(containerElement: HTMLElement, presentSrc: string) {
+  constructor(private containerElement: HTMLElement, private presentSrc: string, private image?: HTMLImageElement) {
     this.containerElement = containerElement;
     this.presentSrc = presentSrc;
 
@@ -40,8 +36,8 @@ export class Present {
    *              Removes the click event listener
    */
   private openPresent = (event: Event): void => {
-    this.image.src = this.presentSrc;
-    this.image.removeEventListener('click', this.openPresent);
+    this.image!.src = this.presentSrc;
+    this.image!.removeEventListener('click', this.openPresent);
   }
 
 }
