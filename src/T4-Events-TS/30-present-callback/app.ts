@@ -36,6 +36,10 @@ export class App {
   /**
    * @method fillPresentContainer
    * @description Creates the present objects and stores them in the presents array
+   *              Each present receives (3rd parameter in the constructor) a reference
+   *              to this.onPresentOpened
+   *              This is a callback that will be executed by presents when opened
+   *              It implements the communication from present to this container app
    */
   private fillPresentContainer(): void {
     for (const SOURCE of PRESENT_SOURCES) {
