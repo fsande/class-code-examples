@@ -25,13 +25,12 @@ interface Hands { [key: string]: {
                  };
 }
 
-
 /** @classdesc Represents an analog clock */
 class Clock {
   // By default document.createElement returns a HTMLElementtype which is a generic type.
   // In order to make your app understand it is a canvas element you need to cast it 
-  private canvas: HTMLCanvasElement = document.createElement('CANVAS') as HTMLCanvasElement; // Creates A new HTML element: a canvas
-  private context: CanvasRenderingContext2D = this.canvas.getContext('2d')!;
+  private readonly canvas: HTMLCanvasElement = document.createElement('CANVAS') as HTMLCanvasElement; // Creates A new HTML element: a canvas
+  private readonly context: CanvasRenderingContext2D = this.canvas.getContext('2d')!;
   private radius: number = 0;
   private centerX: number = 0;
   private centerY: number = 0;

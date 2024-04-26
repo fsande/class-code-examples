@@ -14,24 +14,33 @@
  * Also, check out {@link https://gist.github.com/fixiecoder/a6146501aaa8ad3bf885fa30a66ba079}
  */
 
+/**
+ * @description Defines the content of a hand element
+ */
+interface Hands { [key: string]: {
+                     length: number;
+                     color: string;
+                     width: number;
+                 };
+}
+
 /** @classdesc Represents an analog clock */
 class Clock {
+  // By default document.createElement returns a HTMLElementtype which is a generic type.
+  // In order to make your app understand it is a canvas element you need to cast it 
+  private readonly canvas: HTMLCanvasElement = document.createElement('CANVAS') as HTMLCanvasElement; // Creates A new HTML element: a canvas
+  private readonly context: CanvasRenderingContext2D = this.canvas.getContext('2d')!;
+  private radius: number = 0;
+  private centerX: number = 0;
+  private centerY: number = 0;
+  private hands: Hands; 
+
   /**
    * @description Creates a clock
    * @param containerElement - The HTML that will include the clock
    * @param size - clock size
    */
-  constructor(
-      private readonly containerElement: HTMLElement, 
-      private readonly size: number,
-      // By default document.createElement returns a HTMLElementtype which is a generic type.
-      // In order to make your app understand it is a canvas element you need to cast it 
-      private readonly canvas: HTMLCanvasElement = document.createElement('CANVAS') as HTMLCanvasElement, // Creates A new HTML element: a canvas
-      private readonly context: CanvasRenderingContext2D = canvas.getContext('2d'),
-      private radius: number = 0,
-      private centerX: number = 0,
-      private centerY: number = 0,
-      private hands: object = {}) { // Body
+  constructor(private readonly containerElement: HTMLElement, private readonly size: number) {
     this.radius = 0.95 * (this.size / 2);
     this.hands = {
       second: {
