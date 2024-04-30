@@ -16,11 +16,37 @@
   <meta name="viewport" content="width=device-width">
   <title>20 PAI: CSS</title>
   <link rel=stylesheet href="flexbox-example1.css">
+  <link rel=stylesheet href="csscode.css">
 </head>
 <body>
-  <h1>Flexbox example</h1>
+  <h1>A First Flexbox example</h1>
   <div id="flex-container">
     <div class="flex-item"></div>
   </div>
+  <h2>The CSS code for this page:</h1>
+    <pre>
+    <code>
+.section {
+  height: 200px;
+  background-color: green;
+  margin: 20px;
+}
+
+#flex-container {
+  display: flex;
+  border: 2px solid black;
+  padding: 20px;
+  height: 200px;
+}
+
+.flex-item {
+  border-radius: 10px;
+  background-color: purple;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+}
+    </code>
+    </pre>
 </body>
 </html>
