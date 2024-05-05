@@ -14,11 +14,13 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
+  let notification;
+
   (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
-    $notification = $delete.parentNode;
+    notification = $delete.parentNode;
 
     $delete.addEventListener('click', () => {
-      $notification.parentNode.removeChild($notification);
+      notification.parentNode.removeChild(notification);
     });
   });
 });
