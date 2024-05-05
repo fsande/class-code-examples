@@ -14,17 +14,17 @@
 "use strict";
 
 function move() {
-  let i = 0;
+  let counter = 0;
 
-  if (i == 0) {
-    i = 1;
+  if (counter === 0) {
+    counter = 1;
     let elem = document.getElementById("myBar");
     let width = 0;
     let id = setInterval(frame, 10);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
-        i = 0;
+        counter = 0;
       } else {
         width++;
         elem.style.width = width + "%";
