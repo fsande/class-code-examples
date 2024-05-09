@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 // Set your brand colors
 $purple: #57068C;
 $pink: #FA7C91;
@@ -12,13 +11,13 @@ $ull-purple-invert: findColorInvert($ull-purple);
 $custom-colors: ("ull-purple": ($ull-purple, $ull-purple-invert));
 
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
+$family-sans-serif: "Argentum Sans", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 // Update $primary as your choice
 $primary: $purple;   
 
-$link: #006699;
+$link: #006699;  // ULL link color
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
@@ -36,12 +35,13 @@ $input-shadow: none;
   $grey-dark: $brown,
   $grey-light: $beige-light,
   $primary: $purple,
-  $link: $pink,
+  $link: #006699,
   $control-border-width: 2px,
   $input-shadow: none
 );
 
 // Import the Google Font
 // @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
 // Import Argentum Sans, the official typography 
 @import url("https://fonts.cdnfonts.com/css/argentum-sans");
